@@ -1,0 +1,25 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "source": [
+    "src/index.html"
+  ],
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Nimanthika Abeyrathna & Gayantha Kuruppuarachchi",
+  "license": "ISC",
+  "description": "Student-progress-monitor",
+  "devDependencies": {
+    "parcel": "^2.9.2"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "animate.css": "^4.1.1",
+    "big.js": "^6.2.1",
+    "bootstrap": "^5.3.0",
+    "jquery": "^3.7.0",
+    "normalize.css": "^8.0.1"
+  }
+}
