@@ -2,7 +2,7 @@
   "name": "front-end",
   "version": "1.0.0",
   "source": [
-    "src/index.html"
+    "src/signUp.html"
   ],
   "scripts": {
     "start": "parcel",

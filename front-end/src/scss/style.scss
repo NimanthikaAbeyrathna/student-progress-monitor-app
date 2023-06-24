@@ -1,4 +1,5 @@
-/* sidebar styling */
+
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -45,15 +46,15 @@
 
 /* footer styling */
 .footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 10px 0; /* Updated padding */
-  font-size: 0.8rem;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px; /* Updated height */
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0; /* Updated padding */
+    font-size: 0.8rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Updated height */
   z-index: 999;
 }
 
@@ -64,5 +65,16 @@
 
 
 @media (max-width: 600px) {
+
+}
+
+.errorcode{
+
+  display: flex;
+  color: red;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+
 
 }

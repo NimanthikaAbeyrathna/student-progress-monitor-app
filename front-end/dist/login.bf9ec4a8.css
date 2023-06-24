@@ -1,0 +1,54 @@
+.container {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+button[type="submit"] {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#login-area {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.icons {
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+
+.icons:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=login.bf9ec4a8.css.map */
