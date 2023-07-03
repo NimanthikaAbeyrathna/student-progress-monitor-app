@@ -588,7 +588,7 @@ const outerUserName = (0, _jqueryDefault.default)("#userNameInput");
 const outerPassword = (0, _jqueryDefault.default)("#passwordInput");
 btnSignUp.on("click", (evt)=>{
     evt.preventDefault();
-    sendData();
+    sendDataSignUp();
 });
 [
     nameElm,
@@ -633,7 +633,7 @@ function resetForm() {
     userNameElm.val("");
     passwordElm.val("");
 }
-function sendData() {
+function sendDataSignUp() {
     const fullName = nameElm.val();
     const userName = userNameElm.val();
     const password = passwordElm.val();
@@ -644,9 +644,43 @@ function sendData() {
         password
     };
     const xhr = new XMLHttpRequest();
-    xhr.addEventListener("readystatechange", ()=>{});
-    // xhr.open();
+    xhr.addEventListener("readystatechange", ()=>{
+        if (xhr.readyState === 4) {
+            if (xhr.status === 201) {
+                window.location.href = "login.html";
+                resetForm();
+            } else if (xhr.status === 409) {
+                const errorObject = JSON.parse(xhr.responseText);
+                console.log(errorObject);
+                showToast("error", "Failed to Signup", errorObject.message);
+            } else showToast("error", "Failed to Signup", "An error occurred on the server.");
+        }
+    });
+    xhr.open("POST", "http://localhost:8080/app/api/v1/adding/signUp", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(information));
+}
+function showToast(toastType, header, message) {
+    const toast = (0, _jqueryDefault.default)("#toast .toast");
+    toast.removeClass("text-bg-success", "text-bg-warning", "text-bg-danger");
+    switch(toastType){
+        case "success":
+            toast.addClass("text-bg-success");
+            break;
+        case "warning":
+            toast.addClass("text-bg-warning");
+            break;
+        case "error":
+            toast.addClass("text-bg-danger");
+            break;
+        default:
+    }
+    (0, _jqueryDefault.default)("#toast .toast-header > strong").text(header);
+    (0, _jqueryDefault.default)("#toast .toast-body").text(message);
+    toast.addClass("show");
+    setTimeout(function() {
+        toast.removeClass("show");
+    }, 2000);
 }
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["epZ2E","5WLbD"], "5WLbD", "parcelRequire8d29")

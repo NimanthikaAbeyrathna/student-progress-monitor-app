@@ -584,7 +584,7 @@ const outerUserName = (0, _jqueryDefault.default)("#userNameInput");
 const outerPassword = (0, _jqueryDefault.default)("#passwordInput");
 btnLogin.on("click", (evt)=>{
     evt.preventDefault();
-    sendData();
+    sendDataLogging();
 });
 [
     userNameElm,
@@ -622,7 +622,7 @@ function resetForm() {
     userNameElm.val("");
     passwordElm.val("");
 }
-function sendData() {
+function sendDataLogging() {
     const userName = userNameElm.val();
     const password = passwordElm.val();
     if (!validation()) return;
@@ -631,41 +631,45 @@ function sendData() {
         password
     };
     const xhr = new XMLHttpRequest();
-    xhr.addEventListener("readystatechange", ()=>{});
-    // xhr.open();
+    xhr.addEventListener("readystatechange", ()=>{
+        if (xhr.readyState === 4) {
+            if (xhr.status === 202) {
+                //  window.location.href = 'index.html';
+                window.location.replace("index.html");
+                return;
+            } else if (xhr.status === 400) {
+                const errorObject = JSON.parse(xhr.responseText);
+                showToast("error", "Failed to Login", errorObject.message);
+            }
+        }
+    });
+    xhr.open("POST", "http://localhost:8080/app/api/v1/adding/login", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(information));
 }
+function showToast(toastType, header, message) {
+    const toast = (0, _jqueryDefault.default)("#toast .toast");
+    toast.removeClass("text-bg-success", "text-bg-warning", "text-bg-danger");
+    switch(toastType){
+        case "success":
+            toast.addClass("text-bg-success");
+            break;
+        case "warning":
+            toast.addClass("text-bg-warning");
+            break;
+        case "error":
+            toast.addClass("text-bg-danger");
+            break;
+        default:
+    }
+    (0, _jqueryDefault.default)("#toast .toast-header > strong").text(header);
+    (0, _jqueryDefault.default)("#toast .toast-body").text(message);
+    toast.addClass("show");
+    setTimeout(function() {
+        toast.removeClass("show");
+    }, 2000);
+}
 
-},{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}]},["bytFw","47T64"], "47T64", "parcelRequire8d29")
+},{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["bytFw","47T64"], "47T64", "parcelRequire8d29")
 
 //# sourceMappingURL=login.333b87f1.js.map

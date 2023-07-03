@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Progress Monitor</title>
+    <link rel="icon" href="./image/favicon.png">
+
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="./scss/style.scss">
+    <link rel="stylesheet" href="./scss/students.scss">
+
+    <script defer type="module" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer type="module" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer type="module" src="../node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script defer src="../node_modules/big.js/big.js"></script>
+    <script defer type="module" src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script defer type="module"  src="./js/main.js"></script>
+    <script defer type="module"  src="./js/students.js"></script>
+
+</head>
+<body>
+<div class="d-flex flex-column" style="min-height: 100vh;">
+    <div class="d-flex">
+        <div class="sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="bi bi-house-door-fill"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-calendar"></i>
+                        Enter New year
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-123"></i>
+                        Enter New Semester
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-type"></i>
+                        Enter New Grade
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-type"></i>
+                        Enter New Class
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-mortarboard-fill"></i>
+                        Enter New Subjects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href= "../src/student.html">
+                        <i class="bi bi-people"></i>
+                        Enter New Student
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-bookmarks-fill"></i>
+                        Enter Student Marks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-printer-fill"></i>
+                        Print Student Reports
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <main class="content ">
+            <div id="left-div">
+                <div>
+                    <h5>Enter Student Details</h5>
+                    <form>
+                        <div class="form-floating mb-2 inputElm ">
+                            <input id="index" type="text" class="form-control animate__animated" placeholder="S001" required >
+                            <label >Index</label>
+
+                        </div>
+
+                        <div class="form-floating mb-2 inputElm">
+                            <input id="Uname" type="text" class="form-control animate__animated"  placeholder="Nimal Kuruppu" required>
+                            <label >Full Name</label>
+                        </div>
+
+                        <div class="form-floating mb-2 inputElm">
+                            <input id="address" type="text" class="form-control animate__animated"  placeholder="Colombo" required>
+                            <label >Address</label>
+                        </div>
+                        <div class="input-group inputElm">
+                            <input type="date" class="form-control animate__animated" id="birthday" placeholder="Birthday of Student">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="sex inputElm">
+                            <div class="form-check">
+                                <input class="form-check-input animate__animated" type="radio" name="gender" id="male" value="MALE" checked>
+                                <label class="form-check-label" >
+                                     Male
+                                </label>
+                            </div>
+                            <div class="form-check inputElm">
+                                <input class="form-check-input animate__animated" type="radio" name="gender" id="female" value="FEMALE" checked>
+                                <label class="form-check-label" >
+                                   Female
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-floating mb-2 inputElm">
+                            <input id="Gname" type="text" class="form-control animate__animated"  placeholder="Gamage" required>
+                            <label >Guarantee Name</label>
+                        </div>
+
+                        <div class="form-floating mb-2 inputElm">
+                            <input id="Gcontact" type="text" class="form-control animate__animated"  placeholder="098-0987656" required>
+                            <label >Guarantee Conatct</label>
+                        </div>
+
+<!--                        <div class="form-floating mb-1 inputElm">-->
+<!--                            <input id="Gcontact" type="number" class="form-control animate__animated"  placeholder="071-1231231" >-->
+<!--                            <label >Guarantee Contact</label>-->
+<!--                        </div>-->
+
+
+
+                        <div class="image inputElm">
+                            <input accept="image/*" type="file" id="fileInput" style="display: none;">
+                            </div>
+
+                        <button id="btnAddImg" type="button" class="btn btn-primary save" >Add Image</button>
+                        <button id="save" type="button" class="btn btn-primary save" >Save</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <div id="right-div" class="table-responsive">
+
+                <div id="searchElm" class="mb-3">
+                    <input type="text"  id="search" placeholder="Search here" >
+                </div>
+
+
+                <table class="table  table-striped table-hover table-bordered
+                border-primary table-sm align-middle text-center">
+                    <thead class="table-dark">
+                    <tr class="table-primary">
+                        <th scope="col">Index</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Address</th>
+<!--                        <th scope="col">Birthday</th>-->
+                        <th scope="col">Sex</th>
+                        <th scope="col">Guarantee Name</th>
+                        <th scope="col">Guarantee Contact</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody" class="table-group-divider">
+
+
+                    </tbody>
+                    <tfoot id="tFoot" class="table-group-divider">
+                    <tr>
+                        <td class="text-center" colspan="9">no content</td>
+
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023. All rights reserved. | Designed by <a href="#">Nimanthika Abeyrathna & Gayantha Kuruppuarachchi</a></p>
+        </div>
+    </footer>
+</div>
+
+
+</body>
+</html>

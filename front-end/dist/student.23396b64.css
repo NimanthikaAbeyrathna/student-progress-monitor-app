@@ -1,0 +1,107 @@
+main {
+  display: flex;
+}
+
+#left-div {
+  justify-content: left;
+  width: 30vw;
+  height: 100vh;
+  padding: 20px 20px 70px;
+}
+
+#right-div {
+  justify-content: right;
+  width: 70vw;
+  height: 100vh;
+  padding: 20px 20px 70px;
+}
+
+.form-select {
+  height: 25px;
+  padding: .25rem .5rem;
+  font-size: .875rem;
+}
+
+table {
+  font-size: 15px;
+}
+
+@media (width <= 800px) {
+  table {
+    font-size: 10px;
+  }
+}
+
+@media (width <= 600px) {
+  main {
+    flex-direction: column;
+    display: flex;
+  }
+
+  #left-div {
+    width: 100%;
+  }
+
+  #right-div {
+    width: 100%;
+    padding: 5px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+}
+
+.inputs, .input {
+  height: 10px;
+}
+
+.image {
+  border: 1px dotted gray;
+  width: 130px;
+  height: 130px;
+}
+
+.form-control {
+  height: 10px !important;
+}
+
+.save {
+  flex-direction: column;
+  margin-top: -150px;
+  margin-left: 150px;
+  display: inline;
+}
+
+.sex {
+  gap: 30px;
+  margin-top: 15px;
+  display: flex;
+}
+
+#birthday {
+  height: 58px !important;
+}
+
+#btnAddImg {
+  margin-bottom: 70px;
+}
+
+#search {
+  width: 720px;
+  height: 100%;
+}
+
+.edit:hover {
+  cursor: pointer;
+  color: #006400;
+  scale: 1.1;
+}
+
+.delete:hover {
+  cursor: pointer;
+  color: red;
+  scale: 1.1;
+}
+
+/*# sourceMappingURL=student.23396b64.css.map */
