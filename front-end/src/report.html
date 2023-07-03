@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./scss/report-styles.scss">
+  <title>Report</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: grey;
+
+    }
+    #bill{
+      font-size: 10px;
+      background-color: white;
+      width: 148mm;
+      height: 210mm;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 10px;
+      padding: 10px;
+    }
+    #billContainer{
+      position: relative;
+      left: 75px;
+      transform: translateX(-30px);
+    }
+    #headerElm{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+    }
+    #schoolBadgeElm {
+      width: 50px;
+      height: 60px;
+      background-image: url("./image/govermentlogo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    #studentImageElm{
+      width: 100px;
+      height: 120px;
+      background-image: url("./image/roundgaya.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      left: 40%;
+      transform: translateX(-40%);
+    }
+    .labelContainer{
+      display: flex;
+      width: 100%;
+    }
+    .label {
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+
+    .data {
+      margin-bottom: 5px;
+      text-align: left;
+      width: 100%;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      position: relative;
+
+    }
+    table th{
+      padding: 5px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    table td {
+      padding: 5px;
+      text-align: left;
+      border: 1px solid #ccc;
+    }
+    .height{
+      height:30px;
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="bill">
+  <div id="billContainer">
+    <div id="headerElm">
+      <div id="schoolBadgeElm"></div>
+      <h1>K/Pushpadana Girl's collage</h1>
+    </div>
+    <div id="studentImageElm"></div>
+    <div class="labelContainer">
+      <label class="label" for="indexNoElm">Index No</label>
+      <div class="data" id="indexNoElm">12655</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="fullNameElm">Full Name</label>
+      <div class="data" id="fullNameElm">GAYANTHA RUKSHAN KURUPPUARACHCHI</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="addressElm">Address</label>
+      <div class="data" id="addressElm">No 210/A, seeduwa , galaha</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="guaranteeNameElm">Gurantee Name</label>
+      <div class="data" id="guaranteeNameElm">Shriya devi mallawaarachchi</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="guaranteeContactElm">Gurantee Contact</label>
+      <div class="data" id="guaranteeContactElm">081-5656946</div>
+    </div>
+
+    <div class="labelContainer">
+      <label class="label" for="yearElm">Year</label>
+      <div class="data" id="yearElm">2022</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="semesterElm">Semester</label>
+      <div class="data" id="semesterElm">2</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="gradeElm">Grade</label>
+      <div class="data" id="gradeElm">11</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="classElm">Class</label>
+      <div class="data" id="classElm">A</div>
+    </div>
+    <br>
+    <br>
+    <table>
+      <thead>
+      <tr>
+        <th>Subject</th>
+        <th>marks(%)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>maths</td>
+        <td>65</td>
+      </tr>
+      <tr>
+        <td>science</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>sinhala</td>
+        <td>65</td>
+      </tr>
+      <tr>
+        <td>english</td>
+        <td>65</td>
+      </tr>
+
+      </tbody>
+    </table>
+    <div class="labelContainer">
+      <label class="label" for="totalMarksElm">Total marks</label>
+      <div class="data" id="totalMarksElm">1054</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="averageMarksElm">Average marks</label>
+      <div class="data" id="averageMarksElm">85</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="maxAverageMarksElm">Max average marks of the class</label>
+      <div class="data" id="maxAverageMarksElm">85</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="numberOfStudentInClassElm">Number of the students in the class</label>
+      <div class="data" id="numberOfStudentInClassElm">40</div>
+    </div>
+    <div class="labelContainer">
+      <label class="label" for="studentPositionElm">Student position of the class</label>
+      <div class="data" id="studentPositionElm">4</div>
+    </div>
+    <br>
+    <br>
+    <div class="labelContainer height">
+      <label class="label">Principal sign :</label>
+      <div class="data">-------------------</div>
+      <div class="label">date :</div>
+      <div class="data">-------------------</div>
+    </div>
+    <div class="labelContainer height">
+      <label class="label">Class teacher sign :</label>
+      <div class="data">-------------------</div>
+      <div class="label">date :</div>
+      <div class="data">-------------------</div>
+    </div>
+    <div class="labelContainer height">
+      <label class="label">Guarantee sign :</label>
+      <div class="data">-------------------</div>
+      <div class="label">date :</div>
+      <div class="data">-------------------</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

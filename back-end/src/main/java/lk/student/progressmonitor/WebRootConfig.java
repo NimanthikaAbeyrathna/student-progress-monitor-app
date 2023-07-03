@@ -15,8 +15,8 @@ public class WebRootConfig {
         bds.setPassword("Gaya/123&1994");
         bds.setDriverClassName("com.mysql.cj.jdbc.Driver");
         bds.setUrl("jdbc:mysql://localhost:3306/student_progress_monitor?createDatabaseIfNotExist=true");
-        bds.setMaxTotal(50);
-        bds.setInitialSize(20);
+        bds.setMaxTotal(100);
+        bds.setInitialSize(50);
 
         return bds;
     }
