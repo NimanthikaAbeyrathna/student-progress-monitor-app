@@ -13,10 +13,14 @@ const imgInputElm=$('#fileInput');
 const tableBodyElm=$('#tbody');
 const tFootElm=$('#tFoot');
 const searchElm=$('#search');
+const tableElm=$('#tableElement');
 let x =[];
 let update= false;
+let imgUpload=false;
 let btnSaveClick=false;
 let indexVariable;
+let imgFiles=[];
+
 
 const inputElements=[indexElm,UserNameElm,addressElm,guaranteeNameElm,guaranteeContactElm];
 
@@ -24,9 +28,11 @@ addDataToTable();
 
 tableBodyElm.on('click','.delete',(evt)=>{
 
-    const idElm = $(evt.target).closest('#tbody').children().children().first();
+    const idElm = $(evt.target).closest('tr').children().first();
+    console.log(idElm);
     // console.log(idElm);
     const idValue = idElm.text();
+    console.log(idValue);
     deleteElements(idValue);
 });
 
@@ -76,6 +82,13 @@ btnSave.on('click',(evt)=>{
     }
 
 });
+
+imgInputElm.on('change', (evt) => {
+    imgUpload=true;
+    let files = Array.from(evt.target.files);
+    uploadImages(files);
+});
+console.log(imgFiles);
 
 inputElements.forEach(elements=>{
     elements.on('input',(evt)=>{
@@ -163,7 +176,7 @@ console.log("after validation");
         if(xhr.readyState===4 && xhr.status===201){
             resetForm();
            addDataToTable();
-
+            showToast("success","Saved","Data has been saved")
 
         }else {
             // const errorObject = JSON.parse(xhr.responseText);
@@ -196,13 +209,11 @@ const searchValue = searchElm.val();
         xhr.addEventListener("readystatechange", (evt) => {
             if(xhr.status===200 && xhr.readyState===4) {
                 tableBodyElm.empty();
-
                 const responseObject = JSON.parse(xhr.responseText);
-
                 if(responseObject.length){
                     tFootElm.remove();
                 }else {
-                    tableBodyElm.append(tFootElm);
+                    tableElm.append(tFootElm);
                 }
 
 
@@ -245,17 +256,15 @@ const searchValue = searchElm.val();
 
 function  deleteElements(value){
 
-
-
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener("readystatechange",(evt)=>{
-        // if(xhr.readyState===4 && xhr.status===204){
-        //
-        // }
+        if(xhr.readyState===4 && xhr.status===204){
+            showToast("warning","DELETE","Selected data has been deleted")
+
+        }
 
     });
-
 
     xhr.open("DELETE",`http://localhost:8080/app/students/${value}`,true);
     xhr.send();
@@ -280,8 +289,9 @@ function updateElements(studentIndexNo){
 
     xhr.addEventListener('readystatechange',(evt)=>{
             if(xhr.readyState===4 && xhr.status===202){
+                const responseObject = JSON.parse(xhr.responseText);
                 resetForm();
-
+                showToast('success','Updated','Saved data has been updated');
                 console.log(btnSaveClick);
                addDataToTable();
             }
@@ -294,6 +304,51 @@ function updateElements(studentIndexNo){
        xhr.send(JSON.stringify(studentDetails));
    }
 
+}
+function showToast(toastType, header, message) {
+    const toast =$("#toast .toast");
+    toast.removeClass("text-bg-success", "text-bg-warning", "text-bg-danger");
+    switch (toastType) {
+        case 'success':
+            toast.addClass('text-bg-success');
+            break;
+        case 'warning':
+            toast.addClass('text-bg-warning');
+            break;
+        case 'error':
+            toast.addClass('text-bg-danger');
+            break;
+        default:
+
+    }
+    $("#toast .toast-header > strong").text(header);
+    $("#toast .toast-body").text(message);
+    toast.addClass('show');
+
+    setTimeout(function() {
+        toast.removeClass('show');
+    }, 2000);
+}
+
+function  uploadImages(allFiles){
+
+    const formData = new FormData;
+   const selectedFile = allFiles[0];
+    formData.append("img",selectedFile);
+
+
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener('readystatechange',(evt)=>{
+        if(xhr.readyState===4 && xhr.status===201){
+
+        }
+
+      });
+
+        if(imgUpload && btnSaveClick){
+            xhr.open("POST","http://localhost:8080/app/students",true);
+            xhr.send(formData);
+        }
 
 
 }

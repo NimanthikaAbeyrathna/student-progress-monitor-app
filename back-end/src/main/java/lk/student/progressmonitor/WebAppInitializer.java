@@ -2,6 +2,9 @@ package lk.student.progressmonitor;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.ServletRegistration;
+
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
@@ -16,5 +19,12 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};
+    }
+
+    @Override
+    protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+        String tmpDir = System.getProperty("java.io.tmpdir");
+        MultipartConfigElement multipartConfigElement = new MultipartConfigElement(tmpDir);
+        registration.setMultipartConfig(multipartConfigElement);
     }
 }

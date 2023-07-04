@@ -590,10 +590,13 @@ const imgInputElm = (0, _jqueryDefault.default)("#fileInput");
 const tableBodyElm = (0, _jqueryDefault.default)("#tbody");
 const tFootElm = (0, _jqueryDefault.default)("#tFoot");
 const searchElm = (0, _jqueryDefault.default)("#search");
+const tableElm = (0, _jqueryDefault.default)("#tableElement");
 let x = [];
 let update = false;
+let imgUpload = false;
 let btnSaveClick = false;
 let indexVariable;
+let imgFiles = [];
 const inputElements = [
     indexElm,
     UserNameElm,
@@ -603,9 +606,11 @@ const inputElements = [
 ];
 addDataToTable();
 tableBodyElm.on("click", ".delete", (evt)=>{
-    const idElm = (0, _jqueryDefault.default)(evt.target).closest("#tbody").children().children().first();
+    const idElm = (0, _jqueryDefault.default)(evt.target).closest("tr").children().first();
+    console.log(idElm);
     // console.log(idElm);
     const idValue = idElm.text();
+    console.log(idValue);
     deleteElements(idValue);
 });
 tableBodyElm.on("click", ".edit", (evt)=>{
@@ -645,6 +650,12 @@ btnSave.on("click", (evt)=>{
         updateElements(indexVariable);
     }
 });
+imgInputElm.on("change", (evt)=>{
+    imgUpload = true;
+    let files = Array.from(evt.target.files);
+    uploadImages(files);
+});
+console.log(imgFiles);
 inputElements.forEach((elements)=>{
     elements.on("input", (evt)=>{
         elements.closest(".inputElm").find(".errorcode").remove();
@@ -708,6 +719,7 @@ function sendData() {
         if (xhr.readyState === 4 && xhr.status === 201) {
             resetForm();
             addDataToTable();
+            showToast("success", "Saved", "Data has been saved");
         }
     });
     xhr.open("POST", "http://localhost:8080/app/students/save", true);
@@ -731,7 +743,7 @@ function addDataToTable() {
             tableBodyElm.empty();
             const responseObject = JSON.parse(xhr.responseText);
             if (responseObject.length) tFootElm.remove();
-            else tableBodyElm.append(tFootElm);
+            else tableElm.append(tFootElm);
             responseObject.forEach((responses)=>{
                 tableBodyElm.append(`
            <tr>
@@ -769,9 +781,7 @@ function addDataToTable() {
 function deleteElements(value) {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
-    // if(xhr.readyState===4 && xhr.status===204){
-    //
-    // }
+        if (xhr.readyState === 4 && xhr.status === 204) showToast("warning", "DELETE", "Selected data has been deleted");
     });
     xhr.open("DELETE", `http://localhost:8080/app/students/${value}`, true);
     xhr.send();
@@ -796,7 +806,9 @@ function updateElements(studentIndexNo) {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
         if (xhr.readyState === 4 && xhr.status === 202) {
+            const responseObject = JSON.parse(xhr.responseText);
             resetForm();
+            showToast("success", "Updated", "Saved data has been updated");
             console.log(btnSaveClick);
             addDataToTable();
         }
@@ -805,6 +817,41 @@ function updateElements(studentIndexNo) {
         xhr.open("PATCH", `http://localhost:8080/app/students/${indexVariable}`, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(JSON.stringify(studentDetails));
+    }
+}
+function showToast(toastType, header, message) {
+    const toast = (0, _jqueryDefault.default)("#toast .toast");
+    toast.removeClass("text-bg-success", "text-bg-warning", "text-bg-danger");
+    switch(toastType){
+        case "success":
+            toast.addClass("text-bg-success");
+            break;
+        case "warning":
+            toast.addClass("text-bg-warning");
+            break;
+        case "error":
+            toast.addClass("text-bg-danger");
+            break;
+        default:
+    }
+    (0, _jqueryDefault.default)("#toast .toast-header > strong").text(header);
+    (0, _jqueryDefault.default)("#toast .toast-body").text(message);
+    toast.addClass("show");
+    setTimeout(function() {
+        toast.removeClass("show");
+    }, 2000);
+}
+function uploadImages(allFiles) {
+    const formData = new FormData;
+    const selectedFile = allFiles[0];
+    formData.append("img", selectedFile);
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", (evt)=>{
+        xhr.readyState === 4 && xhr.status;
+    });
+    if (imgUpload && btnSaveClick) {
+        xhr.open("POST", "http://localhost:8080/app/students", true);
+        xhr.send(formData);
     }
 }
 
