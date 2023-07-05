@@ -814,6 +814,8 @@ function updateElements(studentIndexNo) {
         }
     });
     if (update && btnSaveClick) {
+        console.log(update);
+        console.log(btnSaveClick);
         xhr.open("PATCH", `http://localhost:8080/app/students/${indexVariable}`, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(JSON.stringify(studentDetails));
@@ -847,7 +849,9 @@ function uploadImages(allFiles) {
     formData.append("img", selectedFile);
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
-        xhr.readyState === 4 && xhr.status;
+        if (xhr.readyState === 4 && xhr.status === 201) {
+            const listOfImageUrls = JSON.parse(xhr.responseText);
+        }
     });
     if (imgUpload && btnSaveClick) {
         xhr.open("POST", "http://localhost:8080/app/students", true);

@@ -299,6 +299,8 @@ function updateElements(studentIndexNo){
     });
 
    if(update && btnSaveClick){
+       console.log(update);
+       console.log(btnSaveClick);
        xhr.open("PATCH",`http://localhost:8080/app/students/${indexVariable}`, true);
        xhr.setRequestHeader('Content-Type', 'application/json');
        xhr.send(JSON.stringify(studentDetails));
@@ -340,6 +342,8 @@ function  uploadImages(allFiles){
     const xhr = new XMLHttpRequest();
     xhr.addEventListener('readystatechange',(evt)=>{
         if(xhr.readyState===4 && xhr.status===201){
+            const listOfImageUrls = JSON.parse(xhr.responseText);
+
 
         }
 
