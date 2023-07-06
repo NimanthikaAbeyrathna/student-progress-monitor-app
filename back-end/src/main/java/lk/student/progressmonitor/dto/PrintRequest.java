@@ -5,19 +5,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class PrintRequest {
+    @NotEmpty(message = "ID can't be null or empty")
     private  String printRequestId;
-    @NotEmpty(message = "class can't be null or empty")
     private String printRequestClass;
-    @NotEmpty(message = "year can't be null or empty")
+    @NotNull(message = "year can't be null or empty")
     private int printRequestYear;
-    @NotEmpty(message = "semester can't be null or empty")
+    @NotNull(message = "semester can't be null or empty")
     private int printRequestSemester;
-    @NotEmpty(message = "grade can't be null or empty")
+    @NotNull(message = "grade can't be null or empty")
     private int printRequestGrade;
 
 }

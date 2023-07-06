@@ -671,6 +671,14 @@ btnSave.on("click", ()=>{
                     if (xhr.status === 204) {
                         (0, _mainJs.showToast)("success", "Updated", "studentMark has been updated successfully");
                         btnSave.text("Save");
+                        yearSelection.val("");
+                        semesterSelection.val("");
+                        gradeSelection.val("");
+                        classSelection.val("");
+                        subjectSelection.val("");
+                        indexNoInputElm.val("");
+                        marksInputElm.val("");
+                        yearSelection.focus();
                         getStudentMarks();
                         updateStudentMarkId = null;
                     } else (0, _mainJs.showToast)("error", "Failed", "Failed to update the studentMark, try again!");
@@ -726,6 +734,7 @@ function getStudentMarks() {
                         </td>
                     </tr>`);
                 });
+                if (studentMarkList.length === 0) (0, _jqueryDefault.default)("tfoot").show();
             } else {
                 (0, _jqueryDefault.default)("tfoot").show();
                 (0, _mainJs.showToast)("error", "Failed", "Failed to load student marks");

@@ -3,6 +3,7 @@ main {
 }
 
 #left-div {
+  background-color: #ff69b4;
   justify-content: left;
   width: 30vw;
   height: 100vh;
@@ -10,10 +11,12 @@ main {
 }
 
 #right-div {
+  background-color: #0dcaf0;
   justify-content: right;
   width: 70vw;
   height: 100vh;
   padding: 20px 20px 70px;
+  overflow-x: auto;
 }
 
 .form-control {
@@ -43,13 +46,36 @@ table {
 
 .edit:hover {
   color: #0a58ca;
+  cursor: pointer;
 }
 
 .delete:hover {
   color: red;
+  cursor: pointer;
 }
 
 @media (width <= 800px) {
+  #left-div {
+    font-size: 10px;
+  }
+
+  .form-select {
+    height: 15px;
+  }
+
+  #indexNoInput, #marksInput {
+    height: 15px;
+    font-size: 10px;
+  }
+
+  #save, #clear {
+    width: 50px;
+    height: 20px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 100%;
+  }
+
   table {
     font-size: 10px;
   }
@@ -67,12 +93,13 @@ table {
 
   #right-div {
     width: 100%;
-    margin-left: 20px;
+    margin-top: 50px;
     padding: 5px;
   }
 
   table {
     font-size: 10px;
+    overflow-x: auto;
   }
 }
 

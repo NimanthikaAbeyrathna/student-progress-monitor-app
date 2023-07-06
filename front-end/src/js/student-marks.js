@@ -111,6 +111,14 @@ btnSave.on('click', () => {
                     if (xhr.status === 204) {
                         showToast('success', 'Updated', 'studentMark has been updated successfully');
                         btnSave.text('Save');
+                        yearSelection.val('');
+                        semesterSelection.val('');
+                        gradeSelection.val('');
+                        classSelection.val('');
+                        subjectSelection.val('');
+                        indexNoInputElm.val('');
+                        marksInputElm.val('');
+                        yearSelection.focus();
                         getStudentMarks();
                         updateStudentMarkId=null;
 
@@ -178,6 +186,9 @@ function getStudentMarks() {
                         </td>
                     </tr>`);
                 });
+                if (studentMarkList.length===0){
+                    $('tfoot').show();
+                }
 
             } else {
 

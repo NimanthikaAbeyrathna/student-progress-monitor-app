@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 @Data
@@ -12,7 +13,6 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 public class Grade {
     private int id;
-    @NotEmpty(message = "Grade can't be null or empty")
-    @Pattern(regexp = "([1-9]|1[0-3])", message = "Invalid grade")
+    @NotNull(message = "Grade can't be null or empty")
     private int grade;
 }

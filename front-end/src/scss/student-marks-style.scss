@@ -6,6 +6,7 @@ main{
   width: calc((100vw/5)*1.5);
   justify-content: left;
   padding: 20px 20px 70px;
+  background-color: hotpink;
 
 }
 #right-div{
@@ -13,6 +14,8 @@ main{
   width: calc((100vw/5)*3.5);
   justify-content: right;
   padding: 20px 20px 70px;
+  background-color: #0dcaf0;
+  overflow-x: auto;
 }
 
 .form-control {
@@ -40,16 +43,38 @@ table{
 }
 .edit:hover{
   color: #0a58ca;
+  cursor: pointer;
 }
 .delete:hover{
   color: red;
+  cursor: pointer;
 }
 
 
 @media (max-width: 800px) {
+  #left-div{
+    font-size: 10px;
+  }
+  .form-select {
+    height: 15px;
+  }
+  #indexNoInput,#marksInput{
+    height: 15px;
+    font-size: 10px;
+
+  }
+  #save, #clear{
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    line-height: 100%;
+  }
+
   table{
     font-size: 10px;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -63,13 +88,15 @@ table{
 
   }
   #right-div{
-    margin-left: 20px;
+
+    margin-top: 50px;
     padding: 5px;
     width: 100%;
   }
 
   table{
     font-size: 10px;
+    overflow-x: auto;
   }
 
 }

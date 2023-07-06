@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 @Data
@@ -12,7 +14,6 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 public class Year {
     private int id;
-    @NotEmpty(message = "Year can't be null or empty")
-    @Pattern(regexp = "\\d{4}", message = "Invalid year")
+    @NotNull(message = "Year can't be null or empty")
     private int year;
 }
