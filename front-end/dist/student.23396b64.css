@@ -104,4 +104,10 @@ table {
   scale: 1.1;
 }
 
+.trash {
+  position: absolute;
+  bottom: 60px;
+  left: 320px;
+}
+
 /*# sourceMappingURL=student.23396b64.css.map */

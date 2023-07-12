@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.xml.SimpleTransformErrorListener;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -53,46 +54,59 @@ public class Students {
  }
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public List<String> saveImageOfStudents(@RequestPart("img")List<Part> Files, UriComponentsBuilder urlBuilder){
-        ArrayList<String> imageUrlList=new ArrayList<>();
-
-
-        if (Files != null) {
+    public ResponseEntity<?> saveImageOfStudents(@RequestPart("img") List<Part> files, UriComponentsBuilder urlBuilder) {
+        if (files != null && !files.isEmpty()) {
+            Part imageFile = files.get(0);
             String imgDirectPath = servletContext.getRealPath("/images");
-            for (Part imageFile : Files) {
-                String imageFilePath = new File(imgDirectPath, imageFile.getSubmittedFileName()).getAbsolutePath();
-                File fileDir = new File(imgDirectPath);
+            String imageFilePath = new File(imgDirectPath, imageFile.getSubmittedFileName()).getAbsolutePath();
+            File fileDir = new File(imgDirectPath);
 
-
-
-                if (!fileDir.exists()) {
-                    if (fileDir.mkdirs()) {
-                        System.out.println("Directory created successfully: " + fileDir.getAbsolutePath());
-                    } else {
-                        System.out.println("Failed to create the directory: " + fileDir.getAbsolutePath());
-
-                    }
+            if (!fileDir.exists()) {
+                if (fileDir.mkdirs()) {
+                    System.out.println("Directory created successfully: " + fileDir.getAbsolutePath());
+                } else {
+                    System.out.println("Failed to create the directory: " + fileDir.getAbsolutePath());
                 }
+            }
 
-                try {
-                    imageFile.write(imageFilePath);
-                    UriComponentsBuilder cloneBuilder = urlBuilder.cloneBuilder();
-                    String imageUrl = cloneBuilder.
-                            pathSegment("images", imageFile.getSubmittedFileName()).toUriString();//images== place where image store
-                    imageUrlList.add(imageUrl);
 
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            try {
+                imageFile.write(imageFilePath);
+                UriComponentsBuilder cloneBuilder = urlBuilder.cloneBuilder();
+                String imageUrl = cloneBuilder.pathSegment("images", imageFile.getSubmittedFileName()).toUriString();
+                System.out.println(imageUrl);
+                return new ResponseEntity<>(imageUrl,HttpStatus.CREATED);
 
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
-        return imageUrlList;
+
+        return ResponseEntity.badRequest().body("No image provided");
     }
 
+    @GetMapping("/images")
+    public ResponseEntity<?> getImage(@RequestParam(value = "q",required = false)String query ,UriComponentsBuilder uriComponentsBuilder) {
+        String[] imgList = new String[1];
+        String imgDirectParth = servletContext.getRealPath("/images");
+        File filePath = new File(imgDirectParth);
+        String[] imageNames = filePath.list();
+        System.out.println("query: "+query);
+        System.out.println("imageName: "+ imageNames);
+        for (String imageName : imageNames) {
+            System.out.println(imageName);
+            if (query!=null  && query.equals(imageName)) {
+                System.out.println("inside if");
+                UriComponentsBuilder cloneBuilder = uriComponentsBuilder.cloneBuilder();
+                String url = cloneBuilder.pathSegment("images", imageName).toUriString();
+                imgList[0] = url;
+                System.out.println("url" + imgList[0]);
+                return new ResponseEntity<>(imgList, HttpStatus.OK);
+            }
 
-
-
+        }
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
     @GetMapping
     public ResponseEntity<?> getAllStudents(@RequestParam(value = "q",required = false)String query) {

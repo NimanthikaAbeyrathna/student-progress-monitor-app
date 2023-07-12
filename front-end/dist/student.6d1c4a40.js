@@ -591,11 +591,16 @@ const tableBodyElm = (0, _jqueryDefault.default)("#tbody");
 const tFootElm = (0, _jqueryDefault.default)("#tFoot");
 const searchElm = (0, _jqueryDefault.default)("#search");
 const tableElm = (0, _jqueryDefault.default)("#tableElement");
+const imgInput = (0, _jqueryDefault.default)("#imgInput");
 let x = [];
 let update = false;
 let imgUpload = false;
 let btnSaveClick = false;
+let getImage = false;
 let indexVariable;
+let selectedFile;
+let fileName;
+let files;
 let imgFiles = [];
 const inputElements = [
     indexElm,
@@ -605,6 +610,9 @@ const inputElements = [
     guaranteeContactElm
 ];
 addDataToTable();
+(0, _jqueryDefault.default)(document).on("click", ".trash", function(evt) {
+    alert("ok");
+});
 tableBodyElm.on("click", ".delete", (evt)=>{
     const idElm = (0, _jqueryDefault.default)(evt.target).closest("tr").children().first();
     console.log(idElm);
@@ -645,17 +653,14 @@ btnAddImg.on("click", (evt)=>{
 btnSave.on("click", (evt)=>{
     btnSaveClick = true;
     if (!update) sendData();
-    else {
-        console.log("inside else");
-        updateElements(indexVariable);
-    }
+    else updateElements(indexVariable);
 });
 imgInputElm.on("change", (evt)=>{
     imgUpload = true;
-    let files = Array.from(evt.target.files);
+    files = evt.target.files;
+    // console.log(files);
     uploadImages(files);
 });
-console.log(imgFiles);
 inputElements.forEach((elements)=>{
     elements.on("input", (evt)=>{
         elements.closest(".inputElm").find(".errorcode").remove();
@@ -778,6 +783,25 @@ function addDataToTable() {
     xhr.open("GET", `http://localhost:8080/app/students?q=${query}`, true, query);
     xhr.send();
 }
+function addImages() {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", (evt)=>{
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const responseUrls = JSON.parse(xhr.response);
+            imgInput.css({
+                "background-image": `url(${responseUrls[0]})`,
+                "background-size": "cover",
+                "background-repeat": "no-repeat"
+            });
+            imgInput.append(`<div class="trash"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+  <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+</svg></div>`);
+        }
+    });
+    xhr.open("GET", `http://localhost:8080/app/students/images?q=${fileName}`, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send();
+}
 function deleteElements(value) {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
@@ -814,8 +838,6 @@ function updateElements(studentIndexNo) {
         }
     });
     if (update && btnSaveClick) {
-        console.log(update);
-        console.log(btnSaveClick);
         xhr.open("PATCH", `http://localhost:8080/app/students/${indexVariable}`, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(JSON.stringify(studentDetails));
@@ -844,17 +866,21 @@ function showToast(toastType, header, message) {
     }, 2000);
 }
 function uploadImages(allFiles) {
-    const formData = new FormData;
+    const formData = new FormData();
     const selectedFile = allFiles[0];
-    formData.append("img", selectedFile);
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
-        if (xhr.readyState === 4 && xhr.status === 201) {
-            const listOfImageUrls = JSON.parse(xhr.responseText);
+        if (xhr.status === 201 && xhr.readyState === 4) {
+            const url = xhr.responseText;
+            fileName = url.substring(url.lastIndexOf("/") + 1);
+            console.log("inside uploadImages");
+            addImages();
         }
     });
-    if (imgUpload && btnSaveClick) {
+    if (imgUpload) {
+        formData.append("img", selectedFile);
         xhr.open("POST", "http://localhost:8080/app/students", true);
+        console.log("formdat:" + formData);
         xhr.send(formData);
     }
 }
