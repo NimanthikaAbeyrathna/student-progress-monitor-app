@@ -46,7 +46,15 @@ public class Students {
          stm.setString(5,studentDTO.getGuaranteeName());
          stm.setString(6,studentDTO.getGuaranteeContact());
          stm.executeUpdate();
-        return new  ResponseEntity<>(HttpStatus.CREATED);
+
+         if(studentDTO.getFileName()!=null){
+
+         PreparedStatement stm1 = connection.prepareStatement("INSERT INTO imageUrl (indexNumber, url) VALUES (?,?)");
+         stm1.setString(1,studentDTO.getStudentIndexNo());
+         stm1.setString(2,studentDTO.getFileName());
+         stm1.executeUpdate();
+         }
+         return new  ResponseEntity<>(HttpStatus.CREATED);
      } catch (SQLException e) {
          e.printStackTrace();
          throw new RuntimeException(e);
@@ -108,6 +116,26 @@ public class Students {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @DeleteMapping("/images/{studentImage:.+}")
+    public ResponseEntity<?> deleteImages(@PathVariable String studentImage){
+
+        String imgDirectParth = servletContext.getRealPath("/images");
+        File filePath = new File(imgDirectParth);
+        String[] imageName = filePath.list();// return names of the images
+        if(imageName!=null){
+            for (String image : imageName) {
+                if (image.equals(studentImage)) {
+                    File imgFile = new File(filePath,image); // create new file for particular image
+                    boolean delete = imgFile.delete();
+
+                    if(delete){
+                    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                    }
+                }
+            }
+        }
+          return new ResponseEntity<>(HttpStatus.OK);
+    }
     @GetMapping
     public ResponseEntity<?> getAllStudents(@RequestParam(value = "q",required = false)String query) {
 
@@ -139,7 +167,7 @@ public class Students {
                     String guaranteeName = rst.getString("guaranteeName");
                     String guaranteeContact = rst.getString("guaranteeContact");
 
-                    StudentDTO studentDTO1 = new StudentDTO(indexNumber, fullName, address, genderAsDTO, guaranteeName, guaranteeContact);
+                    StudentDTO studentDTO1 = new StudentDTO(indexNumber, fullName, address, genderAsDTO, guaranteeName, guaranteeContact,null);
                     studentList.add(studentDTO1);
                 }
                 return new ResponseEntity<>(studentList, HttpStatus.OK);
@@ -154,11 +182,33 @@ public class Students {
     @DeleteMapping("/{studentIndexNo}")
     public ResponseEntity<?> deleteAllStudents(@PathVariable String studentIndexNo ){
 
+
         try {
             Connection connection = dataSource.getConnection();
+            PreparedStatement stm3 = connection.prepareStatement("SELECT * FROM imageUrl WHERE indexNumber=?");
+            stm3.setString(1,studentIndexNo);
+            ResultSet resultSet = stm3.executeQuery();
+
+            if(resultSet.next()){
+                String url = resultSet.getString("url");
+                if(url!=null){
+                    deleteImages(url);
+                }
+            }
+
+            resultSet.close();
+            stm3.close();
+            PreparedStatement stm1 = connection.prepareStatement("DELETE FROM imageUrl WHERE indexNumber=?");
+            stm1.setString(1,studentIndexNo);
+            stm1.executeUpdate();
+            stm1.close();
+
             PreparedStatement stm = connection.prepareStatement("DELETE FROM student WHERE student_index_no=?");
             stm.setString(1,studentIndexNo);
             stm.executeUpdate();
+            stm.close();
+
+            connection.close();
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -110,4 +110,10 @@ table {
   left: 320px;
 }
 
+.trash:hover {
+  color: red;
+  cursor: pointer;
+  scale: 1.2;
+}
+
 /*# sourceMappingURL=student.23396b64.css.map */

@@ -20,6 +20,7 @@ let update = false;
 let imgUpload = false;
 let btnSaveClick = false;
 let getImage = false;
+let deleteImage = true; // Flag to determine if the image should be deleted
 let indexVariable;
 let selectedFile;
 let fileName;
@@ -33,7 +34,8 @@ addDataToTable();
 
 
 $(document).on('click', '.trash', function(evt) {
-    alert("ok");
+    clearImage();
+    $(this).remove();
 });
 tableBodyElm.on('click', '.delete', (evt) => {
 
@@ -83,15 +85,25 @@ btnAddImg.on('click', (evt) => {
 
 });
 btnSave.on('click', (evt) => {
+
     btnSaveClick = true;
+    imgInput.css({"background-image":`url()`});
+    imgInput.find('.trash').remove();
     if (!update) {
         sendData();
-        //uploadImages(files);
+        deleteImage=false;
+        location.reload(); //to reload the web page
 
     } else {
         updateElements(indexVariable);
     }
 
+});
+
+window.addEventListener('beforeunload', function(event) {   //when refresh the page this listner start to working
+    if (deleteImage) {
+        clearImage();
+    }
 });
 
 imgInputElm.on('change', (evt) => {
@@ -108,12 +120,10 @@ inputElements.forEach(elements => {
     });
 });
 
-
 function validation() {
     let validate = true;
 
     inputElements.forEach(elements => {
-        console.log("ok")
         elements.closest('.inputElm').find('.errorcode').remove();
     });
 
@@ -177,7 +187,7 @@ function sendData() {
 
     const studentInformation = {
         studentIndexNo, fullName, address, gender: genderElm
-        , guaranteeName, guaranteeContact
+        , guaranteeName, guaranteeContact,fileName
     };
 
 
@@ -393,5 +403,23 @@ function uploadImages(allFiles) {
         console.log('formdat:' + formData);
         xhr.send(formData);
     }
+}
+
+
+function clearImage(){
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange',(evt)=>{
+        if(xhr.status===204 &&  xhr.readyState===4){
+            imgInput.css({"background-image":`url()`});
+
+        }
+    });
+
+    console.log(fileName);
+    xhr.open('DELETE',`http://localhost:8080/app/students/images/${fileName}`);
+    xhr.send();
+
 }
 

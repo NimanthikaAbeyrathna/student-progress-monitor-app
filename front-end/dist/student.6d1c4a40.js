@@ -597,6 +597,7 @@ let update = false;
 let imgUpload = false;
 let btnSaveClick = false;
 let getImage = false;
+let deleteImage = true; // Flag to determine if the image should be deleted
 let indexVariable;
 let selectedFile;
 let fileName;
@@ -611,7 +612,8 @@ const inputElements = [
 ];
 addDataToTable();
 (0, _jqueryDefault.default)(document).on("click", ".trash", function(evt) {
-    alert("ok");
+    clearImage();
+    (0, _jqueryDefault.default)(this).remove();
 });
 tableBodyElm.on("click", ".delete", (evt)=>{
     const idElm = (0, _jqueryDefault.default)(evt.target).closest("tr").children().first();
@@ -652,8 +654,18 @@ btnAddImg.on("click", (evt)=>{
 });
 btnSave.on("click", (evt)=>{
     btnSaveClick = true;
-    if (!update) sendData();
-    else updateElements(indexVariable);
+    imgInput.css({
+        "background-image": `url()`
+    });
+    imgInput.find(".trash").remove();
+    if (!update) {
+        sendData();
+        deleteImage = false;
+        location.reload(); //to reload the web page
+    } else updateElements(indexVariable);
+});
+window.addEventListener("beforeunload", function(event) {
+    if (deleteImage) clearImage();
 });
 imgInputElm.on("change", (evt)=>{
     imgUpload = true;
@@ -669,7 +681,6 @@ inputElements.forEach((elements)=>{
 function validation() {
     let validate = true;
     inputElements.forEach((elements)=>{
-        console.log("ok");
         elements.closest(".inputElm").find(".errorcode").remove();
     });
     const studentIndexNo = indexElm.val();
@@ -714,7 +725,8 @@ function sendData() {
         address,
         gender: genderElm,
         guaranteeName,
-        guaranteeContact
+        guaranteeContact,
+        fileName
     };
     if (!validation()) return;
     console.log("after validation");
@@ -883,6 +895,17 @@ function uploadImages(allFiles) {
         console.log("formdat:" + formData);
         xhr.send(formData);
     }
+}
+function clearImage() {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", (evt)=>{
+        if (xhr.status === 204 && xhr.readyState === 4) imgInput.css({
+            "background-image": `url()`
+        });
+    });
+    console.log(fileName);
+    xhr.open("DELETE", `http://localhost:8080/app/students/images/${fileName}`);
+    xhr.send();
 }
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["5W3P2","aK5oB"], "aK5oB", "parcelRequire8d29")

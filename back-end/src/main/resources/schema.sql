@@ -16,3 +16,10 @@ CREATE TABLE IF NOT EXISTS student(
     UNIQUE (guaranteeContact)
 
 );
+
+CREATE TABLE IF NOT EXISTS imageUrl(
+    number INT AUTO_INCREMENT PRIMARY KEY ,
+    indexNumber VARCHAR(200) NOT NULL ,
+    url VARCHAR(500),
+    FOREIGN KEY (indexNumber) REFERENCES student(student_index_no)
+);

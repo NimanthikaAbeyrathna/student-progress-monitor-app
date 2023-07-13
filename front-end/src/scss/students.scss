@@ -109,3 +109,9 @@ flex-direction: column;
   left:320px;
   bottom: 60px;
 }
+
+.trash:hover{
+  scale: 1.2;;
+  color: red;
+  cursor: pointer;
+}

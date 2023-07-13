@@ -1,11 +1,11 @@
 9075
 93/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/signUp.html1687846053317626881 0
 94/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/js/signUp.js1687702122679411690 0
-100/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/scss/students.scss1688369456803819663 0
-86/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/scss1688369456811820833 1
+100/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/scss/students.scss1689187646743963928 0
+86/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/scss1689187646755963650 1
 92/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/login.html1687702122695407695 0
 87/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/image1687067976111216494 1
-81/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src1688281122937217711 1
+81/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src1688929606446738627 1
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/sunset-fill.svg1687097271244299167 0
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/music-note.svg1687097271180298570 0
 129/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/align-center.svg1687097270204289472 0
@@ -152,7 +152,7 @@
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/credit-card-2-back-fill.svg1687097270984296743 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/cone.svg1687097270984296743 0
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/calendar2-x-fill.svg1687097270852295512 0
-96/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/js/students.js1688376352716565088 0
+96/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/js/students.js1689271816717457719 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/chevron-expand.svg1687097270924296183 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/calendar-minus.svg1687097270840295401 0
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/file-spreadsheet.svg1687097271124298048 0
@@ -2755,7 +2755,7 @@
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/traversing/var/siblings.js1687097270464291896 0
 112/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/traversing1687097270212289547 1
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/dom-serializer/lib/esm/package.json1687097269920286824 0
-101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.c8945bf4.js1688327265089056602 0
+101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.c8945bf4.js1689268843325747887 0
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/attributes/support.js1687097270476292007 0
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/sign-yield.svg1687097271224298980 0
 112/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/attributes1687097270508292306 1
@@ -2777,7 +2777,7 @@
 111/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/offset.js1687097270404291336 0
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/syntax/node/Url.cjs1687097270444291709 0
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/html5semantic.js1687097270856295550 0
-84/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/js1688376352724565185 1
+84/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/js1689271816725457712 1
 120/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/react-error-overlay/README.md1687097270012287682 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/usb-drive-fill.svg1687097271256299278 0
 139/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/encode.d.ts1687097287016446172 0
@@ -3155,7 +3155,7 @@
 145/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/css-tree/lib/syntax/scope/default.js1687097287364449415 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/modifiers/applyStyles.d.ts1687097270556292753 0
 115/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/cjs/replace/Url.cjs1687097270132288801 0
-101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.18dbc454.js1688327265093056687 0
+101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.18dbc454.js1689268843325747887 0
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/http2.js1687097270856295550 0
 109/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/cjs/usage.cjs1687097270132288801 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/js/src/util/swipe.js1687097270680293909 0
@@ -3778,7 +3778,7 @@
 109/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/is-json/.npmignore1687097269800285706 0
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/dice-2-fill.svg1687097271048297339 0
 138/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/lmdb.h1687097271520301740 0
-103/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.89ac449a.css1688327265045055680 0
+103/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.89ac449a.css1689268843249752005 0
 146/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/sample-bdb.txt1687097271724303641 0
 155/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.th.min.js1687805000611256623 0
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/lexer/prepare-tokens.cjs1687097270392291224 0
@@ -3906,7 +3906,7 @@
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/details.js1687097270756294618 0
 171/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-select/lib/pseudo-selectors/index.js1687097269952287123 0
 158/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-NZ.min.js1687805000587257134 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.e8265c92.css1688327265045055680 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.e8265c92.css1689268843249752005 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/index.js1687097286996445985 0
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/utility-types/dist/mapped-types.d.ts1687097270000287570 0
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/dist/unpacker/region.js1687097271044297302 0
@@ -3997,7 +3997,7 @@
 141/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/source-map/parcel_sourcemap_node/artifacts1687097290076474689 1
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/node_modules/msgpackr/rollup.config.js1687097270072288241 0
 114/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@lezer/common/README.md1687097269940287011 0
-105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.277c8202.js.map1688327265109057021 0
+105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.277c8202.js.map1689268843341747021 0
 107/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/cosmiconfig/dist1687097270688293984 1
 129/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/domhandler/lib1687097287672452285 1
 112/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/posthtml/node_modules1687097268920277503 1
@@ -4038,7 +4038,7 @@
 144/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/domhandler/lib/esm/index.d.ts1687097287672452285 0
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/core/lib/RequestTracker.js1687097283532413701 0
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/dist/css/bootstrap-reboot.css1687097270016287719 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ab0485ab.css1688327264997054676 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ab0485ab.css1689268843249752005 0
 146/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/domutils/lib/esm/traversal.d.ts1687097287024446246 0
 147/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/domutils/lib/esm/manipulation.js1687097287012446134 0
 104/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/source-map-js1687097270036287906 1
@@ -4159,7 +4159,7 @@
 109/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/micromatch/LICENSE1687097269788285594 0
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/cc-square.svg1687097270880295774 0
 149/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-datepicker/js/locales/bootstrap-datepicker.vi.js1687805000647255857 0
-104/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.333b87f1.js.map1688327265109057021 0
+104/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.333b87f1.js.map1689268843341747021 0
 150/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@swc/helpers/_/_class_private_field_loose_base/package.json1687097270828295289 0
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@babel/highlight/node_modules/chalk1687097269892286563 1
 169/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/node/Identifier.js1687097270352290852 0
@@ -4199,7 +4199,7 @@
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/utils/computeOffsets.js1687097270680293909 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/dom-serializer/node_modules/entities/lib1687097286456440952 1
 113/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/xxhash-wasm/types.d.ts1687097269952287123 0
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.e8265c92.css.map1688327265069056183 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.e8265c92.css.map1689268843293749622 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/js/src/util/index.js1687097270588293052 0
 117/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/msgpackr/dist/index.min.js1687097270492292156 0
 109/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@swc/core/spack.js1687097271012297004 0
@@ -4376,7 +4376,7 @@
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/source-map-js/lib/binary-search.js1687097269864286302 0
 119/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/core/var/rhtml.js1687097270432291598 0
 167/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/node/Function.js1687097270316290516 0
-103/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.23396b64.css1688374359017366284 0
+103/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.23396b64.css1689268843249752005 0
 110/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/base-x/package.json1687097269824285930 0
 135/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/node-gyp-build-optional-packages/optional.js1687097269840286078 0
 153/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/posthtml/node_modules/posthtml-parser/dist/location-tracker.js1687097269844286116 0
@@ -4412,7 +4412,7 @@
 110/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/event.js1687097270204289472 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/ordered-binary/rollup.config.js1687097269896286601 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@swc/helpers/lib/_non_iterable_spread.js1687097270584293015 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.464ee2bb.js1688327265089056602 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.464ee2bb.js1689268843325747887 0
 119/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/resolver-default/src1687097275660340330 1
 129/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/popper-base.js.flow1687097269996287533 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/mdn-data/api1687097286768443860 1
@@ -4495,7 +4495,7 @@
 132/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/input-color.js1687097270868295662 0
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/9-circle-fill.svg1687097270172289174 0
 138/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-datepicker/js/bootstrap-datepicker.js1687805000623256368 0
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.56b0b470.js.map1688327265109057021 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.56b0b470.js.map1689268843341747021 0
 137/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/utils/getFreshSideObject.js1687097270712294208 0
 145/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/node_modules/node-addon-api/tools/clang-format.js1687097270056288093 0
 101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/color-name1687097269820285892 1
@@ -4516,7 +4516,7 @@
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/modifiers/offset.js.flow1687097270660293723 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/CX.js1687097270744294506 0
 111/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/msgpackr/SECURITY.md1687097271404300658 0
-101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.bf9ec4a8.css1688327265045055680 0
+101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.bf9ec4a8.css1689268843249752005 0
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/file-x.svg1687097271124298048 0
 161/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/core/test/fixtures/invalid-target-source-not-file/package.json1687097283552413888 0
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/offline-apps.js1687097270976296668 0
@@ -4543,7 +4543,7 @@
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/scss/forms/_form-check.scss1687097271044297302 0
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/dist/css/bootstrap.css.map1687097270868295662 0
 108/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/util/when.js1687097271600302485 0
-107/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.89ac449a.css.map1688327265069056183 0
+107/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.89ac449a.css.map1689268843301749188 0
 105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.e6718fa7.js.map1687892232644748062 0
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/mdn-data/CHANGELOG.md1687097286788444047 0
 119/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/scss/_buttons.scss1687097271020297078 0
@@ -4551,7 +4551,7 @@
 151/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/core/test/fixtures/main-format-mismatch/package.json1687097283552413888 0
 117/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/compressor-raw/src1687097285408431185 1
 124/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/scss/forms/_labels.scss1687097271056297414 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.dee82485.css1688327265001054759 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.dee82485.css1689268843249752005 0
 144/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/domutils/lib/esm/stringify.js1687097287016446172 0
 109/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/sass/sass.node.mjs1687097275356337496 0
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@swc/helpers/esm/_array_with_holes.js1687097270280290181 0
@@ -4559,7 +4559,7 @@
 115/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/dimensions.js1687097270168289136 0
 110/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/dict/dict2.txt1687097271724303641 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/cjs/replace/Dimension.cjs1687097270076288279 0
-105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.a4d2abc6.js.map1688327265109057021 0
+105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.a4d2abc6.js.map1689268843345746804 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/usb-c.svg1687097271256299278 0
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/css-conic-gradients.js1687097270452291784 0
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/lib/syntax/node/Rule.js1687097270780294841 0
@@ -4587,12 +4587,12 @@
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/file-earmark-pdf.svg1687097271108297899 0
 143/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/lib/esm/pseudo-selectors/filters.d.ts.map1687097270136288838 0
 114/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/micromatch/package.json1687097269816285855 0
-93/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.html1688327265045055680 0
+93/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.html1689268843249752005 0
 115/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/js-yaml/lib/type/bool.js1687097269840286078 0
 118/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/utils/src/config.js1687097272264308675 0
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/reporter-cli/test1687097275048334625 1
 137/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/generated1687097287012446134 1
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.dee82485.css.map1688327265029055346 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.dee82485.css.map1689268843293749622 0
 118/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/binary-extensions/readme.md1687097269844286116 0
 137/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/back_exits/backOutRight.css1687097270044287980 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-js/native-browser.js1687097273380319078 0
@@ -4675,7 +4675,7 @@
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/grid-3x3.svg1687097271140298197 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/binary-extensions/binary-extensions.json.d.ts1687097269860286265 0
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/svgo/dist1687097270288290255 1
-105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ee17f6b0.js.map1688327265109057021 0
+105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ee17f6b0.js.map1689268843341747021 0
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/css-tree/lib/syntax/node1687097287828453739 1
 142/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/dist/esm/dom-utils/isTableElement.js1687097270764294692 0
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/node_modules/msgpackr/dist/test.js.map1687097270316290516 0
@@ -4695,7 +4695,7 @@
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/scss/_accordion.scss1687097271008296967 0
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/ruby.js1687097271056297414 0
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/moon-fill.svg1687097271176298533 0
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.464ee2bb.js.map1688327265109057021 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.464ee2bb.js.map1689268843345746804 0
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/index.js.flow1687097269972287309 0
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/lib/utils/url.js1687097270816295177 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/scss/_containers.scss1687097271040297265 0
@@ -4706,15 +4706,15 @@
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/TL.js1687097271088297713 0
 101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.6a08306a.js1687892232588747880 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/utility-types/dist/aliases-and-guards.js1687097269812285818 0
-100/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.333b87f1.js1688327265089056602 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.6b158569.css1688327265045055680 0
+100/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.333b87f1.js1689268843325747887 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.6b158569.css1689268843249752005 0
 153/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/decode_codepoint.d.ts.map1687097286996445985 0
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-image/lib/ImageTransformer.js1687097273540320569 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.843dac01.css1688327264997054676 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.843dac01.css1689268843249752005 0
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@swc/helpers/src/_set.mjs1687097271016297041 0
 129/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/modifiers/flip.d.ts1687097270592293089 0
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/term-size/vendor/macos/.DS_Store1687097269824285930 0
-105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.18dbc454.js.map1688327265109057021 0
+105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.18dbc454.js.map1689268843345746804 0
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/box-arrow-in-left.svg1687097270764294692 0
 129/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/droplet-fill.svg1687097271060297452 0
 139/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/file-earmark-plus-fill.svg1687097271112297936 0
@@ -4761,7 +4761,7 @@
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/dist/esm/modifiers/arrow.js1687097270772294767 0
 137/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/webkit-user-drag.js1687097271108297899 0
 119/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/chrome-trace-event/README.md1687097269860286265 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.56b0b470.js1688327265089056602 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.56b0b470.js1689268843325747887 0
 115/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/cache/index.d.ts1687097285624433199 0
 141/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@babel/highlight/node_modules/color-name/README.md1687097287668452248 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/BI.js1687097270248289882 0
@@ -4784,7 +4784,7 @@
 139/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/dom-utils/isTableElement.d.ts1687097270536292567 0
 141/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/encode.js.map1687097287000446023 0
 110/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/is-json/.travis.yml1687097269856286228 0
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.6d1c4a40.js.map1688376352876567016 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.6d1c4a40.js.map1689271816885457559 0
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/chokidar/lib/fsevents-handler.js1687097269844286116 0
 143/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/encode.d.ts.map1687097287000446023 0
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/badge-sd-fill.svg1687097270444291709 0
@@ -4825,7 +4825,7 @@
 101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.c9d81428.js1687892232588747880 0
 112/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-swc1687097278168363707 1
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/dependencies/lmdb/libraries1687097270564292828 1
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.6b158569.css.map1688327265069056183 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.6b158569.css.map1689268843293749622 0
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/lib/createPopper.js1687097269908286713 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/css-tree/cjs/data-patch.cjs1687097286800444158 0
 110/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/ajax/var1687097270436291635 1
@@ -4840,7 +4840,7 @@
 162/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/esm/generated/decode-data-xml.d.ts1687097287012446134 0
 141/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/lib/esm/pseudo-selectors/pseudos.js.map1687097270208289510 0
 114/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/jquery/src/var/slice.js1687097270468291933 0
-113/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/bootstrap-icons.07ffb6de.woff21688327264929053251 0
+113/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/bootstrap-icons.07ffb6de.woff21689268843149757422 0
 124/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/lib/esm/compile.js.map1687097270136288838 0
 100/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@mischnic1687097268916277465 1
 152/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/lib/generated/encode-html.js1687097286996445985 0
@@ -4857,14 +4857,14 @@
 103/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/mdn-data/api1687097270040287943 1
 151/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/lib/svgo/plugins.js1687097270176289211 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/domutils/lib/stringify.d.ts.map1687097269984287421 0
-105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.bf9ec4a8.css.map1688327265069056183 0
+105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/login.bf9ec4a8.css.map1689268843293749622 0
 154/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/csso/lib/clean/utils.js1687097270236289770 0
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/facebook.svg1687097271092297750 0
 135/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-postcss/src/constants.js1687097271588302373 0
-105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.c8945bf4.js.map1688327265109057021 0
+105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.c8945bf4.js.map1689268843345746804 0
 135/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/bookmark-star-fill.svg1687097270656293686 0
 111/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/nullthrows/README.md1687097269852286191 0
-105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.fd40e163.js.map1688327265109057021 0
+105/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.fd40e163.js.map1689268843345746804 0
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/css-tree/cjs/utils1687097287168447588 1
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/entities/readme.md1687097287012446134 0
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/chalk/source/templates.js1687097269832286004 0
@@ -4911,7 +4911,7 @@
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/js/dist/base-component.js1687097270360290926 0
 132/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/cjs/restructure/3-disjoinRuleset.cjs1687097269856286228 0
 141/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/domutils/lib/legacy.js.map1687097287020446209 0
-95/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.html1688327265045055680 0
+95/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.html1689268843285750055 0
 148/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/css-tree/lib/lexer/generic-an-plus-b.js1687097287368449452 0
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/workers/lib/process/ProcessChild.js1687097272732313038 0
 111/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/is-json/package.json1687097269788285594 0
@@ -4991,7 +4991,7 @@
 143/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@swc/helpers/lib/_class_static_private_method_get.js1687097270432291598 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/BB.js1687097270220289621 0
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/cosmiconfig/dist/getDirectory.d.ts1687097270684293947 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.6d1c4a40.js1688376352872566967 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.6d1c4a40.js1689271816881457561 0
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/js/dist/util/config.js.map1687097270972296631 0
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/chokidar/types/index.d.ts1687097269960287198 0
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/syntax/node/index-generate.cjs1687097270268290068 0
@@ -5102,7 +5102,7 @@
 133/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/syntax/node/ClassSelector.cjs1687097270020287757 0
 129/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/scss/mixins/_pagination.scss1687097271060297452 0
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/json-parse-even-better-errors/README.md1687097269840286078 0
-94/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.html1688327265045055680 0
+94/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.html1689268843249752005 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/node_modules/domutils/lib/index.js1687097287012446134 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/ME.js1687097270944296370 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/x-doc-messaging.js1687097271116297974 0
@@ -5112,7 +5112,7 @@
 138/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/resolver-default/lib/DefaultResolver.js1687097275660340330 0
 100/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/dist1687097270392291224 1
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/slack.svg1687097271228299017 0
-82/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist1688376352876567016 1
+82/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist1689271816885457559 1
 118/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/ordered-binary/package.json1687097269920286824 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/arrows-angle-expand.svg1687097270392291224 0
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/sliding_exits/slideOutLeft.css1687097270292290292 0
@@ -5214,7 +5214,7 @@
 142/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/credential-management.js1687097270416291448 0
 115/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-sass1687097272632312105 1
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@mischnic/json-sourcemap/dist/index.d.ts1687097269844286116 0
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ab0485ab.css.map1688327265013055010 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ab0485ab.css.map1689268843293749622 0
 124/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/cosmiconfig/dist/loaders.d.ts.map1687097270652293648 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-svg/src/SVGTransformer.js1687097272352309495 0
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-select/lib/attributes.d.ts.map1687097270116288651 0
@@ -5311,7 +5311,7 @@
 117/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/node-addon-api/common.gypi1687097269816285855 0
 166/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/syntax/node/Declaration.js1687097270260289994 0
 149/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/css-tree/lib/syntax/node/UnicodeRange.js1687097287828453739 0
-94/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/student.html1688281122929217616 0
+94/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/student.html1688929606418739464 0
 113/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/tslib/modules/index.js1687097270432291598 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@babel/code-frame/package.json1687097286132437933 0
 119/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/abortcontroller-polyfill/src1687097269996287533 1
@@ -5459,7 +5459,7 @@
 127/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/syntax/pseudo/index.cjs1687097270296290329 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/node-resolver-core/lib1687097279528376383 1
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/sass/types/exception.d.ts1687097275360337534 0
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.d95b80a3.css.map1688327265069056183 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.d95b80a3.css.map1689268843293749622 0
 114/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/braces/lib/constants.js1687097269904286676 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/animate.css1687097269956287160 0
 138/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@babel/helper-validator-identifier/lib/index.js1687097286304439536 0
@@ -6006,7 +6006,7 @@
 115/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/supports-color/readme.md1687097269836286042 0
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/person-lines-fill.svg1687097271192298682 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap/scss/mixins/_color-scheme.scss1687097271036297228 0
-101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.fd40e163.js1688327265089056602 0
+101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.fd40e163.js1689268843329747671 0
 121/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/htmlparser2/lib/Tokenizer.d.ts1687097270004287608 0
 104/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/msgpackr/dist1687097271360300248 1
 124/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/runtime-react-refresh/lib1687097274984334029 1
@@ -6238,7 +6238,7 @@
 107/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/src/txn.cpp1687097271424300844 0
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/node_modules/css-tree/cjs/walker1687097286824444382 1
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/node-releases/data/release-schedule1687097269904286676 1
-101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.277c8202.js1688327265089056602 0
+101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.277c8202.js1689268843325747887 0
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/lmdb/node_modules/msgpackr/iterators.js1687097270048288018 0
 108/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/csso/package.json1687097270400291299 0
 141/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@popperjs/core/dist/esm/modifiers/popperOffsets.js1687097270776294804 0
@@ -6296,7 +6296,7 @@
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/filetype-scss.svg1687097271128298085 0
 137/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/zooming_exits/zoomOutUp.css1687097270340290740 0
 129/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/border-width.svg1687097270756294618 0
-106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.843dac01.css.map1688327265013055010 0
+106/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.843dac01.css.map1689268843293749622 0
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/zooming_exits/zoomOutRight.css1687097270332290665 0
 139/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/zooming_exits/zoomOutDown.css1687097270332290665 0
 118/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/specials1687097270232289733 1
@@ -6313,7 +6313,7 @@
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/SE.js1687097271064297489 0
 108/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/parcel/lib/cli.js1687097270536292567 0
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/reporter-cli/src/logLevels.js1687097275048334625 0
-93/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/index.html1688327265045055680 0
+93/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/index.html1689268843249752005 0
 120/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/lightspeed1687097270228289696 1
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/filter-left.svg1687097271128298085 0
 143/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/animate.css/source/lightspeed/lightSpeedOutRight.css1687097270228289696 0
@@ -6473,7 +6473,7 @@
 148/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/core/test/fixtures/invalid-target-source-not-file1687097283552413888 1
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/calc.js1687097270328290628 0
 102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/js-yaml/bin1687097269984287421 1
-103/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/favicon.8d3427ea.png1688327264653047466 0
+103/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/favicon.8d3427ea.png1689268843201754604 0
 113/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/js-yaml/bin/js-yaml.js1687097269996287533 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/QA.js1687097271040297265 0
 132/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/utils/test/input/config/config.js1687097272264308675 0
@@ -7098,7 +7098,7 @@
 119/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/utils/clone.cjs1687097270044287980 0
 134/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/skip-forward-fill.svg1687097271228299017 0
 107/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/profiler1687097276104344469 1
-112/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/bootstrap-icons.c616c025.woff1688327264945053586 0
+112/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/bootstrap-icons.c616c025.woff1689268843149757422 0
 119/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/utils/index.cjs1687097270312290479 0
 118/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/data-patch.cjs1687097270136288838 0
 113/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/generator1687097270428291560 1
@@ -7215,7 +7215,7 @@
 123/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/term-size/vendor/macos/term-size1687097269864286302 0
 152/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-datepicker/js/locales/bootstrap-datepicker.en-GB.js1687805000627256282 0
 117/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/term-size/vendor/.DS_Store1687097269796285669 0
-92/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/index.html1687795293132273822 0
+92/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/src/index.html1688380101073830716 0
 148/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-svgo/node_modules/csso/lib/clean/Raw.js1687097270220289621 0
 109/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/msgpackr/unpack.js1687097270584293015 0
 124/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/reporter-cli/src/emoji.js1687097275048334625 0
@@ -7431,7 +7431,7 @@
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/ET.js1687097270812295140 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/PR.js1687097271016297041 0
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/dotenv/lib/cli-options.js1687097269896286601 0
-107/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.23396b64.css.map1688374359025366330 0
+107/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/student.23396b64.css.map1689268843293749622 0
 122/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/regions/KH.js1687097270892295885 0
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@babel/highlight/node_modules/chalk/index.js.flow1687097269836286042 0
 116/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/packager-html/src1687097279584376905 1
@@ -7732,7 +7732,7 @@
 139/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/css-widows-orphans.js1687097270728294357 0
 124/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/mp3.js1687097270952296445 0
 139/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/css-default-pseudo.js1687097270488292120 0
-102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.d95b80a3.css1688327265045055680 0
+102/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.d95b80a3.css1689268843249752005 0
 130/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/atob-btoa.js1687097270136288838 0
 137/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/caniuse-lite/data/features/publickeypinning.js1687097271032297191 0
 159/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/function1687097270572292902 1
@@ -8293,7 +8293,7 @@
 125/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/markdown-ansi/package.json1687097279612377166 0
 131/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/hash/parcel-hash.darwin-x64.node1687097284448422238 0
 140/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/hash/parcel-hash.linux-arm-gnueabihf.node1687097285520432229 0
-101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.a4d2abc6.js1688327265089056602 0
+101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.a4d2abc6.js1689268843329747671 0
 111/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/ordered-binary/tests1687097269904286676 1
 128/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/css-tree/cjs/syntax/node/Function.cjs1687097270220289621 0
 135/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/hash/parcel-hash.linux-x64-musl.node1687097289444468799 0
@@ -8916,7 +8916,7 @@
 126/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-postcss/LICENSE1687097271584302336 0
 144/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-postcss/lib/PostCSSTransformer.js1687097271588302373 0
 141/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/bootstrap-icons/icons/file-earmark-binary-fill.svg1687097271100297824 0
-101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ee17f6b0.js1688327265089056602 0
+101/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/dist/signUp.ee17f6b0.js1689268843325747887 0
 136/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-postcss/lib/loadConfig.js1687097271588302373 0
 150/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/common1687097270540292604 1
 144/home/gayantha/Documents/DEP10/Phase 2/student-progress-monitor-app/front-end/node_modules/@parcel/transformer-postcss/src/PostCSSTransformer.js1687097271588302373 0

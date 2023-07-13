@@ -32,7 +32,7 @@ public class StudentDTO {
     @NotBlank
     @Pattern(regexp = "\\d{3}-\\d{7}")
      private String guaranteeContact;
-
+    private String fileName;
 
 //    public Date getParsedDate() {
 //        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
