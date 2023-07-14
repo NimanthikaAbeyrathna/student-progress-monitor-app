@@ -178,6 +178,25 @@ public class Students {
 
     }
 
+    @GetMapping("/url")
+    public String getUrl(@RequestParam(value = "q",required = false)String query){
+        String url="";
+
+        try {
+            Connection connection = dataSource.getConnection();
+            PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl WHERE indexNumber=?");
+            stm.setString(1,query);
+            ResultSet resultSet = stm.executeQuery();
+            if(resultSet.next()){
+                     url = resultSet.getString("url");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return url;
+    }
+
 
     @DeleteMapping("/{studentIndexNo}")
     public ResponseEntity<?> deleteAllStudents(@PathVariable String studentIndexNo ){
@@ -219,6 +238,16 @@ public class Students {
 
         try {
             Connection connection = dataSource.getConnection();
+
+//            PreparedStatement stm1 = connection.prepareStatement("SELECT *FROM imageUrl WHERE indexNumber=?");
+//            stm1.setString(1,studentIndexNo);
+//            ResultSet resultSet = stm1.executeQuery();
+//            if(resultSet.next()){
+//                String url = resultSet.getString("url");
+//                studentDTO.setFileName(url);
+//            }
+//            stm1.close();
+
             PreparedStatement stm = connection.prepareStatement("UPDATE student  SET fullName=?,address=?,gender=?,guaranteeName=?,guaranteeContact=? WHERE student_index_no=?");
             stm.setString(1,studentDTO.getFullName());
             stm.setString(2,studentDTO.getAddress());
@@ -229,6 +258,8 @@ public class Students {
 
             stm.executeUpdate();
             stm.close();
+
+
             connection.close();
 
             return new ResponseEntity<>(studentDTO,HttpStatus.ACCEPTED);

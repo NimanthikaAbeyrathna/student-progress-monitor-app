@@ -84,6 +84,12 @@
                         Print Student Reports
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a id="logout-link" class="nav-link" href="#">
+                        <i class="bi bi-plug"></i>
+                        Log out
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -92,27 +98,27 @@
                 <div>
                     <h5>Enter Student Details</h5>
                     <form>
-                        <div class="form-floating mb-2 inputElm ">
-                            <input id="index" type="text" class="form-control animate__animated" placeholder="S001" required="">
+                        <div class="form-floating mb-1 inputElm ">
+                            <input id="index" type="text" class="form-control  animate__animated" placeholder="S001" required="">
                             <label>Index</label>
 
                         </div>
 
-                        <div class="form-floating mb-2 inputElm">
+                        <div class="form-floating mb-1 inputElm">
                             <input id="Uname" type="text" class="form-control animate__animated" placeholder="Nimal Kuruppu" required="">
                             <label>Full Name</label>
                         </div>
 
-                        <div class="form-floating mb-2 inputElm">
+                        <div class="form-floating mb-1 inputElm">
                             <input id="address" type="text" class="form-control animate__animated" placeholder="Colombo" required="">
                             <label>Address</label>
                         </div>
-                        <div class="input-group inputElm">
-                            <input type="date" class="form-control animate__animated" id="birthday" placeholder="Birthday of Student">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </div>
-                        </div>
+<!--                        <div class="input-group inputElm">-->
+<!--                            <input type="date" class="form-control animate__animated" id="birthday" placeholder="Birthday of Student">-->
+<!--                            <div class="input-group-addon">-->
+<!--                                <span class="glyphicon glyphicon-calendar"></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
 
                         <div class="sex inputElm">
@@ -131,12 +137,12 @@
                         </div>
 
 
-                        <div class="form-floating mb-2 inputElm">
+                        <div class="form-floating mb-1 inputElm">
                             <input id="Gname" type="text" class="form-control animate__animated" placeholder="Gamage" required="">
                             <label>Guarantee Name</label>
                         </div>
 
-                        <div class="form-floating mb-2 inputElm">
+                        <div class="form-floating mb-1 inputElm">
                             <input id="Gcontact" type="text" class="form-control animate__animated" placeholder="098-0987656" required="">
                             <label>Guarantee Conatct</label>
                         </div>
@@ -152,8 +158,10 @@
                             <input accept="image/*" type="file" id="fileInput" style="display: none">
                         </div>
 
-                        <button id="btnAddImg" type="button" class="btn btn-primary save">Add Image</button>
-                        <button id="save" type="button" class="btn btn-primary save">Save</button>
+                        <div>
+                            <button id="btnAddImg" type="button" class="btn btn-primary save ">Add Image</button>
+                            <button id="save" type="button" class="btn btn-primary save">Save</button>
+                        </div>
                     </form>
                 </div>
             </div>

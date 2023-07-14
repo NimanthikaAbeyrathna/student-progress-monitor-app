@@ -103,15 +103,21 @@ flex-direction: column;
   color: red;
   scale: 1.1;
 }
-
-.trash{
-   position: absolute;
-  left:320px;
-  bottom: 60px;
+#imgInput{
+  position: relative;
 }
 
+
+.trash {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  right: 5px;
+}
 .trash:hover{
-  scale: 1.2;;
+  scale: 1.1;;
   color: red;
   cursor: pointer;
 }
+
+

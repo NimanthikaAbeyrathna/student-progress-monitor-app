@@ -10,7 +10,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import javax.validation.Valid;
@@ -80,12 +82,24 @@ public class signUp {
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
     @GetMapping("/logout")
-    public void logOut(HttpServletRequest request){
+    public String logOut(HttpServletRequest request, HttpServletResponse response){
         HttpSession session = request.getSession(false);
         if(session!=null){
             session.invalidate();
-        }
 
+            Cookie[] cookies = request.getCookies();
+            if (cookies != null) {
+                for (Cookie cookie : cookies) {
+                    if (cookie.getName().equals("DRAgon")) { // Use the configured cookie name
+                        cookie.setMaxAge(0);
+                        cookie.setPath("/"); // Set the correct cookie path if needed
+                        response.addCookie(cookie);
+                        break;
+                    }
+                }
+            }
+        }
+        return "redirect:/login.html";
     }
 
 }

@@ -611,6 +611,25 @@ const inputElements = [
     guaranteeContactElm
 ];
 addDataToTable();
+(0, _jqueryDefault.default)(window).on("resize", adjustTrashPosition);
+(0, _jqueryDefault.default)(document).ready(function() {
+    // Get the logout link element
+    const logoutLink = (0, _jqueryDefault.default)("#logout-link");
+    // Add a click event listener to the logout link
+    logoutLink.on("click", function(event) {
+        event.preventDefault();
+        (0, _jqueryDefault.default).ajax({
+            url: "http://localhost:8080/app/api/v1/adding/logout",
+            method: "GET",
+            success: function(response) {
+                window.location.href = "login.html"; // Redirect the user to the login page
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+    });
+});
 (0, _jqueryDefault.default)(document).on("click", ".trash", function(evt) {
     clearImage();
     (0, _jqueryDefault.default)(this).remove();
@@ -639,6 +658,7 @@ tableBodyElm.on("click", ".edit", (evt)=>{
     guaranteeNameElm.val(x[4]);
     guaranteeContactElm.val(x[5]);
     updateElements(x[0]);
+    getUrl(x[0]);
     x.length = 0; // all element inside the array is deleted
 });
 searchElm.on("input", (evt)=>{
@@ -653,15 +673,17 @@ btnAddImg.on("click", (evt)=>{
     imgInputElm.trigger("click");
 });
 btnSave.on("click", (evt)=>{
-    btnSaveClick = true;
-    imgInput.css({
-        "background-image": `url()`
-    });
-    imgInput.find(".trash").remove();
+    if (validation()) {
+        btnSaveClick = true;
+        imgInput.css({
+            "background-image": `url()`
+        });
+        imgInput.find(".trash").remove();
+    }
     if (!update) {
         sendData();
         deleteImage = false;
-        location.reload(); //to reload the web page
+    // location.reload(); //to reload the web page
     } else updateElements(indexVariable);
 });
 window.addEventListener("beforeunload", function(event) {
@@ -729,14 +751,19 @@ function sendData() {
         fileName
     };
     if (!validation()) return;
-    console.log("after validation");
+    // btnAddImg.removeAttr('disabled');
+    // console.log("after validation");
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", ()=>{
         // console.log(birthday);
         if (xhr.readyState === 4 && xhr.status === 201) {
             resetForm();
             addDataToTable();
+            console.log("inside send data");
             showToast("success", "Saved", "Data has been saved");
+            setTimeout(function() {
+                location.reload();
+            }, 1000);
         }
     });
     xhr.open("POST", "http://localhost:8080/app/students/save", true);
@@ -795,7 +822,7 @@ function addDataToTable() {
     xhr.open("GET", `http://localhost:8080/app/students?q=${query}`, true, query);
     xhr.send();
 }
-function addImages() {
+function addImages(url) {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -810,14 +837,33 @@ function addImages() {
 </svg></div>`);
         }
     });
-    xhr.open("GET", `http://localhost:8080/app/students/images?q=${fileName}`, true);
+    if (url == null) xhr.open("GET", `http://localhost:8080/app/students/images?q=${fileName}`, true);
+    else xhr.open("GET", `http://localhost:8080/app/students/images?q=${url}`, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send();
+}
+function getUrl(index) {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", (evt)=>{
+        if (xhr.status === 200 && xhr.readyState === 4) {
+            const response = xhr.responseText;
+            if (response.trim().length === 0) console.log("okay");
+            else addImages(response);
+        }
+    });
+    xhr.open("GET", `http://localhost:8080/app/students/url?q=${index}`, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
 }
 function deleteElements(value) {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
-        if (xhr.readyState === 4 && xhr.status === 204) showToast("warning", "DELETE", "Selected data has been deleted");
+        if (xhr.readyState === 4 && xhr.status === 204) {
+            showToast("warning", "DELETE", "Selected data has been deleted");
+            setTimeout(function() {
+                location.reload();
+            }, 1000);
+        }
     });
     xhr.open("DELETE", `http://localhost:8080/app/students/${value}`, true);
     xhr.send();
@@ -836,13 +882,15 @@ function updateElements(studentIndexNo) {
         address,
         gender: genderElm,
         guaranteeName,
-        guaranteeContact
+        guaranteeContact,
+        fileName
     };
     console.log(studentDetails);
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
         if (xhr.readyState === 4 && xhr.status === 202) {
             const responseObject = JSON.parse(xhr.responseText);
+            const fileName1 = responseObject.fileName;
             resetForm();
             showToast("success", "Updated", "Saved data has been updated");
             console.log(btnSaveClick);
@@ -899,13 +947,27 @@ function uploadImages(allFiles) {
 function clearImage() {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
-        if (xhr.status === 204 && xhr.readyState === 4) imgInput.css({
-            "background-image": `url()`
-        });
+        if (xhr.status === 204 && xhr.readyState === 4) {
+            imgInput.css({
+                "background-image": `url()`
+            });
+            showToast("warning", "Deleted", "Image Successfully Deleted ");
+        }
     });
     console.log(fileName);
     xhr.open("DELETE", `http://localhost:8080/app/students/images/${fileName}`);
     xhr.send();
+}
+function adjustTrashPosition() {
+    const imgInput = (0, _jqueryDefault.default)("#imgInput");
+    const trash = imgInput.find(".trash");
+    const imgInputPosition = imgInput.position();
+    const imgInputTop = imgInputPosition.top;
+    const imgInputLeft = imgInputPosition.left;
+    trash.css({
+        top: imgInputTop + 50 + "px",
+        left: imgInputLeft + imgInput.width() + 100 + "px"
+    });
 }
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["5W3P2","aK5oB"], "aK5oB", "parcelRequire8d29")

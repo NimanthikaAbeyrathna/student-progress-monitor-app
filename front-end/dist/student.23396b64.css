@@ -104,16 +104,21 @@ table {
   scale: 1.1;
 }
 
+#imgInput {
+  position: relative;
+}
+
 .trash {
   position: absolute;
-  bottom: 60px;
-  left: 320px;
+  top: 90%;
+  right: 5px;
+  transform: translateY(-50%);
 }
 
 .trash:hover {
   color: red;
   cursor: pointer;
-  scale: 1.2;
+  scale: 1.1;
 }
 
 /*# sourceMappingURL=student.23396b64.css.map */

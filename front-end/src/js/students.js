@@ -31,7 +31,29 @@ let imgFiles = [];
 const inputElements = [indexElm, UserNameElm, addressElm, guaranteeNameElm, guaranteeContactElm];
 
 addDataToTable();
+$(window).on('resize', adjustTrashPosition);
+$(document).ready(function() {
+    // Get the logout link element
+    const logoutLink = $('#logout-link');
 
+    // Add a click event listener to the logout link
+    logoutLink.on('click', function(event) {
+        event.preventDefault();
+
+        $.ajax({
+            url: 'http://localhost:8080/app/api/v1/adding/logout', // Update the URL according to back end
+            method: 'GET',
+            success: function(response) {
+
+                window.location.href = 'login.html';// Redirect the user to the login page
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+
+    });
+});
 
 $(document).on('click', '.trash', function(evt) {
     clearImage();
@@ -66,7 +88,7 @@ tableBodyElm.on('click', '.edit', (evt) => {
     guaranteeContactElm.val(x[5]);
 
     updateElements(x[0])
-
+    getUrl(x[0]);
     x.length = 0; // all element inside the array is deleted
 });
 
@@ -85,14 +107,16 @@ btnAddImg.on('click', (evt) => {
 
 });
 btnSave.on('click', (evt) => {
-
+if(validation()){
     btnSaveClick = true;
     imgInput.css({"background-image":`url()`});
     imgInput.find('.trash').remove();
+}
+
     if (!update) {
         sendData();
         deleteImage=false;
-        location.reload(); //to reload the web page
+       // location.reload(); //to reload the web page
 
     } else {
         updateElements(indexVariable);
@@ -170,8 +194,10 @@ function validation() {
     return validate;
 }
 
+
+
 function addingErrorClass(element, message) {
-    element.closest('.inputElm').append(`<div class="errorcode">${message}</div>`);
+  element.closest('.inputElm').append(`<div class="errorcode">${message}</div>`);
     element.addClass('animate__jello');
     return false;
 }
@@ -192,7 +218,8 @@ function sendData() {
 
 
     if (!validation()) return;
-    console.log("after validation");
+    // btnAddImg.removeAttr('disabled');
+    // console.log("after validation");
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener('readystatechange', () => {
@@ -200,7 +227,12 @@ function sendData() {
         if (xhr.readyState === 4 && xhr.status === 201) {
             resetForm();
             addDataToTable();
+            console.log("inside send data")
             showToast("success", "Saved", "Data has been saved")
+
+            setTimeout(function () {  // if i dont add that toast not going to appear long period
+                location.reload();
+            }, 1000);
 
         } else {
             // const errorObject = JSON.parse(xhr.responseText);
@@ -277,7 +309,7 @@ function addDataToTable() {
     xhr.send();
 }
 
-function addImages() {
+function addImages(url) {
 
     const xhr = new XMLHttpRequest();
 
@@ -293,16 +325,38 @@ function addImages() {
             imgInput.append(`<div class="trash"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
   <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
 </svg></div>`)
-
         }
-
     });
 
-    xhr.open('GET', `http://localhost:8080/app/students/images?q=${fileName}`, true);
+    if(url==null){
+        xhr.open('GET', `http://localhost:8080/app/students/images?q=${fileName}`, true);
+    }else {
+        xhr.open('GET', `http://localhost:8080/app/students/images?q=${url}`, true);
+    }
+
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send();
 
+}
 
+function getUrl(index){
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange',(evt)=>{
+        if(xhr.status===200 && xhr.readyState===4){
+         const response = xhr.responseText;
+         if(response.trim().length===0){
+             console.log("okay");
+         }else {
+             addImages(response);
+         }
+
+        }
+    });
+
+    xhr.open('GET', `http://localhost:8080/app/students/url?q=${index}`, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send();
 }
 
 function deleteElements(value) {
@@ -311,10 +365,11 @@ function deleteElements(value) {
 
     xhr.addEventListener("readystatechange", (evt) => {
         if (xhr.readyState === 4 && xhr.status === 204) {
-            showToast("warning", "DELETE", "Selected data has been deleted")
-
+            showToast("warning", "DELETE", "Selected data has been deleted");
+            setTimeout(function () {  // if i dont add that toast not going to appear long period
+                location.reload();
+            }, 1000);
         }
-
     });
 
     xhr.open("DELETE", `http://localhost:8080/app/students/${value}`, true);
@@ -333,7 +388,7 @@ function updateElements(studentIndexNo) {
     const guaranteeName = guaranteeNameElm.val();
     const guaranteeContact = guaranteeContactElm.val();
 
-    const studentDetails = {indexVariable, fullName, address, gender: genderElm, guaranteeName, guaranteeContact}
+    const studentDetails = {indexVariable, fullName, address, gender: genderElm, guaranteeName, guaranteeContact,fileName}
     console.log(studentDetails);
 
     const xhr = new XMLHttpRequest();
@@ -341,10 +396,12 @@ function updateElements(studentIndexNo) {
     xhr.addEventListener('readystatechange', (evt) => {
         if (xhr.readyState === 4 && xhr.status === 202) {
             const responseObject = JSON.parse(xhr.responseText);
+            const fileName1 = responseObject.fileName;
             resetForm();
             showToast('success', 'Updated', 'Saved data has been updated');
             console.log(btnSaveClick);
             addDataToTable();
+
         }
 
     });
@@ -413,7 +470,7 @@ function clearImage(){
     xhr.addEventListener('readystatechange',(evt)=>{
         if(xhr.status===204 &&  xhr.readyState===4){
             imgInput.css({"background-image":`url()`});
-
+            showToast("warning","Deleted","Image Successfully Deleted ")
         }
     });
 
@@ -422,4 +479,22 @@ function clearImage(){
     xhr.send();
 
 }
+
+function adjustTrashPosition() {
+    const imgInput = $('#imgInput');
+
+    const trash = imgInput.find('.trash');
+
+    const imgInputPosition = imgInput.position();
+    const imgInputTop = imgInputPosition.top;
+    const imgInputLeft = imgInputPosition.left;
+
+    trash.css({
+        top: (imgInputTop+50) +'px',
+        left: (imgInputLeft + imgInput.width() +100) + 'px'
+    });
+}
+
+
+
 
