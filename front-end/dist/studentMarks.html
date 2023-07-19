@@ -7,16 +7,18 @@
     <title>Student Progress Monitor</title>
     <link rel="icon" href="/favicon.8d3427ea.png">
 
-    <link rel="stylesheet" href="/signUp.843dac01.css">
-    <link rel="stylesheet" href="/signUp.ab0485ab.css">
-    <link rel="stylesheet" href="/signUp.dee82485.css">
-    <link rel="stylesheet" href="/signUp.6b158569.css">
-    <link rel="stylesheet" href="/signUp.e8265c92.css">
-    <script defer="" src="/signUp.c8945bf4.js"></script>
-    <script defer="" src="/signUp.fd40e163.js"></script>
-    <script defer="" src="/signUp.277c8202.js"></script>
-    <script defer="" src="/signUp.ee17f6b0.js"></script>
-    <script defer="" src="/signUp.18dbc454.js"></script>
+    <link rel="stylesheet" href="/index.843dac01.css">
+    <link rel="stylesheet" href="/index.ab0485ab.css">
+    <link rel="stylesheet" href="/index.dee82485.css">
+    <link rel="stylesheet" href="/index.6b158569.css">
+    <link rel="stylesheet" href="/index.e8265c92.css">
+    <link rel="stylesheet" href="/studentMarks.f286ec91.css">
+    <script defer="" src="/index.c8945bf4.js"></script>
+    <script defer="" src="/index.fd40e163.js"></script>
+    <script defer="" src="/index.277c8202.js"></script>
+    <script defer="" src="/index.ee17f6b0.js"></script>
+    <script defer="" src="/index.18dbc454.js"></script>
+    <script defer="" src="/studentMarks.eb4045d6.js"></script>
 
 </head>
 <body>
@@ -61,7 +63,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/student.html">
+                    <a class="nav-link" href="#">
                         <i class="bi bi-people"></i>
                         Enter New Student
                     </a>
@@ -78,24 +80,96 @@
                         Print Student Reports
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="bi bi-plug"></i>
-                        Log out
-                    </a>
-                </li>
             </ul>
         </div>
-        <main class="content">
-            <!--slider-->
-            <section id="slider">
-                <div id="slides-wrapper">
-                    <div class="slide"><img src="/side1.5f1b0c56.jpeg"></div>
-                    <div class="slide"><img src="/slide2.c5665f3f.jpg"></div>
-                    <div class="slide"><img src="/slide3.f874a48b.png"></div>
-                    <div class="slide"><img src="/slide4.15b0b2d0.jpg"></div>
+        <main class="content ">
+            <div id="left-div">
+                <div>
+                    <h5>Enter Student Marks</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="yearSelect" class="form-label">Year</label>
+                            <select class="form-select" id="yearSelect" required="">
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="semesterSelect" class="form-label">Semester</label>
+                            <select class="form-select" id="semesterSelect" required="">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gradeSelect" class="form-label">Grade</label>
+                            <select class="form-select" id="gradeSelect" required="">
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="classSelect" class="form-label">Class</label>
+                            <select class="form-select" id="classSelect" required="">
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subjectSelect" class="form-label">Subject</label>
+                            <select class="form-select" id="subjectSelect" required="">
+                                <option>Mathematics</option>
+                                <option>Science</option>
+                                <option>English</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="indexNoInput" class="form-label ">Index No</label>
+                            <input type="text" class="form-control" id="indexNoInput" placeholder="Enter Index No" required="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="marksInput" class="form-label ">Marks (%)</label>
+                            <input type="number" class="form-control" id="marksInput" placeholder="Enter Marks" required="">
+                        </div>
+                        <button id="save" type="button" class="btn btn-primary">Save</button>
+                        <button id="clear" type="button" class="btn btn-secondary">Clear</button>
+                    </form>
                 </div>
-            </section>
+            </div>
+            <div id="right-div" class="table-responsive">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search">
+                </div>
+
+
+                <table class="table  table-striped table-hover table-bordered
+                border-primary table-sm align-middle text-center">
+                    <thead class="table-dark">
+                        <tr class="table-primary">
+                            <th scope="col">Id</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Semester</th>
+                            <th scope="col">Grade</th>
+                            <th scope="col">Class</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Index No</th>
+                            <th scope="col">Marks (%)</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+
+                    </tbody>
+                    <tfoot class="table-group-divider">
+                        <tr>
+                            <td class="text-center" colspan="9">no content</td>
+
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
             <!--enter new year-->
             <div class="modal fade" id="newYearModal" tabindex="-1" role="dialog" aria-labelledby="newYearModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -258,21 +332,6 @@
                 </div>
             </div>
 
-            <!--toast-->
-
-            <div id="toast" class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
-                <div id="liveToast" class="toast" dat-bs-autohide="true" data-bs-delay="1000" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-
-                        <strong class="me-auto"></strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-
-                    </div>
-                </div>
-            </div>
-
 
         </main>
     </div>
@@ -284,8 +343,7 @@
         </div>
     </footer>
 </div>
-
-
+<!--toast-->
 
 <div id="toast" class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
     <div id="liveToast" class="toast" dat-bs-autohide="true" data-bs-delay="1000" role="alert" aria-live="assertive" aria-atomic="true">
@@ -299,7 +357,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 </html>

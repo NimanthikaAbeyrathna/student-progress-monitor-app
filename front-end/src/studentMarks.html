@@ -2,30 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Progress Monitor</title>
-    <link rel="icon" href="/favicon.8d3427ea.png">
+    <link rel="icon" href="./image/favicon.png">
 
-    <link rel="stylesheet" href="/signUp.843dac01.css">
-    <link rel="stylesheet" href="/signUp.ab0485ab.css">
-    <link rel="stylesheet" href="/signUp.dee82485.css">
-    <link rel="stylesheet" href="/signUp.6b158569.css">
-    <link rel="stylesheet" href="/signUp.e8265c92.css">
-    <script defer="" src="/signUp.c8945bf4.js"></script>
-    <script defer="" src="/signUp.fd40e163.js"></script>
-    <script defer="" src="/signUp.277c8202.js"></script>
-    <script defer="" src="/signUp.ee17f6b0.js"></script>
-    <script defer="" src="/signUp.18dbc454.js"></script>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="./scss/style.scss">
+    <link rel="stylesheet" href="./scss/student-marks-style.scss">
+    <script defer type="module" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer type="module" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer type="module" src="../node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script defer src="../node_modules/big.js/big.js"></script>
+    <script defer type="module" src="./js/main.js"></script>
+    <script defer type="module" src="./js/student-marks.js"></script>
 
 </head>
 <body>
-<div class="d-flex flex-column" style="min-height: 100vh">
+<div class="d-flex flex-column" style="min-height: 100vh;">
     <div class="d-flex">
         <div class="sidebar">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a id="abc" class="nav-link active" href="/index.html">
+                    <a id="abc" class="nav-link active" href="../src/index.html">
                         <i class="bi bi-house-door-fill"></i>
                         Home
                     </a>
@@ -61,13 +64,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/student.html">
+                    <a class="nav-link" href="#">
                         <i class="bi bi-people"></i>
                         Enter New Student
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/studentMarks.html">
+                <li class="nav-item" >
+                    <a class="nav-link" href="../src/studentMarks.html">
                         <i class="bi bi-bookmarks-fill"></i>
                         Enter Student Marks
                     </a>
@@ -78,26 +81,101 @@
                         Print Student Reports
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="bi bi-plug"></i>
-                        Log out
-                    </a>
-                </li>
             </ul>
         </div>
-        <main class="content">
-            <!--slider-->
-            <section id="slider">
-                <div id="slides-wrapper">
-                    <div class="slide"><img src="/side1.5f1b0c56.jpeg"></div>
-                    <div class="slide"><img src="/slide2.c5665f3f.jpg"></div>
-                    <div class="slide"><img src="/slide3.f874a48b.png"></div>
-                    <div class="slide"><img src="/slide4.15b0b2d0.jpg"></div>
+        <main class="content ">
+            <div id="left-div">
+                <div>
+                    <h5>Enter Student Marks</h5>
+                    <form>
+                        <div class="mb-3" >
+                            <label for="yearSelect" class="form-label">Year</label>
+                            <select class="form-select" id="yearSelect" required >
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="semesterSelect" class="form-label">Semester</label>
+                            <select class="form-select" id="semesterSelect" required>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gradeSelect" class="form-label">Grade</label>
+                            <select class="form-select" id="gradeSelect" required>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="classSelect" class="form-label">Class</label>
+                            <select class="form-select" id="classSelect" required>
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subjectSelect" class="form-label">Subject</label>
+                            <select class="form-select" id="subjectSelect" required>
+                                <option>Mathematics</option>
+                                <option>Science</option>
+                                <option>English</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="indexNoInput" class="form-label ">Index No</label>
+                            <input type="text" class="form-control" id="indexNoInput" placeholder="Enter Index No"
+                                   required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="marksInput" class="form-label ">Marks (%)</label>
+                            <input type="number" class="form-control" id="marksInput" placeholder="Enter Marks"
+                                   required>
+                        </div>
+                        <button id="save" type="button" class="btn btn-primary">Save</button>
+                        <button id="clear" type="button" class="btn btn-secondary">Clear</button>
+                    </form>
                 </div>
-            </section>
+            </div>
+            <div id="right-div" class="table-responsive" >
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search">
+                </div>
+
+
+                <table class="table  table-striped table-hover table-bordered
+                border-primary table-sm align-middle text-center">
+                    <thead class="table-dark">
+                        <tr class="table-primary">
+                            <th scope="col">Id</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Semester</th>
+                            <th scope="col">Grade</th>
+                            <th scope="col">Class</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Index No</th>
+                            <th scope="col">Marks (%)</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+
+                    </tbody>
+                    <tfoot class="table-group-divider">
+                        <tr>
+                            <td class="text-center" colspan="9">no content</td>
+
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
             <!--enter new year-->
-            <div class="modal fade" id="newYearModal" tabindex="-1" role="dialog" aria-labelledby="newYearModalLabel" aria-hidden="true">
+            <div class="modal fade" id="newYearModal" tabindex="-1" role="dialog" aria-labelledby="newYearModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -117,7 +195,9 @@
             </div>
 
             <!--enter new Semester-->
-            <div class="modal fade" id="newSemesterModal" tabindex="-1" role="dialog" aria-labelledby="newSemesterModalLabel" aria-hidden="true">
+            <div class="modal fade" id="newSemesterModal" tabindex="-1" role="dialog"
+                 aria-labelledby="newSemesterModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -135,7 +215,8 @@
                 </div>
             </div>
             <!--enter new grade-->
-            <div class="modal fade" id="newGradeModal" tabindex="-1" role="dialog" aria-labelledby="newGradeModalLabel" aria-hidden="true">
+            <div class="modal fade" id="newGradeModal" tabindex="-1" role="dialog" aria-labelledby="newGradeModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -146,7 +227,8 @@
                             <form>
                                 <div class="form-group">
                                     <label for="gradeInput">Grade</label>
-                                    <input type="number" class="form-control" id="gradeInput" placeholder="Enter the grade (1-13)">
+                                    <input type="number" class="form-control" id="gradeInput"
+                                           placeholder="Enter the grade (1-13)">
                                 </div>
                             </form>
                         </div>
@@ -158,7 +240,8 @@
                 </div>
             </div>
             <!--enter new class-->
-            <div class="modal fade" id="newClassModal" tabindex="-1" role="dialog" aria-labelledby="newClassModalLabel" aria-hidden="true">
+            <div class="modal fade" id="newClassModal" tabindex="-1" role="dialog" aria-labelledby="newClassModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -169,7 +252,8 @@
                             <form>
                                 <div class="form-group">
                                     <label for="classCodeInput">Class Code</label>
-                                    <input type="text" class="form-control" id="classCodeInput" placeholder="Enter the class code">
+                                    <input type="text" class="form-control" id="classCodeInput"
+                                           placeholder="Enter the class code">
                                 </div>
                             </form>
                         </div>
@@ -181,7 +265,8 @@
                 </div>
             </div>
             <!--enter new subjects-->
-            <div class="modal fade" id="newSubjectsModal" tabindex="-1" role="dialog" aria-labelledby="newSubjectsModalLabel" aria-hidden="true">
+            <div class="modal fade" id="newSubjectsModal" tabindex="-1" role="dialog"
+                 aria-labelledby="newSubjectsModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -192,13 +277,14 @@
                             <form>
                                 <div class="form-group">
                                     <label for="subjectNameInput">Subject Name</label>
-                                    <input type="text" class="form-control" id="subjectNameInput" placeholder="Enter the subject name">
+                                    <input type="text" class="form-control" id="subjectNameInput"
+                                           placeholder="Enter the subject name">
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
 
-                            <button id="btnSubjectSave" type="button" class="btn btn-primary">Save Subjects
+                            <button id="btnSubjectSave" type="button" class="btn btn-primary" >Save Subjects
                             </button>
                         </div>
                     </div>
@@ -207,7 +293,8 @@
 
 
             <!--print student reports-->
-            <div class="modal fade" id="printReportModal" tabindex="-1" role="dialog" aria-labelledby="printReportModalLabel" aria-hidden="true">
+            <div class="modal fade" id="printReportModal" tabindex="-1" role="dialog"
+                 aria-labelledby="printReportModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -218,31 +305,32 @@
                             <form>
                                 <div class="form-group">
                                     <label for="studentIdInput">Student ID</label>
-                                    <input type="text" class="form-control" id="studentIdInput" placeholder="Enter the student ID">
+                                    <input type="text" class="form-control" id="studentIdInput"
+                                           placeholder="Enter the student ID" >
                                 </div>
                                 <div class="form-group">
                                     <label for="classInput">Class</label>
-                                    <select class="form-select" id="classInput" required="">
+                                    <select class="form-select" id="classInput" required>
 
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="yearInput2">Year</label>
-                                        <select class="form-select" id="yearInput2" required="">
+                                        <select class="form-select" id="yearInput2" required >
 
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="semesterInputField">Semester</label>
-                                    <select class="form-select" id="semesterInputField" required="">
+                                    <select class="form-select" id="semesterInputField" required>
 
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="gradeInputField">Grade</label>
-                                    <select class="form-select" id="gradeInputField" required="">
+                                    <select class="form-select" id="gradeInputField" required>
 
                                     </select>
                                 </div>
@@ -258,21 +346,6 @@
                 </div>
             </div>
 
-            <!--toast-->
-
-            <div id="toast" class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
-                <div id="liveToast" class="toast" dat-bs-autohide="true" data-bs-delay="1000" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-
-                        <strong class="me-auto"></strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-
-                    </div>
-                </div>
-            </div>
-
 
         </main>
     </div>
@@ -284,11 +357,11 @@
         </div>
     </footer>
 </div>
-
-
+<!--toast-->
 
 <div id="toast" class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
-    <div id="liveToast" class="toast" dat-bs-autohide="true" data-bs-delay="1000" role="alert" aria-live="assertive" aria-atomic="true">
+    <div id="liveToast" class="toast" dat-bs-autohide="true" data-bs-delay="1000" role="alert" aria-live="assertive"
+         aria-atomic="true">
         <div class="toast-header">
 
             <strong class="me-auto"></strong>
@@ -299,7 +372,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 </html>

@@ -1,7 +1,14 @@
 package lk.student.progressmonitor.dto;
 
 import lk.student.progressmonitor.util.Gender;
+<<<<<<< HEAD
 import lombok.*;
+=======
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+>>>>>>> origin/main
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
