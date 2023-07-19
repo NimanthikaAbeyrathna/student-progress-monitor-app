@@ -600,9 +600,13 @@ let getImage = false;
 let deleteImage = true; // Flag to determine if the image should be deleted
 let indexVariable;
 let selectedFile;
+let indexValue;
+let response;
+let updateFileName1;
 let fileName;
 let files;
-let imgFiles = [];
+let imgUrlIndex = [];
+let tblElementIndex = [];
 const inputElements = [
     indexElm,
     UserNameElm,
@@ -611,6 +615,7 @@ const inputElements = [
     guaranteeContactElm
 ];
 addDataToTable();
+getImageUrls();
 (0, _jqueryDefault.default)(window).on("resize", adjustTrashPosition);
 (0, _jqueryDefault.default)(document).ready(function() {
     // Get the logout link element
@@ -632,6 +637,7 @@ addDataToTable();
 });
 (0, _jqueryDefault.default)(document).on("click", ".trash", function(evt) {
     clearImage();
+    deleteImage = true;
     (0, _jqueryDefault.default)(this).remove();
 });
 tableBodyElm.on("click", ".delete", (evt)=>{
@@ -639,11 +645,12 @@ tableBodyElm.on("click", ".delete", (evt)=>{
     console.log(idElm);
     // console.log(idElm);
     const idValue = idElm.text();
-    console.log(idValue);
     deleteElements(idValue);
 });
 tableBodyElm.on("click", ".edit", (evt)=>{
     update = true;
+    deleteImage = false;
+    console.log("update: " + update);
     const allTd = (0, _jqueryDefault.default)(evt.target).closest("tr").children();
     allTd.each(function() {
         const element = (0, _jqueryDefault.default)(this).text();
@@ -670,6 +677,8 @@ searchElm.on("input", (evt)=>{
 // });
 // listners
 btnAddImg.on("click", (evt)=>{
+    imgUpload = true;
+    deleteImage = false;
     imgInputElm.trigger("click");
 });
 btnSave.on("click", (evt)=>{
@@ -680,18 +689,17 @@ btnSave.on("click", (evt)=>{
         });
         imgInput.find(".trash").remove();
     }
-    if (!update) {
-        sendData();
-        deleteImage = false;
-    // location.reload(); //to reload the web page
-    } else updateElements(indexVariable);
+    if (!update) sendData();
+    else updateElements(indexVariable);
 });
 window.addEventListener("beforeunload", function(event) {
     if (deleteImage) clearImage();
 });
 imgInputElm.on("change", (evt)=>{
+    alert("ok1");
     imgUpload = true;
     files = evt.target.files;
+    // clearImgInput();
     // console.log(files);
     uploadImages(files);
 });
@@ -732,6 +740,20 @@ function addingErrorClass(element, message) {
     element.closest(".inputElm").append(`<div class="errorcode">${message}</div>`);
     element.addClass("animate__jello");
     return false;
+}
+function getImageUrls() {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", (evt)=>{
+        if (xhr.status === 200 && xhr.readyState === 4) {
+            const parse = JSON.parse(xhr.responseText);
+            parse.forEach((element)=>{
+                imgUrlIndex.push(element);
+            });
+        }
+    });
+    xhr.open("GET", "http://localhost:8080/app/students/imgUrl");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send();
 }
 function sendData() {
     const studentIndexNo = indexElm.val();
@@ -778,6 +800,15 @@ function resetForm() {
     guaranteeNameElm.val("");
     guaranteeContactElm.val("");
 }
+function clearImgInput() {
+    alert("ok");
+    console.log("inside clrimgInput");
+    tblElementIndex.forEach((element)=>{
+        imgUrlIndex.forEach((urls)=>{
+            if (element.toString() !== urls.toString()) imgInputElm.val("");
+        });
+    });
+}
 function addDataToTable() {
     const searchValue = searchElm.val();
     const query = searchValue ? `${searchValue}` : "";
@@ -789,6 +820,7 @@ function addDataToTable() {
             if (responseObject.length) tFootElm.remove();
             else tableElm.append(tFootElm);
             responseObject.forEach((responses)=>{
+                tblElementIndex.push(responses.studentIndexNo);
                 tableBodyElm.append(`
            <tr>
         <td scope="row">${responses.studentIndexNo}</td>
@@ -823,6 +855,7 @@ function addDataToTable() {
     xhr.send();
 }
 function addImages(url) {
+    console.log("inside addImage");
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -837,18 +870,35 @@ function addImages(url) {
 </svg></div>`);
         }
     });
-    if (url == null) xhr.open("GET", `http://localhost:8080/app/students/images?q=${fileName}`, true);
-    else xhr.open("GET", `http://localhost:8080/app/students/images?q=${url}`, true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send();
+    if (url == null) {
+        xhr.open("GET", `http://localhost:8080/app/students/images?q=${fileName}`, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send();
+    } else if (url.length === 0) {
+        console.log("inside add image if");
+        imgInput.css({
+            "background-image": "none",
+            "background-size": "cover",
+            "background-repeat": "no-repeat"
+        });
+        imgInput.children().remove();
+    } else {
+        xhr.open("GET", `http://localhost:8080/app/students/images?q=${url}`, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send();
+    }
 }
 function getUrl(index) {
+    indexValue = index;
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
         if (xhr.status === 200 && xhr.readyState === 4) {
-            const response = xhr.responseText;
-            if (response.trim().length === 0) console.log("okay");
-            else addImages(response);
+            response = xhr.responseText;
+            console.log(response.trim().length);
+            if (response.trim().length === 0) {
+                fileName = "";
+                addImages(response);
+            } else addImages(response);
         }
     });
     xhr.open("GET", `http://localhost:8080/app/students/url?q=${index}`, true);
@@ -890,11 +940,16 @@ function updateElements(studentIndexNo) {
     xhr.addEventListener("readystatechange", (evt)=>{
         if (xhr.readyState === 4 && xhr.status === 202) {
             const responseObject = JSON.parse(xhr.responseText);
-            const fileName1 = responseObject.fileName;
+            updateFileName1 = responseObject.fileName;
             resetForm();
             showToast("success", "Updated", "Saved data has been updated");
-            console.log(btnSaveClick);
+            setTimeout(function() {
+                location.reload();
+            }, 1000);
             addDataToTable();
+        // if (getImage) {
+        //     addImages(responseObject.fileName); // Fetch image using the updated file name
+        // }
         }
     });
     if (update && btnSaveClick) {
@@ -933,30 +988,48 @@ function uploadImages(allFiles) {
         if (xhr.status === 201 && xhr.readyState === 4) {
             const url = xhr.responseText;
             fileName = url.substring(url.lastIndexOf("/") + 1);
-            console.log("inside uploadImages");
             addImages();
         }
     });
     if (imgUpload) {
         formData.append("img", selectedFile);
         xhr.open("POST", "http://localhost:8080/app/students", true);
-        console.log("formdat:" + formData);
         xhr.send(formData);
     }
 }
-function clearImage() {
+function deleteImageByFileName(fileName) {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener("readystatechange", (evt)=>{
         if (xhr.status === 204 && xhr.readyState === 4) {
             imgInput.css({
-                "background-image": `url()`
+                "background-image": "url()"
             });
-            showToast("warning", "Deleted", "Image Successfully Deleted ");
+            showToast("warning", "Deleted", "Image Successfully Deleted");
         }
     });
-    console.log(fileName);
-    xhr.open("DELETE", `http://localhost:8080/app/students/images/${fileName}`);
+    xhr.open("DELETE", `http://localhost:8080/app/students/images/${fileName}`, true);
     xhr.send();
+}
+function deleteImageByURL(url) {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener("readystatechange", (evt)=>{
+        if (xhr.status === 204 && xhr.readyState === 4) {
+            imgInput.css({
+                "background-image": "url()"
+            });
+            showToast("warning", "Deleted", "Image Successfully Deleted");
+        }
+    });
+    xhr.open("DELETE", `http://localhost:8080/app/students/url/${url}`, true);
+    xhr.send();
+}
+function clearImage() {
+    console.log("response length: " + response.length);
+    if (response.length === 0) deleteImageByFileName(fileName);
+    else {
+        deleteImageByURL(response);
+        deleteImageByFileName(indexValue);
+    }
 }
 function adjustTrashPosition() {
     const imgInput = (0, _jqueryDefault.default)("#imgInput");

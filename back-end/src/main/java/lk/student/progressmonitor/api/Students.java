@@ -93,6 +93,26 @@ public class Students {
         return ResponseEntity.badRequest().body("No image provided");
     }
 
+    @GetMapping("/imgUrl")
+    public ArrayList<String> getHasImage(){
+      ArrayList<String> list= new ArrayList<>();
+        try {
+            Connection connection = dataSource.getConnection();
+            PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl");
+            ResultSet resultSet = stm.executeQuery();
+            while (resultSet.next()){
+                list.add(resultSet.getString("indexNumber"));
+            }
+            stm.close();
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return list;
+    }
+
+
     @GetMapping("/images")
     public ResponseEntity<?> getImage(@RequestParam(value = "q",required = false)String query ,UriComponentsBuilder uriComponentsBuilder) {
         String[] imgList = new String[1];
@@ -118,23 +138,36 @@ public class Students {
 
     @DeleteMapping("/images/{studentImage:.+}")
     public ResponseEntity<?> deleteImages(@PathVariable String studentImage){
+        String imgDirectPath = servletContext.getRealPath("/images");
+        File filePath = new File(imgDirectPath);
+        String[] imageNames = filePath.list();
 
-        String imgDirectParth = servletContext.getRealPath("/images");
-        File filePath = new File(imgDirectParth);
-        String[] imageName = filePath.list();// return names of the images
-        if(imageName!=null){
-            for (String image : imageName) {
-                if (image.equals(studentImage)) {
-                    File imgFile = new File(filePath,image); // create new file for particular image
+        if (imageNames != null) {
+            for (String imageName : imageNames) {
+                if (imageName.equals(studentImage)) {
+                    File imgFile = new File(filePath, imageName);
                     boolean delete = imgFile.delete();
 
-                    if(delete){
-                    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                    if (delete) {
+                        // Delete the corresponding entry from the imageUrl table
+                        try {
+                            Connection connection = dataSource.getConnection();
+                            PreparedStatement deleteUrlStm = connection.prepareStatement("DELETE FROM imageUrl WHERE url = ?");
+                            deleteUrlStm.setString(1, studentImage);
+                            deleteUrlStm.executeUpdate();
+                            deleteUrlStm.close();
+                            connection.close();
+                        } catch (SQLException e) {
+                            throw new RuntimeException(e);
+                        }
+
+                        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
                     }
                 }
             }
         }
-          return new ResponseEntity<>(HttpStatus.OK);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
     @GetMapping
     public ResponseEntity<?> getAllStudents(@RequestParam(value = "q",required = false)String query) {
@@ -181,7 +214,7 @@ public class Students {
     @GetMapping("/url")
     public String getUrl(@RequestParam(value = "q",required = false)String query){
         String url="";
-
+        System.out.println("query in url :"+query);
         try {
             Connection connection = dataSource.getConnection();
             PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl WHERE indexNumber=?");
@@ -197,6 +230,22 @@ public class Students {
         return url;
     }
 
+
+    @DeleteMapping("/url/{response}")
+    public ResponseEntity<?> deleteImageFromUrl(@PathVariable String  response){
+
+        try {
+            Connection connection = dataSource.getConnection();
+            PreparedStatement stm = connection.prepareStatement("DELETE FROM imageUrl WHERE url=?");
+            stm.setString(1,response);
+            stm.executeUpdate();
+            stm.close();
+            connection.close();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @DeleteMapping("/{studentIndexNo}")
     public ResponseEntity<?> deleteAllStudents(@PathVariable String studentIndexNo ){
