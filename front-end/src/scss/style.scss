@@ -1,3 +1,8 @@
+
+
+*{
+  box-sizing: border-box;
+}
 /* sidebar styling */
 .sidebar {
   position: fixed;
@@ -38,9 +43,58 @@
 
 /*main*/
 .content {
-  margin-left: 200px; /* Updated margin-left */
-  padding: 20px;
+  margin-left: 190px; /* Updated margin-left */
+  overflow: hidden;
 }
+#slider {
+
+  height: calc(100vh - 50px);
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+#slides-wrapper {
+  position: relative;
+  width: 400%;            /*  Relative to slider's width */
+  height: 100%;
+  animation-name: slide-anim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide-anim {
+  from, to {
+    left: 0;
+  }
+
+  20%, 25%{
+    left: -100%;
+  }
+
+  45%, 50%{
+    left: -200%;
+  }
+
+  70%, 75%{
+    left: -300%;
+  }
+}
+
+#slider .slide {
+  float: left;
+  width: 25%;  /* Relative to slides-wrapper's width */
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#slides-wrapper>div>img{
+  width: 100%;
+  height: 100%;
+}
+
 
 
 /* footer styling */
@@ -50,7 +104,7 @@
   padding: 10px 0; /* Updated padding */
   font-size: 0.8rem;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 50px; /* Updated height */
@@ -62,7 +116,20 @@
 
 }
 
-
 @media (max-width: 600px) {
+  #slides-wrapper>div>img{
+    width: 100%;
+    height: 40%;
+  }
+}
+
+.errorcode{
+
+  display: flex;
+  color: red;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  font-size: 10px;
 
 }

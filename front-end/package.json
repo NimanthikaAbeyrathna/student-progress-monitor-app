@@ -2,7 +2,10 @@
   "name": "front-end",
   "version": "1.0.0",
   "source": [
-    "src/index.html"
+    "src/signUp.html",
+    "src/login.html",
+    "src/index.html",
+    "src/student.html"
   ],
   "scripts": {
     "start": "parcel",
@@ -20,6 +23,7 @@
     "animate.css": "^4.1.1",
     "big.js": "^6.2.1",
     "bootstrap": "^5.3.0",
+    "bootstrap-datepicker": "^1.9.0",
     "bootstrap-icons": "^1.10.5",
     "jquery": "^3.7.0",
     "normalize.css": "^8.0.1"

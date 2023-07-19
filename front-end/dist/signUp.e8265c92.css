@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  color: #fff;
+  z-index: 999;
+  background-color: #343a40;
+  width: 190px;
+  height: 100vh;
+  transition: all .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar:hover {
+  width: 200px;
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: .8rem;
+  transition: all .3s;
+}
+
+.nav-item > a > i {
+  color: #9ec5fe;
+}
+
+.sidebar .nav-link:hover, .nav-item > a > i:hover {
+  color: #000;
+  background-color: #ff69b4;
+}
+
+.nav-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-left: 190px;
+  overflow: hidden;
+}
+
+#slider {
+  width: 100%;
+  height: calc(100vh - 50px);
+  overflow-x: hidden;
+}
+
+#slides-wrapper {
+  width: 400%;
+  height: 100%;
+  animation-name: slide-anim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes slide-anim {
+  from, to {
+    left: 0;
+  }
+
+  20%, 25% {
+    left: -100%;
+  }
+
+  45%, 50% {
+    left: -200%;
+  }
+
+  70%, 75% {
+    left: -300%;
+  }
+}
+
+#slider .slide {
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25%;
+  height: 100%;
+}
+
+#slides-wrapper > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  z-index: 999;
+  background-color: #343a40;
+  width: 100%;
+  height: 50px;
+  padding: 10px 0;
+  font-size: .8rem;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer a {
+  color: #fff;
+}
+
+@media (width <= 600px) {
+  #slides-wrapper > div > img {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+.errorcode {
+  color: red;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  font-size: 10px;
+  display: flex;
+}
+
+/*# sourceMappingURL=signUp.e8265c92.css.map */

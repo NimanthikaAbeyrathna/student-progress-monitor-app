@@ -1,0 +1,123 @@
+main{
+  display: flex;
+}
+#left-div{
+  height: 100vh;
+  width: calc((100vw/5)*1.5);
+  justify-content: left;
+  padding: 20px 20px 70px;
+
+}
+#right-div{
+  height: 100vh;
+  width: calc((100vw/5)*3.5);
+  justify-content: right;
+  padding: 20px 20px 70px;
+}
+
+
+
+.form-select {
+  height: 25px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+table{
+  font-size: 15px;
+}
+
+@media (max-width: 800px) {
+  table{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+  #left-div{
+
+    width: 100%;
+
+  }
+  #right-div{
+    padding: 5px;
+    width: 100%;
+  }
+  table{
+    font-size: 10px;
+  }
+
+}
+
+.inputs{
+  height: 10px;
+}
+.input{
+  height: 10px;
+}
+.image{
+  height: 130px;
+  width: 130px;
+  border: 1px dotted gray;
+}
+
+.form-control{
+  height: 10px !important;
+}
+.save{
+  display: inline;
+  margin-left: 150px;
+flex-direction: column;
+  margin-top: -150px;
+ 
+}
+.sex{
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+#birthday{
+  height: 58px!important;
+}
+#btnAddImg{
+  margin-bottom: 70px;
+}
+
+
+
+#search{
+  height: 100%;
+  width: 720px;
+}
+.edit:hover{
+  cursor: pointer;
+  color: darkgreen;
+  scale: 1.1;
+
+}
+.delete:hover{
+  cursor: pointer;
+  color: red;
+  scale: 1.1;
+}
+#imgInput{
+  position: relative;
+}
+
+
+.trash {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  right: 5px;
+}
+.trash:hover{
+  scale: 1.1;;
+  color: red;
+  cursor: pointer;
+}
+
+
