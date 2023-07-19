@@ -1,9 +1,11 @@
 import $ from 'jquery';
 
+
 export function getReportDesignHTML(responseObject) {
     const studentMarkList = responseObject[0];
     const student = responseObject[1];
     const studentTotalMarkList = responseObject[2];
+    const studentImageUrl = responseObject[3];
 
     let sumOfMarks = 0;
     for (let i = 0; i < studentMarkList.length; i++) {
@@ -133,7 +135,7 @@ export function getReportDesignHTML(responseObject) {
     </div>
     <br>
     <br>
-    <div id="studentImageElm"><img src="${student.url}"  alt="#"></div>
+    <div id="studentImageElm"><img src="${studentImageUrl}" alt="#"></div>
     <br>
     <br>
     <div class="labelContainer">
@@ -249,3 +251,4 @@ function generateRows(studentMarkList){
     });
     return html;
 }
+

@@ -7,12 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.xml.SimpleTransformErrorListener;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.web.bind.annotation.RequestPart;
-import org.w3c.dom.ls.LSInput;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.Part;
 import javax.validation.Valid;
@@ -41,7 +38,6 @@ public class Students {
          stm.setString(1,studentDTO.getStudentIndexNo());
          stm.setString(2,studentDTO.getFullName());
          stm.setString(3,studentDTO.getAddress());
-        // stm.setDate(4,studentDTO.getParsedDate());
          stm.setString(4, String.valueOf(studentDTO.getGender()));
          stm.setString(5,studentDTO.getGuaranteeName());
          stm.setString(6,studentDTO.getGuaranteeContact());
@@ -119,8 +115,7 @@ public class Students {
         String imgDirectParth = servletContext.getRealPath("/images");
         File filePath = new File(imgDirectParth);
         String[] imageNames = filePath.list();
-        System.out.println("query: "+query);
-        System.out.println("imageName: "+ imageNames);
+
         for (String imageName : imageNames) {
             System.out.println(imageName);
             if (query!=null  && query.equals(imageName)) {
@@ -250,7 +245,6 @@ public class Students {
     @DeleteMapping("/{studentIndexNo}")
     public ResponseEntity<?> deleteAllStudents(@PathVariable String studentIndexNo ){
 
-
         try {
             Connection connection = dataSource.getConnection();
             PreparedStatement stm3 = connection.prepareStatement("SELECT * FROM imageUrl WHERE indexNumber=?");
@@ -288,15 +282,6 @@ public class Students {
         try {
             Connection connection = dataSource.getConnection();
 
-//            PreparedStatement stm1 = connection.prepareStatement("SELECT *FROM imageUrl WHERE indexNumber=?");
-//            stm1.setString(1,studentIndexNo);
-//            ResultSet resultSet = stm1.executeQuery();
-//            if(resultSet.next()){
-//                String url = resultSet.getString("url");
-//                studentDTO.setFileName(url);
-//            }
-//            stm1.close();
-
             PreparedStatement stm = connection.prepareStatement("UPDATE student  SET fullName=?,address=?,gender=?,guaranteeName=?,guaranteeContact=? WHERE student_index_no=?");
             stm.setString(1,studentDTO.getFullName());
             stm.setString(2,studentDTO.getAddress());
@@ -307,7 +292,6 @@ public class Students {
 
             stm.executeUpdate();
             stm.close();
-
 
             connection.close();
 

@@ -3,7 +3,6 @@ import $ from 'jquery';
 const indexElm = $('#index');
 const UserNameElm = $('#Uname');
 const addressElm = $('#address');
-//const birthdayElm=$('#birthday');
 const genderElms = $('input[name="gender"]');
 const guaranteeNameElm = $('#Gname');
 const guaranteeContactElm = $('#Gcontact');
@@ -29,7 +28,7 @@ let updateFileName1;
 let fileName;
 let files;
 let imgUrlIndex = [];
-let tblElementIndex=[];
+let tblElementIndex = [];
 
 
 const inputElements = [indexElm, UserNameElm, addressElm, guaranteeNameElm, guaranteeContactElm];
@@ -38,22 +37,22 @@ addDataToTable();
 getImageUrls();
 
 $(window).on('resize', adjustTrashPosition);
-$(document).ready(function() {
+$(document).ready(function () {
     // Get the logout link element
     const logoutLink = $('#logout-link');
 
     // Add a click event listener to the logout link
-    logoutLink.on('click', function(event) {
+    logoutLink.on('click', function (event) {
         event.preventDefault();
 
         $.ajax({
             url: 'http://localhost:8080/app/api/v1/adding/logout', // Update the URL according to back end
             method: 'GET',
-            success: function(response) {
+            success: function (response) {
 
                 window.location.href = 'login.html';// Redirect the user to the login page
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error(error);
             }
         });
@@ -61,16 +60,15 @@ $(document).ready(function() {
     });
 });
 
-$(document).on('click', '.trash', function(evt) {
+$(document).on('click', '.trash', function (evt) {
     clearImage();
-    deleteImage=true;
+    deleteImage = true;
     $(this).remove();
 });
 tableBodyElm.on('click', '.delete', (evt) => {
 
     const idElm = $(evt.target).closest('tr').children().first();
     console.log(idElm);
-    // console.log(idElm);
     const idValue = idElm.text();
     deleteElements(idValue);
 });
@@ -78,8 +76,8 @@ tableBodyElm.on('click', '.delete', (evt) => {
 
 tableBodyElm.on('click', '.edit', (evt) => {
     update = true;
-    deleteImage=false;
-    console.log("update: "+update);
+    deleteImage = false;
+    console.log("update: " + update);
     const allTd = $(evt.target).closest('tr').children();
 
     allTd.each(function () {
@@ -102,31 +100,24 @@ tableBodyElm.on('click', '.edit', (evt) => {
 
 searchElm.on("input", (evt) => {
     addDataToTable();
-})
+});
 
-// $('input[name="gender"]').on('click', () => {
-//     const genderElm = $('input[name="gender"]:checked');
-//
-// });
-// listners
 
 btnAddImg.on('click', (evt) => {
-    imgUpload=true;
-    deleteImage=false;
+    imgUpload = true;
+    deleteImage = false;
     imgInputElm.trigger('click');
 
 });
 btnSave.on('click', (evt) => {
-if(validation()){
-    btnSaveClick = true;
-    imgInput.css({"background-image":`url()`});
-    imgInput.find('.trash').remove();
-}
+    if (validation()) {
+        btnSaveClick = true;
+        imgInput.css({"background-image": `url()`});
+        imgInput.find('.trash').remove();
+    }
 
     if (!update) {
         sendData();
-
-       // location.reload(); //to reload the web page
 
     } else {
         updateElements(indexVariable);
@@ -134,7 +125,7 @@ if(validation()){
 
 });
 
-window.addEventListener('beforeunload', function(event) {   //when refresh the page this listner start to workin
+window.addEventListener('beforeunload', function (event) {   //when refresh the page this listner start to workin
 
     if (deleteImage) {
         clearImage();
@@ -142,11 +133,9 @@ window.addEventListener('beforeunload', function(event) {   //when refresh the p
 });
 
 imgInputElm.on('change', (evt) => {
-alert("ok1")
+    alert("ok1")
     imgUpload = true;
     files = evt.target.files;
-    // clearImgInput();
-    // console.log(files);
     uploadImages(files);
 });
 
@@ -167,7 +156,6 @@ function validation() {
     const studentIndexNo = indexElm.val();
     const fullName = UserNameElm.val();
     const address = addressElm.val();
-    //   const birthday = birthdayElm.val();
     const guaranteeName = guaranteeNameElm.val();
     const guaranteeContact = guaranteeContactElm.val();
 
@@ -185,14 +173,10 @@ function validation() {
 
     if (!address) {
         validate = addingErrorClass(addressElm, "Address can not be empty")
-    } else if (!(/^[A-Za-z ]+$/.test(address))) {
+    } else if (!(/^[A-Za-z,/.\d ]+$/.test(address))) {
         validate = addingErrorClass(addressElm, "Please add correct format");
     }
-    //
-    // // if(!birthday){
-    // //     validate= addingErrorClass(birthdayElm,"Birthday can not be empty")
-    //
-    // }
+
     if (!guaranteeName) {
         validate = addingErrorClass(guaranteeNameElm, "Guarantee name can not be empty")
     } else if (!(/^[A-Za-z ]+$/.test(guaranteeName))) {
@@ -208,34 +192,31 @@ function validation() {
 }
 
 
-
 function addingErrorClass(element, message) {
-  element.closest('.inputElm').append(`<div class="errorcode">${message}</div>`);
+    element.closest('.inputElm').append(`<div class="errorcode">${message}</div>`);
     element.addClass('animate__jello');
     return false;
 }
-function getImageUrls(){
+
+function getImageUrls() {
 
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener('readystatechange', (evt) => {
-    if(xhr.status===200 && xhr.readyState===4){
-        const parse = JSON.parse(xhr.responseText);
-        parse.forEach(element=>{
-            imgUrlIndex.push(element);
-        })
-    }
+        if (xhr.status === 200 && xhr.readyState === 4) {
+            const parse = JSON.parse(xhr.responseText);
+            parse.forEach(element => {
+                imgUrlIndex.push(element);
+            })
+        }
     });
 
 
-    xhr.open("GET","http://localhost:8080/app/students/imgUrl");
+    xhr.open("GET", "http://localhost:8080/app/students/imgUrl");
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send();
 
 }
-
-
-
 
 
 function sendData() {
@@ -249,7 +230,7 @@ function sendData() {
 
     const studentInformation = {
         studentIndexNo, fullName, address, gender: genderElm
-        , guaranteeName, guaranteeContact,fileName
+        , guaranteeName, guaranteeContact, fileName
     };
 
 
@@ -271,7 +252,7 @@ function sendData() {
             }, 1000);
 
         } else {
-            // const errorObject = JSON.parse(xhr.responseText);
+            console.log(xhr.responseText);
         }
     });
 
@@ -285,18 +266,17 @@ function resetForm() {
     indexElm.val("");
     UserNameElm.val("");
     addressElm.val("");
-//birthdayElm.val("");
     guaranteeNameElm.val("");
     guaranteeContactElm.val("");
 }
 
-function clearImgInput(){
+function clearImgInput() {
     alert("ok");
     console.log("inside clrimgInput");
-    tblElementIndex.forEach(element=>{
-        imgUrlIndex.forEach(urls=>{
-            if(element.toString()!==urls.toString()){
-            imgInputElm.val('');
+    tblElementIndex.forEach(element => {
+        imgUrlIndex.forEach(urls => {
+            if (element.toString() !== urls.toString()) {
+                imgInputElm.val('');
             }
         })
 
@@ -379,11 +359,11 @@ function addImages(url) {
         }
     });
 
-    if(url==null){
+    if (url == null) {
         xhr.open('GET', `http://localhost:8080/app/students/images?q=${fileName}`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send();
-    }else if(url.length===0) {
+    } else if (url.length === 0) {
         console.log("inside add image if");
         imgInput.css({
             "background-image": "none",
@@ -391,7 +371,7 @@ function addImages(url) {
             "background-repeat": "no-repeat"
         });
         imgInput.children().remove();
-    }else {
+    } else {
         xhr.open('GET', `http://localhost:8080/app/students/images?q=${url}`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send();
@@ -400,21 +380,21 @@ function addImages(url) {
 
 }
 
-function getUrl(index){
+function getUrl(index) {
 
-    indexValue=index;
+    indexValue = index;
     const xhr = new XMLHttpRequest();
 
-    xhr.addEventListener('readystatechange',(evt)=>{
-        if(xhr.status===200 && xhr.readyState===4){
-          response = xhr.responseText;
-          console.log(response.trim().length);
-         if(response.trim().length===0){
-          fileName="";
-          addImages(response);
-         }else {
-             addImages(response);
-         }
+    xhr.addEventListener('readystatechange', (evt) => {
+        if (xhr.status === 200 && xhr.readyState === 4) {
+            response = xhr.responseText;
+            console.log(response.trim().length);
+            if (response.trim().length === 0) {
+                fileName = "";
+                addImages(response);
+            } else {
+                addImages(response);
+            }
 
         }
     });
@@ -453,7 +433,15 @@ function updateElements(studentIndexNo) {
     const guaranteeName = guaranteeNameElm.val();
     const guaranteeContact = guaranteeContactElm.val();
 
-    const studentDetails = {indexVariable, fullName, address, gender: genderElm, guaranteeName, guaranteeContact,fileName}
+    const studentDetails = {
+        indexVariable,
+        fullName,
+        address,
+        gender: genderElm,
+        guaranteeName,
+        guaranteeContact,
+        fileName
+    }
     console.log(studentDetails);
     const xhr = new XMLHttpRequest();
 
@@ -555,6 +543,7 @@ function deleteImageByURL(url) {
     xhr.open('DELETE', `http://localhost:8080/app/students/url/${url}`, true);
     xhr.send();
 }
+
 function clearImage() {
     console.log("response length: " + response.length);
 
@@ -576,8 +565,8 @@ function adjustTrashPosition() {
     const imgInputLeft = imgInputPosition.left;
 
     trash.css({
-        top: (imgInputTop+50) +'px',
-        left: (imgInputLeft + imgInput.width() +100) + 'px'
+        top: (imgInputTop + 50) + 'px',
+        left: (imgInputLeft + imgInput.width() + 100) + 'px'
     });
 }
 

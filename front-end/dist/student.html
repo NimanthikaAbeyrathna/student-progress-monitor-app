@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="/student.89ac449a.css">
     <link rel="stylesheet" href="/signUp.e8265c92.css">
     <link rel="stylesheet" href="/student.23396b64.css">
-
-    <script src="/student.56b0b470.js"></script><script defer="" src="/signUp.c8945bf4.js"></script>
+    <script src="/student.bb102fa0.js"></script><script defer="" src="/signUp.c8945bf4.js"></script>
     <script defer="" src="/signUp.fd40e163.js"></script>
     <script defer="" src="/signUp.277c8202.js"></script>
     <script defer="" src="/signUp.ee17f6b0.js"></script>
@@ -31,37 +30,37 @@
         <div class="sidebar">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                    <a id="abc" class="nav-link active" href="/index.html">
                         <i class="bi bi-house-door-fill"></i>
                         Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#newYearModal">
                         <i class="bi bi-calendar"></i>
                         Enter New year
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#newSemesterModal">
                         <i class="bi bi-123"></i>
                         Enter New Semester
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#newGradeModal">
                         <i class="bi bi-type"></i>
                         Enter New Grade
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#newClassModal">
                         <i class="bi bi-type"></i>
                         Enter New Class
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#newSubjectsModal">
                         <i class="bi bi-mortarboard-fill"></i>
                         Enter New Subjects
                     </a>
@@ -73,19 +72,19 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/studentMarks.html">
                         <i class="bi bi-bookmarks-fill"></i>
                         Enter Student Marks
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#printReportModal">
                         <i class="bi bi-printer-fill"></i>
                         Print Student Reports
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a id="logout-link" class="nav-link" href="#">
+                    <a class="nav-link" href="#">
                         <i class="bi bi-plug"></i>
                         Log out
                     </a>
@@ -113,25 +112,19 @@
                             <input id="address" type="text" class="form-control animate__animated" placeholder="Colombo" required="">
                             <label>Address</label>
                         </div>
-<!--                        <div class="input-group inputElm">-->
-<!--                            <input type="date" class="form-control animate__animated" id="birthday" placeholder="Birthday of Student">-->
-<!--                            <div class="input-group-addon">-->
-<!--                                <span class="glyphicon glyphicon-calendar"></span>-->
-<!--                            </div>-->
-<!--                        </div>-->
 
 
                         <div class="sex inputElm">
                             <div class="form-check">
                                 <input class="form-check-input animate__animated" type="radio" name="gender" id="male" value="MALE" checked="">
                                 <label class="form-check-label">
-                                     Male
+                                    Male
                                 </label>
                             </div>
                             <div class="form-check inputElm">
                                 <input class="form-check-input animate__animated" type="radio" name="gender" id="female" value="FEMALE" checked="">
                                 <label class="form-check-label">
-                                   Female
+                                    Female
                                 </label>
                             </div>
                         </div>
@@ -147,13 +140,6 @@
                             <label>Guarantee Conatct</label>
                         </div>
 
-<!--                        <div class="form-floating mb-1 inputElm">-->
-<!--                            <input id="Gcontact" type="number" class="form-control animate__animated"  placeholder="071-1231231" >-->
-<!--                            <label >Guarantee Contact</label>-->
-<!--                        </div>-->
-
-
-
                         <div id="imgInput" class="image inputElm">
                             <input accept="image/*" type="file" id="fileInput" style="display: none">
                         </div>
@@ -165,8 +151,6 @@
                     </form>
                 </div>
             </div>
-
-
 
 
             <div id="right-div" class="table-responsive">
@@ -183,7 +167,6 @@
                         <th scope="col">Index</th>
                         <th scope="col">Full Name</th>
                         <th scope="col">Address</th>
-<!--                        <th scope="col">Birthday</th>-->
                         <th scope="col">Sex</th>
                         <th scope="col">Guarantee Name</th>
                         <th scope="col">Guarantee Contact</th>
@@ -209,12 +192,175 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023. All rights reserved. | Designed by <a href="#">Nimanthika Abeyrathna & Gayantha Kuruppuarachchi</a></p>
+            <p>&copy; 2023. All rights reserved. | Designed by <a href="#">Nimanthika Abeyrathna & Gayantha
+                Kuruppuarachchi</a></p>
         </div>
     </footer>
 </div>
 
 
+<!--enter new year-->
+<div class="modal fade" id="newYearModal" tabindex="-1" role="dialog" aria-labelledby="newYearModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newYearModalLabel">Enter New Year</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <!-- Add your input fields or content for entering the year here -->
+                <input type="text" id="yearInput" class="form-control" placeholder="Enter the year">
+            </div>
+            <div class="modal-footer">
+                <button id="btnYearSave" type="button" class="btn btn-primary">Save Year</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--enter new Semester-->
+<div class="modal fade" id="newSemesterModal" tabindex="-1" role="dialog" aria-labelledby="newSemesterModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newSemesterModalLabel">Enter New Semester</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add your input fields or content for entering the semester here -->
+                <input type="text" id="semesterInput" class="form-control" placeholder="Enter the semester">
+            </div>
+            <div class="modal-footer">
+                <button id="btnSemesterSave" type="button" class="btn btn-primary">Save Semester</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--enter new grade-->
+<div class="modal fade" id="newGradeModal" tabindex="-1" role="dialog" aria-labelledby="newGradeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newGradeModalLabel">Enter New Grade</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="gradeInput">Grade</label>
+                        <input type="number" class="form-control" id="gradeInput" placeholder="Enter the grade (1-13)">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button id="btnGradeSave" type="button" class="btn btn-primary">Save Grade</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--enter new class-->
+<div class="modal fade" id="newClassModal" tabindex="-1" role="dialog" aria-labelledby="newClassModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newClassModalLabel">Enter New Class</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="classCodeInput">Class Code</label>
+                        <input type="text" class="form-control" id="classCodeInput" placeholder="Enter the class code">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button id="btnClassSave" type="button" class="btn btn-primary">Save Class</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--enter new subjects-->
+<div class="modal fade" id="newSubjectsModal" tabindex="-1" role="dialog" aria-labelledby="newSubjectsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newSubjectsModalLabel">Enter New Subjects</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="subjectNameInput">Subject Name</label>
+                        <input type="text" class="form-control" id="subjectNameInput" placeholder="Enter the subject name">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button id="btnSubjectSave" type="button" class="btn btn-primary">Save Subjects
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--print student reports-->
+<div class="modal fade" id="printReportModal" tabindex="-1" role="dialog" aria-labelledby="printReportModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="printReportModalLabel">Print Student Reports</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="studentIdInput">Student ID</label>
+                        <input type="text" class="form-control" id="studentIdInput" placeholder="Enter the student ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="classInput">Class</label>
+                        <select class="form-select" id="classInput" required="">
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="yearInput2">Year</label>
+                            <select class="form-select" id="yearInput2" required="">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="semesterInputField">Semester</label>
+                        <select class="form-select" id="semesterInputField" required="">
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gradeInputField">Grade</label>
+                        <select class="form-select" id="gradeInputField" required="">
+
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-primary" id="printButton">
+                    Print
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--toast-->
 <div id="toast" class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
     <div id="liveToast" class="toast" dat-bs-autohide="true" data-bs-delay="1000" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
@@ -227,7 +373,6 @@
         </div>
     </div>
 </div>
-
 
 
 </body>

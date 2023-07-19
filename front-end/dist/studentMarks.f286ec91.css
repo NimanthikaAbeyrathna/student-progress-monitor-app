@@ -3,7 +3,6 @@ main {
 }
 
 #left-div {
-  background-color: #ff69b4;
   justify-content: left;
   width: 30vw;
   height: 100vh;
@@ -11,7 +10,6 @@ main {
 }
 
 #right-div {
-  background-color: #0dcaf0;
   justify-content: right;
   width: 70vw;
   height: 100vh;

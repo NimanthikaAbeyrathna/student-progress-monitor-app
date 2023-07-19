@@ -580,7 +580,6 @@ var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
 const indexElm = (0, _jqueryDefault.default)("#index");
 const UserNameElm = (0, _jqueryDefault.default)("#Uname");
 const addressElm = (0, _jqueryDefault.default)("#address");
-//const birthdayElm=$('#birthday');
 const genderElms = (0, _jqueryDefault.default)('input[name="gender"]');
 const guaranteeNameElm = (0, _jqueryDefault.default)("#Gname");
 const guaranteeContactElm = (0, _jqueryDefault.default)("#Gcontact");
@@ -643,7 +642,6 @@ getImageUrls();
 tableBodyElm.on("click", ".delete", (evt)=>{
     const idElm = (0, _jqueryDefault.default)(evt.target).closest("tr").children().first();
     console.log(idElm);
-    // console.log(idElm);
     const idValue = idElm.text();
     deleteElements(idValue);
 });
@@ -671,11 +669,6 @@ tableBodyElm.on("click", ".edit", (evt)=>{
 searchElm.on("input", (evt)=>{
     addDataToTable();
 });
-// $('input[name="gender"]').on('click', () => {
-//     const genderElm = $('input[name="gender"]:checked');
-//
-// });
-// listners
 btnAddImg.on("click", (evt)=>{
     imgUpload = true;
     deleteImage = false;
@@ -699,8 +692,6 @@ imgInputElm.on("change", (evt)=>{
     alert("ok1");
     imgUpload = true;
     files = evt.target.files;
-    // clearImgInput();
-    // console.log(files);
     uploadImages(files);
 });
 inputElements.forEach((elements)=>{
@@ -716,7 +707,6 @@ function validation() {
     const studentIndexNo = indexElm.val();
     const fullName = UserNameElm.val();
     const address = addressElm.val();
-    //   const birthday = birthdayElm.val();
     const guaranteeName = guaranteeNameElm.val();
     const guaranteeContact = guaranteeContactElm.val();
     if (!studentIndexNo) validate = addingErrorClass(indexElm, "Index can not be empty");
@@ -724,12 +714,7 @@ function validation() {
     if (!fullName) validate = addingErrorClass(UserNameElm, "User name can not be empty");
     else if (!/^[A-Za-z ]+$/.test(fullName)) validate = addingErrorClass(UserNameElm, "Please add correct format");
     if (!address) validate = addingErrorClass(addressElm, "Address can not be empty");
-    else if (!/^[A-Za-z ]+$/.test(address)) validate = addingErrorClass(addressElm, "Please add correct format");
-    //
-    // // if(!birthday){
-    // //     validate= addingErrorClass(birthdayElm,"Birthday can not be empty")
-    //
-    // }
+    else if (!/^[A-Za-z,/.\d ]+$/.test(address)) validate = addingErrorClass(addressElm, "Please add correct format");
     if (!guaranteeName) validate = addingErrorClass(guaranteeNameElm, "Guarantee name can not be empty");
     else if (!/^[A-Za-z ]+$/.test(guaranteeName)) validate = addingErrorClass(guaranteeNameElm, "Please add correct format");
     if (!guaranteeContact) validate = addingErrorClass(guaranteeContactElm, "Guarantee contact can not be empty");
@@ -786,7 +771,7 @@ function sendData() {
             setTimeout(function() {
                 location.reload();
             }, 1000);
-        }
+        } else console.log(xhr.responseText);
     });
     xhr.open("POST", "http://localhost:8080/app/students/save", true);
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -796,7 +781,6 @@ function resetForm() {
     indexElm.val("");
     UserNameElm.val("");
     addressElm.val("");
-    //birthdayElm.val("");
     guaranteeNameElm.val("");
     guaranteeContactElm.val("");
 }

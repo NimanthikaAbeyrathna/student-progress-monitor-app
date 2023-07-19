@@ -14,12 +14,11 @@ public class WebRootConfig {
     public BasicDataSource dataSource(){
         BasicDataSource bds = new BasicDataSource();
         bds.setUsername("root");
-        bds.setPassword("mysql");
+        bds.setPassword("Gaya/123&1994");
         bds.setDriverClassName("com.mysql.cj.jdbc.Driver");
         bds.setUrl("jdbc:mysql://localhost:3306/student_progress_monitor?createDatabaseIfNotExist=true");
-        bds.setMaxTotal(100);
-        bds.setInitialSize(50);
-
+        bds.setMaxTotal(50);
+        bds.setInitialSize(10);
         return bds;
     }
 }
