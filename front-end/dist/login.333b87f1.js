@@ -634,7 +634,7 @@ function sendDataLogging() {
     xhr.addEventListener("readystatechange", ()=>{
         if (xhr.readyState === 4) {
             if (xhr.status === 202) {
-                //  window.location.href = 'index.html';
+                //  window.location.href = 'home.html';
                 window.location.replace("index.html");
                 return;
             } else if (xhr.status === 400) {

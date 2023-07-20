@@ -37,28 +37,7 @@ addDataToTable();
 getImageUrls();
 
 $(window).on('resize', adjustTrashPosition);
-$(document).ready(function () {
-    // Get the logout link element
-    const logoutLink = $('#logout-link');
 
-    // Add a click event listener to the logout link
-    logoutLink.on('click', function (event) {
-        event.preventDefault();
-
-        $.ajax({
-            url: 'http://localhost:8080/app/api/v1/adding/logout', // Update the URL according to back end
-            method: 'GET',
-            success: function (response) {
-
-                window.location.href = 'login.html';// Redirect the user to the login page
-            },
-            error: function (xhr, status, error) {
-                console.error(error);
-            }
-        });
-
-    });
-});
 
 $(document).on('click', '.trash', function (evt) {
     clearImage();

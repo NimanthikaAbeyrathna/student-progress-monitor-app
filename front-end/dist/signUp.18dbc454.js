@@ -897,6 +897,24 @@ function showToast(toastType, header, message) {
         toast.classList.remove("show");
     }, 5000);
 }
+(0, _jqueryDefault.default)(document).ready(function() {
+    // Get the logout link element
+    const logoutLink = (0, _jqueryDefault.default)("#logout-link");
+    // Add a click event listener to the logout link
+    logoutLink.on("click", function(event) {
+        event.preventDefault();
+        (0, _jqueryDefault.default).ajax({
+            url: "http://localhost:8080/app/api/v1/adding/logout",
+            method: "GET",
+            success: function(response) {
+                window.location.href = "index.html"; // Redirect the user to the login page
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+    });
+});
 
 },{"jquery":"hgMhh","./report-design.js":"88YyZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"88YyZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

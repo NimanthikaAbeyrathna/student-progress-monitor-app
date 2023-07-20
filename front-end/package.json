@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "source": [
     "src/signUp.html",
-    "src/login.html",
     "src/index.html",
+    "src/home.html",
     "src/student.html"
   ],
   "scripts": {

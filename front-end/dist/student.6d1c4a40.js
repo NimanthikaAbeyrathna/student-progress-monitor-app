@@ -616,24 +616,6 @@ const inputElements = [
 addDataToTable();
 getImageUrls();
 (0, _jqueryDefault.default)(window).on("resize", adjustTrashPosition);
-(0, _jqueryDefault.default)(document).ready(function() {
-    // Get the logout link element
-    const logoutLink = (0, _jqueryDefault.default)("#logout-link");
-    // Add a click event listener to the logout link
-    logoutLink.on("click", function(event) {
-        event.preventDefault();
-        (0, _jqueryDefault.default).ajax({
-            url: "http://localhost:8080/app/api/v1/adding/logout",
-            method: "GET",
-            success: function(response) {
-                window.location.href = "login.html"; // Redirect the user to the login page
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            }
-        });
-    });
-});
 (0, _jqueryDefault.default)(document).on("click", ".trash", function(evt) {
     clearImage();
     deleteImage = true;

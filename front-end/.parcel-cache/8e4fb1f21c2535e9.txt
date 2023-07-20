@@ -5,12 +5,12 @@
 97/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/image/slide3.png1687071566600415025 0
 97/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/image/slide2.jpg1687071458359176328 0
 86/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/image1688067846448551536 1
-92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/login.js1689743442683998990 0
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/report-design.js1689776026309103751 0
-83/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js1689776026329104636 1
+92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/login.js1689794506992990860 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/report-design.js1689793954277372431 0
+83/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js1689794507000990911 1
 110/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/scss/student-marks-style.scss1689768498464640799 0
 99/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/scss/students.scss1689743442683998990 0
-92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/report.html1688220941849486914 0
+92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/report.html1689794506964990678 0
 89/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/package.json1689743442683998990 0
 94/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/package-lock.json1689743442683998990 0
 110/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/sass/sass.default.js1687028161661782411 0
@@ -471,7 +471,7 @@
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/xbox.svg1687028162417811983 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/ev-front.svg1687028162137801031 0
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/blockquote-left.svg1687028161613780533 0
-93/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/student.html1689749835864137661 0
+93/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/student.html1689794506896990237 0
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/coin.svg1687028162041797276 0
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/person-gear.svg1687028162305807602 0
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/dice-3-fill.svg1687028162105799780 0
@@ -2410,7 +2410,7 @@
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/lib/syntax/node/Operator.js1687028161777786949 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/lib/popper-base.js.flow1687028160705745009 0
 122/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/lib/index.js.flow1687028160653742974 0
-95/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/students.js1689759493604958400 0
+95/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/students.js1689794505144978861 0
 108/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/lib1687028161653782098 1
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/dist/umd/enums.min.js1687028161149762381 0
 137/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/dist/umd/popper-base.min.js.flow1687028161197764259 0
@@ -2454,7 +2454,7 @@
 141/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/mdb_dump.11687028160921753461 0
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/node_modules/msgpackr1687028161305768484 1
 138/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/tooltag1687028160885752052 0
-104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.fd40e163.js.map1689746630180495797 0
+104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.fd40e163.js.map1689794509085004442 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/calendar-month-fill.svg1687028161857790079 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/dist/umd/popper-lite.min.js1687028161241765981 0
 143/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/utils/test/input/sourcemap/source-root.js.map1687028161693783662 0
@@ -2511,7 +2511,7 @@
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/node_modules/node-addon-api/napi.h1687028160809749078 0
 152/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/mdn-data/l10n/css.json1687028160665743444 0
 142/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/node_modules/node-addon-api/tools/check-napi.js1687028160845750487 0
-104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.a4d2abc6.js.map1689746630144494707 0
+104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.a4d2abc6.js.map1689794509089004468 0
 152/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/node_modules/entities/lib/esm/decode_codepoint.d.ts1687028161149762381 0
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/type.svg1687028162397811201 0
 125/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/diagram-2.svg1687028162101799623 0
@@ -2664,7 +2664,7 @@
 106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/mdn-data/LICENSE1687028160301729201 0
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/cloud-haze.svg1687028162009796025 0
 119/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/mdn-data/api/inheritance.json1687028160813749235 0
-92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/signUp.html1689746373719904093 0
+92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/signUp.html1689794507008990964 0
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/js-yaml/lib/snippet.js1687028160989756122 0
 111/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/mdn-data/api/index.js1687028160353731235 0
 108/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/mdn-data/README.md1687028161085759877 0
@@ -2739,7 +2739,7 @@
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/packager-js/lib/ESMOutputFormat.js1687028160581740157 0
 155/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/csso/node_modules/css-tree/lib/tokenizer/char-code-definitions.js1687028161585779438 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/cjs/_ts_generator.cjs1687028161153762537 0
-80/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src1689749998609226090 1
+80/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src1689824745333577681 1
 130/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-what/lib/commonjs/stringify.d.ts.map1687028160765747356 0
 134/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/envelope-plus-fill.svg1687028162133800875 0
 140/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/cjs/syntax/node/PseudoElementSelector.cjs1687028161433773491 0
@@ -3856,7 +3856,7 @@
 152/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/node-resolver-core/parcel-resolver.linux-x64-musl.node1687028161929792895 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/custom-elements.js1687028161741785540 0
 149/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-select/package.json1687028160745746574 0
-104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.bf9ec4a8.css.map1689746630100493375 0
+104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.bf9ec4a8.css.map1689794508993003844 0
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/cosmiconfig/dist/ExplorerBase.js.map1687028160765747356 0
 137/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/file-earmark-pdf-fill.svg1687028162157801814 0
 119/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/json-parse-even-better-errors1687028160385732488 1
@@ -3888,7 +3888,7 @@
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/square-half.svg1687028162365809949 0
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/compressor-raw/src/RawCompressor.js1687028160421733897 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-what/lib/commonjs/stringify.js1687028160597740783 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.6b158569.css1689746630084492890 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.6b158569.css1689794508961003636 0
 165/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/common/OffsetToLocation.js1687028161517776777 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/skip-forward-btn.svg1687028162353809480 0
 163/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/csso/lib/restructure/1-mergeAtrule.js1687028160401733114 0
@@ -4030,7 +4030,7 @@
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/square-fill.svg1687028162365809949 0
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/node_modules/msgpackr/dist/test.js.map1687028161249766293 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/clock-history.svg1687028161997795556 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.e8265c92.css1689746630084492890 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.e8265c92.css1689794508961003636 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/csso/lib/restructure/prepare1687028161349770205 1
 139/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-babel/lib/BabelTransformer.js1687028160521737809 0
 138/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/backspace-reverse-fill.svg1687028161465774744 0
@@ -4130,7 +4130,7 @@
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/entities/lib/maps/xml.json1687028160749746730 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/.bin/svgo1687028162953832948 0
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/test/fixtures1687028161829788983 1
-103/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.333b87f1.js.map1689746630144494707 0
+103/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.333b87f1.js.map1689794509089004468 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/lib/definition-syntax/SyntaxError.js1687028161809788201 0
 139/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/bin/svgo1687028160377732175 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/regions/MU.js1687028162005795869 0
@@ -4164,13 +4164,13 @@
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/_/_create_class1687028161865790392 1
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/lib/PackagerRunner.js1687028161541777716 0
 153/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/mdn-data/css/selectors.json1687028160969755339 0
-91/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/index.html1689749835904139087 0
+91/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/index.html1689794506928990444 0
 122/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/node_modules/entities1687028161141762068 1
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/building-lock.svg1687028161845789609 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/src/requests/TargetRequest.js1687028161705784132 0
 108/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/plugin/src1687028160441734679 1
 143/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/_/_async_generator_delegate/package.json1687028161749785853 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.d95b80a3.css1689746630084492890 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.d95b80a3.css1689794508961003636 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/cache/lib/types.d.ts1687028160657743131 0
 145/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/syntax1687028161449774117 1
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/optical-audio.svg1687028162281806664 0
@@ -4192,7 +4192,7 @@
 119/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/packager-html/LICENSE1687028160333730453 0
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-sass/package.json1687028160481736244 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/utils/test/input/config1687028161693783662 1
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.bb102fa0.js1689746630136494464 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.bb102fa0.js1689794509049004208 0
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/terminal-x.svg1687028162385810731 0
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/events/LICENSE1687028160333730453 0
 108/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/picomatch/index.js1687028160381732331 0
@@ -4244,7 +4244,7 @@
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/mp3.js1687028162001795712 0
 138/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/plugins1687028161209764728 1
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/reporter-cli/src/logLevels.js1687028160821749548 0
-107/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.f286ec91.css1689768498860663148 0
+107/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.f286ec91.css1689794508961003636 0
 150/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/lib/svgo/plugins.js1687028161093760190 0
 160/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/plugins/convertShapeToPath.js1687028160897752522 0
 125/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/buildings.svg1687028161849789766 0
@@ -4295,7 +4295,7 @@
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lightningcss/node/browserslistToTargets.js1687028160653742974 0
 134/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/runtime-js/src/helpers/bundle-url.js1687028160549738905 0
 157/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/common/List.js1687028161461774587 0
-102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.23396b64.css1689746630084492890 0
+102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.23396b64.css1689794508961003636 0
 168/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/definition-syntax/walk.js1687028161605780220 0
 139/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-datepicker/build/build_standalone3.less1689743442667998297 0
 136/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/test/fixtures/application-targets1687028161769786636 1
@@ -4322,7 +4322,7 @@
 142/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/csso/lib/replace1687028161173763320 1
 111/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/bootstrap-icons.33828afc.woff1689743442603995526 0
 130/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/node-plus-fill.svg1687028162273806351 0
-99/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.html1689749999597255464 0
+99/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.html1689794509017004000 0
 143/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/runtime-js/src/helpers/browser/wasm-loader.js1687028161073759408 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/c-circle.svg1687028161849789766 0
 157/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/lexer/error.js1687028161221765198 0
@@ -4470,7 +4470,7 @@
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/package-manager/src/installPackage.js1687028161081759721 0
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/lib/syntax/scope/selector.js1687028161801787888 0
 106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/svgo/lib/xast.js1687028161305768484 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/slide3.f874a48b.png1689746630048491800 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/slide3.f874a48b.png1689794509045004182 0
 108/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/readdirp/README.md1687028160405733270 0
 163/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/node/Value.js1687028161601780064 0
 104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/fs/src1687028160661743287 1
@@ -4481,7 +4481,7 @@
 109/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/src/cursor.cpp1687028161461774587 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/htmlnano/lib/modules/removeEmptyAttributes.js1687028160869751426 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/1-square.svg1687028160873751582 0
-104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.c8945bf4.js.map1689746630144494707 0
+104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.c8945bf4.js.map1689794509089004468 0
 142/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/svgo/LICENSE1687028160333730453 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/gear-wide-connected.svg1687028162197803378 0
 113/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/htmlnano/docs/README.md1687028161309768640 0
@@ -4490,7 +4490,7 @@
 94/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/.bin1687028162953832948 1
 117/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/utils/src/is-url.js1687028161297768171 0
 143/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/node_modules/domutils/lib/stringify.js.map1687028161025757530 0
-104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.18dbc454.js.map1689775722475080616 0
+104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.18dbc454.js.map1689794509089004468 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/regions/JM.js1687028161929792895 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-json/src1687028160393732801 1
 117/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/src/_throw.mjs1687028162077798685 0
@@ -4547,9 +4547,9 @@
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/trash2-fill.svg1687028162393811044 0
 155/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/csso/lib/restructure/index.js1687028161117761129 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/regions/DZ.js1687028161797787731 0
-111/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/bootstrap-icons.c616c025.woff1689746630000490346 0
+111/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/bootstrap-icons.c616c025.woff1689794508773002416 0
 138/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/animate.css/source/fading_entrances/fadeInUp.css1687028161041758156 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.dee82485.css1689746630084492890 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.dee82485.css1689794508961003636 0
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/_/_inherits_loose/package.json1687028161897791644 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/esm/_iterable_to_array.js1687028161597779907 0
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/imports.js1687028161905791957 0
@@ -4580,8 +4580,8 @@
 110/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/LICENSE1687028160917753304 0
 158/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/plugins/removeEmptyAttrs.js1687028161141762068 0
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/reporter-tracer/package.json1687028160441734679 0
-99/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.333b87f1.js1689746630136494464 0
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.6b158569.css.map1689746630100493375 0
+99/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.333b87f1.js1689794509049004208 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.6b158569.css.map1689794508993003844 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/envelope-paper-fill.svg1687028162133800875 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/cjs/syntax/node/Combinator.cjs1687028160841750330 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/lib/ReporterRunner.js1687028161629781159 0
@@ -4592,7 +4592,7 @@
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-what/lib/es/parse.d.ts.map1687028160749746730 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/p-square.svg1687028162281806664 0
 146/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/runtime-js/src/helpers/browser/preload-loader.js1687028161049758469 0
-106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.23396b64.css.map1689746630100493375 0
+106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.23396b64.css.map1689794509005003922 0
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/jquery/src/var/document.js1687028161093760190 0
 144/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/csso/node_modules/css-tree/cjs/syntax/node/AnPlusB.cjs1687028160529738122 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/htmlparser2/lib/Tokenizer.js1687028160537738435 0
@@ -4602,7 +4602,7 @@
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/box2-heart-fill.svg1687028161797787731 0
 144/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css1689743442667998297 0
 137/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/watcher/src/shared/BruteForceBackend.cc1687028160433734366 0
-106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.89ac449a.css.map1689746630100493375 0
+106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.89ac449a.css.map1689794509005003922 0
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/ev-station.svg1687028162137801031 0
 105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/jquery/src/ajax1687028161573778968 1
 143/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/file-earmark-bar-graph-fill.svg1687028162149801501 0
@@ -4633,7 +4633,7 @@
 142/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/mdn-data/api1687028160773747670 1
 147/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/runtime-js/src/helpers/browser/prefetch-loader.js1687028161041758156 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/css-reflections.js1687028161657782254 0
-106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.eb4045d6.js1689746630136494464 0
+106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.eb4045d6.js1689794509049004208 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/question-octagon.svg1687028162321808229 0
 111/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/jquery/dist/jquery.js1687028161233765667 0
 106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/term-size/vendor1687028160449734992 1
@@ -4680,7 +4680,7 @@
 150/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/csso/lib/clean/Atrule.js1687028160641742504 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/type-fest/source/iterable-element.d.ts1687028160745746574 0
 108/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/diagnostic1687028160553739061 1
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.a4d2abc6.js1689746630136494464 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.a4d2abc6.js1689794509049004208 0
 119/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/animate.css/source/lightspeed1687028161153762537 1
 125/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/hdd-stack.svg1687028162217804160 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/brush.svg1687028161829788983 0
@@ -4715,8 +4715,8 @@
 104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.799805d9.js.map1689743442619996218 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/heif.js1687028161881791017 0
 101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/safe-buffer1687028160425734053 1
-93/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.html1689746630136494464 0
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.d95b80a3.css.map1689746630100493375 0
+93/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.html1689794509017004000 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.d95b80a3.css.map1689794508993003844 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/workers/package.json1687028161073759408 0
 138/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/esm/_is_native_reflect_construct.js1687028161585779438 0
 154/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/plugins/inlineStyles.js1687028161009756904 0
@@ -4734,7 +4734,7 @@
 153/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/package-manager/test/fixtures/packages/foo-2.0/index.js1687028160957754869 0
 102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers1687028162009796025 1
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/database.svg1687028162097799467 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.464ee2bb.js1689746630136494464 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.464ee2bb.js1689794509049004208 0
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/nth-check/lib/index.js1687028160453735148 0
 155/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-react-refresh-wrap/src/helpers/.eslintrc.json1687028160621741722 0
 115/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/csso/lib/replace/color.js1687028161161762850 0
@@ -4835,14 +4835,14 @@
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/record2.svg1687028162325808384 0
 165/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/definition-syntax/parse.js1687028161529777247 0
 137/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-sass/src/SassTransformer.js1687028160421733897 0
-102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/favicon.8d3427ea.png1689746630040491558 0
+102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/favicon.8d3427ea.png1689794508961003636 0
 154/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-select/lib/sort.d.ts1687028160973755495 0
 105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.6e889ed0.css.map1689743442619996218 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/side1.5f1b0c56.jpeg1689746630040491558 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/side1.5f1b0c56.jpeg1689794508961003636 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/keyboard-fill.svg1687028162249805412 0
 101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.80a876d2.js1689743442647997430 0
 149/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/common1687028161585779438 1
-102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.89ac449a.css1689746630084492890 0
+102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.89ac449a.css1689794508961003636 0
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/_placeholders.scss1687028162113800093 0
 143/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/lib/style.js1687028161217765041 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/lib/attributes.d.ts.map1687028160977755652 0
@@ -4878,7 +4878,7 @@
 104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.a65e9909.css.map1689743442607995698 0
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/dependencies/lmdb1687028160485736401 1
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/source-map-js/CHANGELOG.md1687028160773747670 0
-110/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.eb4045d6.js.map1689746630144494707 0
+110/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.eb4045d6.js.map1689794509089004468 0
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/alarm-fill.svg1687028161105760660 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/dom-serializer/lib/esm/foreignNames.js1687028160385732488 0
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/css-filters.js1687028161569778812 0
@@ -4963,10 +4963,10 @@
 126/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/package-manager/lib/index.js1687028160621741722 0
 109/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/weak-lru-cache/dist1689743442679998816 1
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/_/_is_native_reflect_construct1687028161917792426 1
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.843dac01.css.map1689746630100493375 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.843dac01.css.map1689794509001003897 0
 105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/posthtml-parser1687028160513737496 1
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/box-arrow-up-left.svg1687028161789787418 0
-92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/index.html1689749838528232776 0
+92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/index.html1689794509017004000 0
 145/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/csso/node_modules/css-tree/lib/parser/parse-selector.js1687028161785787262 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/workers/lib/index.js1687028160793748452 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/postcss-value-parser/LICENSE1687028160301729201 0
@@ -5006,7 +5006,7 @@
 138/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/fs-search/fs-search.linux-arm64-gnu.node1687028161161762850 0
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/grip-horizontal.svg1687028162209803847 0
 130/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/animate.css/source/flippers/flipOutX.css1687028161117761129 0
-92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.html1689746630136494464 0
+92/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.html1689794509017004000 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/codeframe/src/codeframe.js1687028161177763476 0
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/src/TargetDescriptor.schema.js1687028161693783662 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/lib/dom-utils1687028161589779594 1
@@ -5030,7 +5030,7 @@
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/sdch.js1687028162117800249 0
 161/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/svgo/plugins/cleanupListOfValues.js1687028160721745635 0
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-datepicker/README.md1689743442667998297 0
-104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.277c8202.js.map1689746630144494707 0
+104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.277c8202.js.map1689794509089004468 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/css-autofill.js1687028161477775212 0
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/svgo/plugins/removeMetadata.js1687028161097760347 0
 134/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/utility-types/dist/aliases-and-guards.js.map1687028160513737496 0
@@ -5059,7 +5059,7 @@
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/cup-hot.svg1687028162061798059 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/cjs/_class_private_field_set.cjs1687028160837750174 0
 106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/src1687028161749785853 1
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.e8265c92.css.map1689746630104493495 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.e8265c92.css.map1689794508993003844 0
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lightningcss/node/ast.d.ts1687028160905752835 0
 102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-what/lib1687028160413733583 1
 115/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/js-yaml/lib/type/merge.js1687028160941754243 0
@@ -5068,7 +5068,7 @@
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-what/lib/es/stringify.js1687028160629742035 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/src/public/Environment.js1687028161425773178 0
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/graph/lib/types.js1687028160837750174 0
-81/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist1689775722479080809 1
+81/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist1689794509097004520 1
 140/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css.map1687028161841789453 0
 158/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/generator/create.js1687028160949754556 0
 165/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/generator/sourceMap.js1687028161569778812 0
@@ -5084,7 +5084,7 @@
 109/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/dict/dict2.txt1687028161709784289 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/js/src/collapse.js1687028161553778186 0
 158/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/function1687028161605780220 1
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ee17f6b0.js1689746630136494464 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ee17f6b0.js1689794509049004208 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/electron-to-chromium/full-versions.json1687028160749746730 0
 142/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/node_modules/msgpackr/dist/index-no-eval.min.js1687028160697744696 0
 148/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/package-manager/test/fixtures/has-foo/node_modules1687028160853750800 1
@@ -5163,7 +5163,7 @@
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/link.svg1687028162253805569 0
 109/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/commander/Readme.md1687028160589740470 0
 107/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/is-json/README.md1687028160357731392 0
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.fd40e163.js1689746630136494464 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.fd40e163.js1689794509045004182 0
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/logger/LICENSE1687028160333730453 0
 115/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/watcher/prebuilds1687028161249766293 1
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/reporter-cli/package.json1687028160845750487 0
@@ -5197,7 +5197,7 @@
 105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/watcher1687028161513776621 1
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/textencoder.js1687028162137801031 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/chrome-trace-event/README.md1687028160429734210 0
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.277c8202.js1689746630136494464 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.277c8202.js1689794509049004208 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/graph/lib/AdjacencyList.js1687028160505737183 0
 140/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/csso/README.md1687028161201764415 0
 105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.80a876d2.js.map1689743442651997604 0
@@ -5207,7 +5207,7 @@
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/test/fixtures/module-b.js1687028161521776934 0
 158/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-select/lib/sort.d.ts.map1687028160865751269 0
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/jquery/src/deferred.js1687028161053758626 0
-104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ee17f6b0.js.map1689746630144494707 0
+104/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ee17f6b0.js.map1689794509089004468 0
 151/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-select/lib/compile.js1687028160529738122 0
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/entities/lib/encode-trie.d.ts.map1687028160817749392 0
 147/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/runtime-js/lib/helpers/browser/import-polyfill.js1687028160861751113 0
@@ -5236,7 +5236,7 @@
 110/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/posthtml-render/dist1687028160533738279 1
 144/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/README.md1687028161617780689 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-html/src1687028160573739844 1
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.6d1c4a40.js1689759494080981076 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.6d1c4a40.js1689794509049004208 0
 154/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/mdn-data/css/properties.json1687028160937754086 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/jquery/src/traversing/var/rneedsContext.js1687028161481775369 0
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/lib/requests/PackageRequest.js1687028161533777403 0
@@ -5471,7 +5471,7 @@
 167/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/csso/lib/restructure/8-restructRuleset.js1687028160593740627 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/skip-start-btn-fill.svg1687028162353809480 0
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/helpers/_stretched-link.scss1687028162121800406 0
-93/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/signUp.js1689743442683998990 0
+93/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/js/signUp.js1689794505100978576 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/graph-down-arrow.svg1687028162205803692 0
 147/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/mdn-data/package.json1687028160813749235 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-sass/lib1687028160341730766 1
@@ -5542,7 +5542,7 @@
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/package-manager/LICENSE1687028160333730453 0
 153/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/workers/test/integration/workerfarm/shared-reference.js1687028160917753304 0
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/diagnostic/LICENSE1687028160333730453 0
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ab0485ab.css.map1689746630100493375 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ab0485ab.css.map1689794508989003818 0
 162/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/lexer/prepare-tokens.js1687028161541777716 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/filetype-json.svg1687028162177802596 0
 154/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pl.min.js1689743442671998471 0
@@ -5701,7 +5701,7 @@
 137/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-sass/lib/SassTransformer.js1687028160365731705 0
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/u2f.js1687028162149801501 0
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/lib/definition-syntax1687028161837789296 1
-94/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.html1689749838528232776 0
+94/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.html1689794509017004000 0
 133/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/animate.css/source/fading_exits/fadeOut.css1687028161057758782 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/lib/utils/computeOffsets.js1687028161657782254 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/lib/modifiers/index.d.ts1687028161629781159 0
@@ -5818,7 +5818,7 @@
 149/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/mdn-data/css/units.json1687028161041758156 0
 122/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/cjs/lexer/structure.cjs1687028161469774899 0
 137/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/esm/_class_apply_descriptor_set.js1687028161297768171 0
-111/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.f286ec91.css.map1689768498860663148 0
+111/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/studentMarks.f286ec91.css.map1689794509001003897 0
 143/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/runtime-js/lib/helpers/browser/html-loader.js1687028160833750018 0
 122/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/fs/src/NodeFS.browser.js1687028160649742817 0
 160/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/syntax/node/String.js1687028161569778812 0
@@ -5993,7 +5993,7 @@
 163/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/config/mix.js1687028161485775526 0
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/utils/test/objectHash.test.js1687028161305768484 0
 127/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/colr-v1.js1687028161421773022 0
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.c8945bf4.js1689746630136494464 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.c8945bf4.js1689794509045004182 0
 155/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/node_modules/entities/lib/generated/encode-html.js.map1687028161093760190 0
 140/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/test/fixtures/custom-format-infer-ext1687028161781787105 1
 141/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/esm/_class_extract_field_descriptor.js1687028161361770675 0
@@ -6190,7 +6190,7 @@
 117/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-raw/lib1687028160337730610 1
 123/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/src/public/Target.js1687028161689783507 0
 137/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/transformer-html/src/HTMLTransformer.js1687028160521737809 0
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.6d1c4a40.js.map1689759494084981267 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.6d1c4a40.js.map1689794509089004468 0
 125/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/svgo/plugins/removeEditorsNSData.js1687028161077759564 0
 108/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/is-extglob/LICENSE1687028160357731392 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/src/public/BundleGroup.js1687028161237765824 0
@@ -6205,7 +6205,7 @@
 154/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/svgo/lib/svgo/jsAPI.d.ts1687028161445773961 0
 130/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/src/requests/PathRequest.js1687028161609780376 0
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/question-circle.svg1687028162321808229 0
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.dee82485.css.map1689746630100493375 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.dee82485.css.map1689794508993003844 0
 139/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/source-map/parcel_sourcemap_node/build.js1687028160573739844 0
 168/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-tree/lib/syntax/node/StyleSheet.js1687028161581779281 0
 139/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/mtest2.c1687028161301768327 0
@@ -6243,7 +6243,7 @@
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/media-fragments.js1687028161985795086 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/mixins/_transition.scss1687028162125800562 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/node-gyp-build-optional-packages/bin.js1687028160337730610 0
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.bb102fa0.js.map1689746630144494707 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.bb102fa0.js.map1689794509089004468 0
 152/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/core/test/fixtures/custom-targets-distdir/package.json1687028161789787418 0
 119/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/lib/_defaults.js1687028161521776934 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/sass/types/value/string.d.ts1687028161745785697 0
@@ -6255,7 +6255,7 @@
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/package.json1687028160693744539 0
 166/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/svgo/plugins/removeElementsByAttr.js1687028161137761912 0
 161/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/syntax/atrule/media.js1687028161477775212 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.843dac01.css1689746630080492769 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.843dac01.css1689794508961003636 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/grid-3x3.svg1687028162209803847 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/package-manager/test/fixtures/has-foo1687028161181763633 1
 134/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/watcher/src/macos/FSEventsBackend.cc1687028160593740627 0
@@ -6524,7 +6524,7 @@
 130/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/animate.css/source/flippers/flipOutY.css1687028161117761129 0
 136/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/chevron-bar-contract.svg1687028161965794303 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/dom-serializer/lib/foreignNames.js1687028160465735618 0
-105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.464ee2bb.js.map1689746630176495676 0
+105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/student.464ee2bb.js.map1689794509089004468 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/animate.css/source/flippers/flipInY.css1687028161113760972 0
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/sort-numeric-up.svg1687028162361809793 0
 136/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/animate.css/source/attention_seekers/flash.css1687028161105760660 0
@@ -6640,7 +6640,7 @@
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/react-refresh/babel.js1687028160333730453 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/lib/definition-syntax/parse.js1687028161781787105 0
 97/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/js-yaml1687028161041758156 1
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.18dbc454.js1689775722467080227 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.18dbc454.js1689794509049004208 0
 113/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/js-yaml/dist/js-yaml.js1687028160841750330 0
 161/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@parcel/optimizer-htmlnano/node_modules/css-select/lib/pseudo-selectors1687028160973755495 1
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/_/_class_private_method_init1687028161849789766 1
@@ -6735,7 +6735,7 @@
 134/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@msgpackr-extract/msgpackr-extract-linux-x641687028160573739844 1
 155/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@msgpackr-extract/msgpackr-extract-linux-x64/node.napi.glibc.node1687028160561739374 0
 139/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/css-read-only-write.js1687028161657782254 0
-100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.bf9ec4a8.css1689746630084492890 0
+100/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/login.bf9ec4a8.css1689794508961003636 0
 102/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/browserslist1687028160589740470 1
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/capsule-pill.svg1687028161905791957 0
 136/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/dist/esm/dom-utils/getWindow.js1687028161769786636 0
@@ -7087,7 +7087,6 @@
 157/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/node_modules/entities/lib/generated/encode-html.d.ts.map1687028161053758626 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/regions/SC.js1687028162113800093 0
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/_/_create_super/package.json1687028161869790548 0
-91/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/login.html1689746373687910113 0
 151/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/node_modules/entities/lib/generated/encode-html.js1687028160829749861 0
 161/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-select/node_modules/entities/lib/generated/decode-data-xml.d.ts.map1687028160989756122 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/regions/GI.js1687028161865790392 0
@@ -7508,7 +7507,7 @@
 136/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/core-linux-x64-gnu/swc.linux-x64-gnu.node1687028162513815738 0
 122/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/dice-4.svg1687028162105799780 0
 122/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/type-fest/source/promisable.d.ts1687028160869751426 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/slide2.c5665f3f.jpg1689746630040491558 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/slide2.c5665f3f.jpg1689794508989003818 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/xxhash-wasm/esm/xxhash-wasm.js.map1687028160557739218 0
 105/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/xxhash-wasm/cjs1687028160513737496 1
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/jquery/src/var/fnToString.js1687028161145762225 0
@@ -7815,6 +7814,7 @@
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/cosmiconfig/dist/cacheWrapper.d.ts.map1687028160629742035 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/cosmiconfig/dist/ExplorerSync.d.ts.map1687028160773747670 0
 131/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/cosmiconfig/dist/getPropertyByPath.js.map1687028160849750643 0
+90/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/home.html1689794506860990003 0
 135/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/caniuse-lite/data/features/referrer-policy.js1687028162101799623 0
 144/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@msgpackr-extract/msgpackr-extract-linux-x64/README.md1687028160377732175 0
 129/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/htmlnano/lib/modules/removeUnusedCss.js1687028160901752678 0
@@ -7832,7 +7832,7 @@
 134/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/csso/cjs/restructure/prepare/specificity.cjs1687028161001756591 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/css-tree/cjs/lexer/index.cjs1687028161221765198 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/cosmiconfig/dist/cacheWrapper.d.ts1687028160945754400 0
-98/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/studentMarks.html1689749998597225733 0
+98/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/src/studentMarks.html1689794505120978706 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/cosmiconfig/dist/Explorer.d.ts.map1687028160661743287 0
 121/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/cosmiconfig/dist/loaders.js.map1687028160881751896 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/suit-diamond.svg1687028162373810262 0
@@ -7879,7 +7879,7 @@
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/_offcanvas.scss1687028162113800093 0
 114/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/term-size/vendor/windows1687028160513737496 1
 148/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js1689743442675998643 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/slide4.15b0b2d0.jpg1689746630084492890 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/slide4.15b0b2d0.jpg1689794509045004182 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/term-size/vendor/windows/term-size.exe1687028160557739218 0
 132/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@popperjs/core/lib/modifiers/arrow.js.flow1687028161605780220 0
 122/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/@swc/helpers/src/_instanceof.mjs1687028162057797903 0
@@ -8697,7 +8697,7 @@
 119/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/_carousel.scss1687028162089799154 0
 112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/escalade/dist/index.js1687028160357731392 0
 128/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/forms/_form-select.scss1687028162101799623 0
-101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ab0485ab.css1689746630080492769 0
+101/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/signUp.ab0485ab.css1689794508961003636 0
 116/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/_modal.scss1687028162109799936 0
 120/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/scss/_utilities.scss1687028162125800562 0
 124/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/file-zip.svg1687028162173802440 0
@@ -8825,7 +8825,7 @@
 106/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/js/src1687028161669782724 1
 115/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/js/src/modal.js1687028161621780846 0
 118/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/js/src/carousel.js1687028161545777873 0
-112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/bootstrap-icons.07ffb6de.woff21689746629996490226 0
+112/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/dist/bootstrap-icons.07ffb6de.woff21689794508773002416 0
 119/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/js/src/offcanvas.js1687028161633781316 0
 117/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap/js/src/popover.js1687028161641781629 0
 125/home/nimanthika/Documents/dep-10/phase 2/student-progress-monitor/front-end/node_modules/bootstrap-icons/icons/check-all.svg1687028161957793991 0

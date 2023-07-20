@@ -92,7 +92,7 @@ function sendDataSignUp() {
     xhr.addEventListener('readystatechange', () => {
         if (xhr.readyState === 4) {
             if (xhr.status === 201) {
-                window.location.href = 'login.html';
+                window.location.href = 'home.html';
                 resetForm();
             } else if (xhr.status === 409) {
                 const errorObject = JSON.parse(xhr.responseText);
