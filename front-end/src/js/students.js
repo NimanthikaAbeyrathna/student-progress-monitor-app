@@ -18,15 +18,13 @@ let x = [];
 let update = false;
 let imgUpload = false;
 let btnSaveClick = false;
-let getImage = false;
 let deleteImage = true; // Flag to determine if the image should be deleted
 let indexVariable;
-let selectedFile;
 let indexValue;
 let response;
 let updateFileName1;
 let fileName;
-let files;
+let files=[];
 let imgUrlIndex = [];
 let tblElementIndex = [];
 
@@ -47,7 +45,6 @@ $(document).on('click', '.trash', function (evt) {
 tableBodyElm.on('click', '.delete', (evt) => {
 
     const idElm = $(evt.target).closest('tr').children().first();
-    console.log(idElm);
     const idValue = idElm.text();
     deleteElements(idValue);
 });
@@ -56,7 +53,6 @@ tableBodyElm.on('click', '.delete', (evt) => {
 tableBodyElm.on('click', '.edit', (evt) => {
     update = true;
     deleteImage = false;
-    console.log("update: " + update);
     const allTd = $(evt.target).closest('tr').children();
 
     allTd.each(function () {
@@ -112,7 +108,7 @@ window.addEventListener('beforeunload', function (event) {   //when refresh the 
 });
 
 imgInputElm.on('change', (evt) => {
-    alert("ok1")
+
     imgUpload = true;
     files = evt.target.files;
     uploadImages(files);
@@ -202,7 +198,6 @@ function sendData() {
     const studentIndexNo = indexElm.val();
     const fullName = UserNameElm.val();
     const address = addressElm.val();
-    //  const birthday = birthdayElm.val();
     const genderElm = $('input[name="gender"]:checked').val()
     const guaranteeName = guaranteeNameElm.val();
     const guaranteeContact = guaranteeContactElm.val();
@@ -214,16 +209,14 @@ function sendData() {
 
 
     if (!validation()) return;
-    // btnAddImg.removeAttr('disabled');
-    // console.log("after validation");
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener('readystatechange', () => {
-        // console.log(birthday);
+
         if (xhr.readyState === 4 && xhr.status === 201) {
             resetForm();
             addDataToTable();
-            console.log("inside send data")
+
             showToast("success", "Saved", "Data has been saved")
 
             setTimeout(function () {  // if i dont add that toast not going to appear long period
@@ -249,18 +242,7 @@ function resetForm() {
     guaranteeContactElm.val("");
 }
 
-function clearImgInput() {
-    alert("ok");
-    console.log("inside clrimgInput");
-    tblElementIndex.forEach(element => {
-        imgUrlIndex.forEach(urls => {
-            if (element.toString() !== urls.toString()) {
-                imgInputElm.val('');
-            }
-        })
 
-    });
-}
 
 function addDataToTable() {
 
@@ -283,32 +265,32 @@ function addDataToTable() {
             responseObject.forEach(responses => {
                 tblElementIndex.push(responses.studentIndexNo);
                 tableBodyElm.append(`
-           <tr>
-        <td scope="row">${responses.studentIndexNo}</td>
-        <td>${responses.fullName}</td>
-        <td>${responses.address}</td>
-        <td>${responses.gender}</td>
-        <td>${responses.guaranteeName}</td>
-        <td>${responses.guaranteeContact}</td>
-
-        <td>
-            <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                 className="bi bi-pencil-square" viewBox="0 0 16 16">
-                <path
-                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                <path fill-rule="evenodd"
-                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-            </svg>
-        
-            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-trash3"
-                 viewBox="0 0 16 16">
-                <path
-                    d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
-            </svg>
-        </td>
-
-    </tr>  
-        `)
+                       <tr>
+                    <td scope="row">${responses.studentIndexNo}</td>
+                    <td>${responses.fullName}</td>
+                    <td>${responses.address}</td>
+                    <td>${responses.gender}</td>
+                    <td>${responses.guaranteeName}</td>
+                    <td>${responses.guaranteeContact}</td>
+            
+                    <td>
+                        <svg class="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             className="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd"
+                                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                        </svg>
+                    
+                        <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-trash3"
+                             viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                        </svg>
+                    </td>
+            
+                </tr>  
+                `)
             });
         }
 
@@ -320,7 +302,6 @@ function addDataToTable() {
 
 function addImages(url) {
 
-    console.log("inside addImage")
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener('readystatechange', (evt) => {
@@ -367,7 +348,6 @@ function getUrl(index) {
     xhr.addEventListener('readystatechange', (evt) => {
         if (xhr.status === 200 && xhr.readyState === 4) {
             response = xhr.responseText;
-            console.log(response.trim().length);
             if (response.trim().length === 0) {
                 fileName = "";
                 addImages(response);
@@ -390,7 +370,7 @@ function deleteElements(value) {
     xhr.addEventListener("readystatechange", (evt) => {
         if (xhr.readyState === 4 && xhr.status === 204) {
             showToast("warning", "DELETE", "Selected data has been deleted");
-            setTimeout(function () {  // if i dont add that toast not going to appear long period
+            setTimeout(function () {  // if i don't add that toast not going to appear long period
                 location.reload();
             }, 1000);
         }
@@ -404,7 +384,6 @@ function deleteElements(value) {
 function updateElements(studentIndexNo) {
 
     indexVariable = studentIndexNo;
-    console.log(indexVariable);
 
     const fullName = UserNameElm.val();
     const address = addressElm.val();
@@ -434,9 +413,7 @@ function updateElements(studentIndexNo) {
                 location.reload();
             }, 1000);
             addDataToTable();
-            // if (getImage) {
-            //     addImages(responseObject.fileName); // Fetch image using the updated file name
-            // }
+
         }
 
     });
@@ -445,6 +422,7 @@ function updateElements(studentIndexNo) {
         xhr.open("PATCH", `http://localhost:8080/app/students/${indexVariable}`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(studentDetails));
+        uploadImages(files);
     }
 
 }
@@ -500,7 +478,9 @@ function deleteImageByFileName(fileName) {
 
     xhr.addEventListener('readystatechange', (evt) => {
         if (xhr.status === 204 && xhr.readyState === 4) {
-            imgInput.css({"background-image": "url()"});
+            imgInput.removeAttr('style');
+            files = [];
+            imgInputElm.value = "";
             showToast("warning", "Deleted", "Image Successfully Deleted");
         }
     });
@@ -514,7 +494,9 @@ function deleteImageByURL(url) {
 
     xhr.addEventListener('readystatechange', (evt) => {
         if (xhr.status === 204 && xhr.readyState === 4) {
-            imgInput.css({"background-image": "url()"});
+            imgInput.removeAttr('style');
+            files = [];
+            imgInputElm.value = "";
             showToast("warning", "Deleted", "Image Successfully Deleted");
         }
     });
@@ -524,21 +506,20 @@ function deleteImageByURL(url) {
 }
 
 function clearImage() {
-    console.log("response length: " + response.length);
 
     if (response.length === 0) {
         deleteImageByFileName(fileName);
     } else {
         deleteImageByURL(response);
         deleteImageByFileName(indexValue);
+
     }
 }
 
+
 function adjustTrashPosition() {
     const imgInput = $('#imgInput');
-
     const trash = imgInput.find('.trash');
-
     const imgInputPosition = imgInput.position();
     const imgInputTop = imgInputPosition.top;
     const imgInputLeft = imgInputPosition.left;

@@ -12,11 +12,13 @@ import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.web.bind.annotation.RequestPart;
 import javax.servlet.ServletContext;
 import javax.servlet.http.Part;
+import javax.sql.DataSource;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -29,7 +31,111 @@ public class Students {
     @Autowired
     private ServletContext servletContext;
 
- @PostMapping(value = "/save" ,consumes ="application/json" )
+    @GetMapping("/imgUrl")
+    public ArrayList<String> getHasImage(){
+        ArrayList<String> list= new ArrayList<>();
+        try {
+            Connection connection = dataSource.getConnection();
+            PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl");
+            ResultSet resultSet = stm.executeQuery();
+            while (resultSet.next()){
+                list.add(resultSet.getString("indexNumber"));
+            }
+            stm.close();
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return list;
+    }
+
+
+    @GetMapping("/images")
+    public ResponseEntity<?> getImage(@RequestParam(value = "q",required = false)String query ,UriComponentsBuilder uriComponentsBuilder) {
+        String[] imgList = new String[1];
+        String imgDirectParth = servletContext.getRealPath("/images");
+        File filePath = new File(imgDirectParth);
+        String[] imageNames = filePath.list();
+
+        for (String imageName : imageNames) {
+
+            if (query!=null  && query.equals(imageName)) {
+
+                UriComponentsBuilder cloneBuilder = uriComponentsBuilder.cloneBuilder();
+                String url = cloneBuilder.pathSegment("images", imageName).toUriString();
+                imgList[0] = url;
+
+                return new ResponseEntity<>(imgList, HttpStatus.OK);
+            }
+
+        }
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+
+    @GetMapping
+    public ResponseEntity<?> getAllStudents(@RequestParam(value = "q",required = false)String query) {
+
+        System.out.println(query);
+
+        try {
+            Connection connection = dataSource.getConnection();
+            PreparedStatement stm = connection.prepareStatement("SELECT *FROM student WHERE student_index_no LIKE ? OR fullName LIKE ? OR  address LIKE ? OR  gender LIKE ? OR student.guaranteeName LIKE ? OR guaranteeContact LIKE ?");
+            if(query!=null) {
+                for (int i = 1; i <=6; i++) {
+                    stm.setString(i, "%" + query + "%");
+                }
+            }
+            else  {
+                for (int i = 1; i <=6; i++) {
+                    stm.setString(i, "%");  //---------use this as empty stirng
+                }
+            }
+            ResultSet rst = stm.executeQuery();
+
+            List<StudentDTO> studentList = new ArrayList<>();
+            while (rst.next()) {
+
+                String indexNumber = rst.getString("student_index_no");
+                String fullName = rst.getString("fullName");
+                String address = rst.getString("address");
+                String gender = rst.getString("gender");
+                Gender genderAsDTO = Gender.valueOf(gender);
+                String guaranteeName = rst.getString("guaranteeName");
+                String guaranteeContact = rst.getString("guaranteeContact");
+
+                StudentDTO studentDTO1 = new StudentDTO(indexNumber, fullName, address, genderAsDTO, guaranteeName, guaranteeContact,null);
+                studentList.add(studentDTO1);
+            }
+            return new ResponseEntity<>(studentList, HttpStatus.OK);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @GetMapping("/url")
+    public String getUrl(@RequestParam(value = "q",required = false)String query){
+        String url="";
+        try {
+            Connection connection = dataSource.getConnection();
+            PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl WHERE indexNumber=?");
+            stm.setString(1,query);
+            ResultSet resultSet = stm.executeQuery();
+            if(resultSet.next()){
+                url = resultSet.getString("url");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return url;
+    }
+
+
+    @PostMapping(value = "/save" ,consumes ="application/json" )
     public ResponseEntity<?> saveAllStudents(@RequestBody @Valid StudentDTO studentDTO){
 
      try {
@@ -55,7 +161,7 @@ public class Students {
          e.printStackTrace();
          throw new RuntimeException(e);
      }
- }
+    }
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> saveImageOfStudents(@RequestPart("img") List<Part> files, UriComponentsBuilder urlBuilder) {
@@ -89,158 +195,33 @@ public class Students {
         return ResponseEntity.badRequest().body("No image provided");
     }
 
-    @GetMapping("/imgUrl")
-    public ArrayList<String> getHasImage(){
-      ArrayList<String> list= new ArrayList<>();
-        try {
-            Connection connection = dataSource.getConnection();
-            PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl");
-            ResultSet resultSet = stm.executeQuery();
-            while (resultSet.next()){
-                list.add(resultSet.getString("indexNumber"));
-            }
-            stm.close();
-            connection.close();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        return list;
-    }
-
-
-    @GetMapping("/images")
-    public ResponseEntity<?> getImage(@RequestParam(value = "q",required = false)String query ,UriComponentsBuilder uriComponentsBuilder) {
-        String[] imgList = new String[1];
-        String imgDirectParth = servletContext.getRealPath("/images");
-        File filePath = new File(imgDirectParth);
-        String[] imageNames = filePath.list();
-
-        for (String imageName : imageNames) {
-            System.out.println(imageName);
-            if (query!=null  && query.equals(imageName)) {
-                System.out.println("inside if");
-                UriComponentsBuilder cloneBuilder = uriComponentsBuilder.cloneBuilder();
-                String url = cloneBuilder.pathSegment("images", imageName).toUriString();
-                imgList[0] = url;
-                System.out.println("url" + imgList[0]);
-                return new ResponseEntity<>(imgList, HttpStatus.OK);
-            }
-
-        }
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
-
-    @DeleteMapping("/images/{studentImage:.+}")
-    public ResponseEntity<?> deleteImages(@PathVariable String studentImage){
-        String imgDirectPath = servletContext.getRealPath("/images");
-        File filePath = new File(imgDirectPath);
-        String[] imageNames = filePath.list();
-
-        if (imageNames != null) {
-            for (String imageName : imageNames) {
-                if (imageName.equals(studentImage)) {
-                    File imgFile = new File(filePath, imageName);
-                    boolean delete = imgFile.delete();
-
-                    if (delete) {
-                        // Delete the corresponding entry from the imageUrl table
-                        try {
-                            Connection connection = dataSource.getConnection();
-                            PreparedStatement deleteUrlStm = connection.prepareStatement("DELETE FROM imageUrl WHERE url = ?");
-                            deleteUrlStm.setString(1, studentImage);
-                            deleteUrlStm.executeUpdate();
-                            deleteUrlStm.close();
-                            connection.close();
-                        } catch (SQLException e) {
-                            throw new RuntimeException(e);
-                        }
-
-                        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-                    }
-                }
-            }
-        }
-
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-    @GetMapping
-    public ResponseEntity<?> getAllStudents(@RequestParam(value = "q",required = false)String query) {
-
-        System.out.println(query);
-
-            try {
-                Connection connection = dataSource.getConnection();
-                PreparedStatement stm = connection.prepareStatement("SELECT *FROM student WHERE student_index_no LIKE ? OR fullName LIKE ? OR  address LIKE ? OR  gender LIKE ? OR student.guaranteeName LIKE ? OR guaranteeContact LIKE ?");
-                if(query!=null) {
-                    for (int i = 1; i <=6; i++) {
-                        stm.setString(i, "%" + query + "%");
-                    }
-                }
-                else  {
-                    for (int i = 1; i <=6; i++) {
-                        stm.setString(i, "%");  //---------use this as empty stirng
-                    }
-                }
-                ResultSet rst = stm.executeQuery();
-
-                List<StudentDTO> studentList = new ArrayList<>();
-                while (rst.next()) {
-
-                    String indexNumber = rst.getString("student_index_no");
-                    String fullName = rst.getString("fullName");
-                    String address = rst.getString("address");
-                    String gender = rst.getString("gender");
-                    Gender genderAsDTO = Gender.valueOf(gender);
-                    String guaranteeName = rst.getString("guaranteeName");
-                    String guaranteeContact = rst.getString("guaranteeContact");
-
-                    StudentDTO studentDTO1 = new StudentDTO(indexNumber, fullName, address, genderAsDTO, guaranteeName, guaranteeContact,null);
-                    studentList.add(studentDTO1);
-                }
-                return new ResponseEntity<>(studentList, HttpStatus.OK);
-
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-
-    }
-
-    @GetMapping("/url")
-    public String getUrl(@RequestParam(value = "q",required = false)String query){
-        String url="";
-        System.out.println("query in url :"+query);
-        try {
-            Connection connection = dataSource.getConnection();
-            PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl WHERE indexNumber=?");
-            stm.setString(1,query);
-            ResultSet resultSet = stm.executeQuery();
-            if(resultSet.next()){
-                     url = resultSet.getString("url");
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        return url;
-    }
-
-
-    @DeleteMapping("/url/{response}")
-    public ResponseEntity<?> deleteImageFromUrl(@PathVariable String  response){
+    @PatchMapping("/{studentIndexNo}")
+    public ResponseEntity<?> updateStudents(@PathVariable String studentIndexNo , @RequestBody StudentDTO studentDTO){
 
         try {
             Connection connection = dataSource.getConnection();
-            PreparedStatement stm = connection.prepareStatement("DELETE FROM imageUrl WHERE url=?");
-            stm.setString(1,response);
+
+            PreparedStatement stm = connection.prepareStatement("UPDATE student  SET fullName=?,address=?,gender=?,guaranteeName=?,guaranteeContact=? WHERE student_index_no=?");
+            stm.setString(1,studentDTO.getFullName());
+            stm.setString(2,studentDTO.getAddress());
+            stm.setString(3, String.valueOf(studentDTO.getGender()));
+            stm.setString(4, studentDTO.getGuaranteeName());
+            stm.setString(5,studentDTO.getGuaranteeContact());
+            stm.setString(6,studentIndexNo);
             stm.executeUpdate();
-            stm.close();
-            connection.close();
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+            PreparedStatement stm1 = connection.prepareStatement("INSERT INTO imageUrl (indexNumber, url) VALUES (?,?)");
+            stm1.setString(1,studentIndexNo);
+            stm1.setString(2,studentDTO.getFileName());
+            stm1.executeUpdate();
+
+
+            return new ResponseEntity<>(studentDTO,HttpStatus.ACCEPTED);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
 
     @DeleteMapping("/{studentIndexNo}")
     public ResponseEntity<?> deleteAllStudents(@PathVariable String studentIndexNo ){
@@ -254,7 +235,7 @@ public class Students {
             if(resultSet.next()){
                 String url = resultSet.getString("url");
                 if(url!=null){
-                    deleteImages(url);
+                    deleteImages(studentIndexNo);
                 }
             }
 
@@ -276,29 +257,78 @@ public class Students {
             throw new RuntimeException(e);
         }
     }
-    @PatchMapping("/{studentIndexNo}")
-    public ResponseEntity<?> updateStudents(@PathVariable String studentIndexNo , @RequestBody StudentDTO studentDTO){
+
+
+    /*delete image from target directory*/
+    @DeleteMapping("/images/{studentImage:.+}")
+    public ResponseEntity<?> deleteImages(@PathVariable String studentImage) throws SQLException {
+
+        Connection connection = dataSource.getConnection();
+        PreparedStatement stm = connection.prepareStatement("SELECT * FROM imageUrl WHERE indexNumber=?");
+        stm.setString(1,studentImage);
+        ResultSet rst = stm.executeQuery();
+        if(rst.next()){
+            studentImage= rst.getString("url");
+        }
+
+        String imgDirectPath = servletContext.getRealPath("/images");
+
+        File filePath = new File(imgDirectPath);
+
+        String[] imageNames = filePath.list();
+
+
+        if (imageNames != null) {
+
+            for (String imageName : imageNames) {
+
+                if (imageName.equals(studentImage)) {
+
+                    File imgFile = new File(filePath, imageName);
+
+                    boolean delete = imgFile.delete();
+
+
+                    if (delete) {
+                        // Delete the corresponding entry from the imageUrl table
+                        try {
+                            Connection connection2 = dataSource.getConnection();
+                            PreparedStatement deleteUrlStm = connection2.prepareStatement("DELETE FROM imageUrl WHERE url = ?");
+                            deleteUrlStm.setString(1, studentImage);
+                            deleteUrlStm.executeUpdate();
+                            deleteUrlStm.close();
+                            connection2.close();
+                        } catch (SQLException e) {
+                            throw new RuntimeException(e);
+                        }
+
+                        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                    }
+                }
+            }
+        }
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+
+    @DeleteMapping("/url/{response}")
+    public ResponseEntity<?> deleteImageFromUrl(@PathVariable String  response){
 
         try {
             Connection connection = dataSource.getConnection();
-
-            PreparedStatement stm = connection.prepareStatement("UPDATE student  SET fullName=?,address=?,gender=?,guaranteeName=?,guaranteeContact=? WHERE student_index_no=?");
-            stm.setString(1,studentDTO.getFullName());
-            stm.setString(2,studentDTO.getAddress());
-            stm.setString(3, String.valueOf(studentDTO.getGender()));
-            stm.setString(4, studentDTO.getGuaranteeName());
-            stm.setString(5,studentDTO.getGuaranteeContact());
-            stm.setString(6,studentIndexNo);
-
+            PreparedStatement stm = connection.prepareStatement("DELETE FROM imageUrl WHERE url=?");
+            stm.setString(1,response);
             stm.executeUpdate();
             stm.close();
-
             connection.close();
-
-            return new ResponseEntity<>(studentDTO,HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
+
+
 }
 
