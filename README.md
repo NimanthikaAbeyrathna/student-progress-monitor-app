@@ -8,7 +8,7 @@
     Front-end: HTML, CSS, JavaScript, bootstrap
     Back-end: Java SE, Node.js, Express.js, Tomcat, Hibernate VAlidator
     Database: MySQL
-    Build Tool: Parcel
+    Build Tool: Parcel, Maven
 
 ## version 
 1.0.0
