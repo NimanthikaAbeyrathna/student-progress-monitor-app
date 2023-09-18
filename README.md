@@ -6,7 +6,7 @@
 #### Technologies Used
 
     Front-end: HTML, CSS, JavaScript, bootstrap
-    Back-end: Java SE, Node.js, Express.js, Tomcat, Hibernate VAlidator
+    Back-end: Spring MVC, Tomcat, Hibernate VAlidator
     Database: MySQL
     Build Tool: Parcel, Maven
 
